@@ -1,3 +1,4 @@
+X,Filing Date,Trade Date,Ticker,Company Name,Insider Name,Title,Trade Type,Price,Qty,Owned,DeltaOwn,Value,Qty2,Value2
 ,2021-06-01 06:01:18,2021-05-27,CMBM,Cambium Networks Corp,Rau Sally,GC,S - Sale,$58.60,"-4,938",0,-100%,"-$289,353",#N/A,#N/A
 D,2021-06-01 06:10:13,2021-05-28,OCGN,"Ocugen, Inc.",Kompella Uday,Dir,S - Sale+OE,$8.82,"-7,191","1,030,090",-1%,"-$63,417",#N/A,#N/A
 M,2021-06-01 07:00:36,2021-05-26,ESNT,Essent Group Ltd.,Kasmar Roy James,Dir,S - Sale,$47.96,"-6,314","26,109",-19%,"-$302,807",#N/A,#N/A
@@ -5905,4 +5906,3 @@ M,2021-06-30 21:44:32,2021-06-28,OSPN,Onespan Inc.,Hunt T Kendall,10%,S - Sale,$
 M,2021-06-30 21:45:28,2021-06-28,OTRK,"Ontrak, Inc.",Peizer Terren S,"Exec COB, 10%",S - Sale,$33.75,"-33,000","9,253,218",0%,"-$1,113,779",#N/A,#N/A
 D,2021-06-30 21:52:35,2021-06-28,PINS,"Pinterest, Inc.",Yang Tseli Lily,Chief Accounting Officer,S - Sale+OE,$77.50,"-9,687","61,429",-14%,"-$750,743",#N/A,#N/A
 D,2021-06-30 21:53:22,2021-06-28,ZIP,"Ziprecruiter, Inc.",Travers David,CFO,S - Sale+OE,$23.19,"-19,411","1,104,321",-2%,"-$450,141",#N/A,#N/A
-X,Filing Date,Trade Date,Ticker,Company Name,Insider Name,Title,Trade Type,Price,Qty,Owned,DeltaOwn,Value,Qty2,Value2
