@@ -1,0 +1,854 @@
+FilingDate,TradeDate,Ticker,CompanyName,InsiderName,Title,TradeType,Price,Qty,Owned,DeltaOwn,Value
+2022-03-28,2022-03-24,RIBT,Ricebran Technologies,Chemerow David I.,Dir,P - Purchase,0.5,50000.0,260332.0,0.24,25079.0
+2022-03-28,2022-03-28,M,"Macy'S, Inc.",Gennette Jeffrey,"COB, CEO",S - Sale+OE,25.4,-31447.0,351523.0,-8.0,-798886.0
+2022-03-28,2022-03-24,BNFT,"Benefitfocus, Inc.","Indaba Capital Management, L.P.",10%,P - Purchase,12.63,142047.0,3963694.0,0.04,1793400.0
+2022-03-28,2022-03-25,AFL,Aflac Inc,Fukuzawa Toshihiko,Dir,S - Sale,65.5,-1300.0,10226.0,-11.0,-85150.0
+2022-03-28,2022-03-24,DBX,"Dropbox, Inc.",Young Timothy H.,Pres,S - Sale,23.09,-12750.0,1891627.0,-1.0,-294362.0
+2022-03-28,2020-05-21,LMAT,Lemaitre Vascular Inc,Roush John A,Dir,P - Purchase,25.28,151.0,20151.0,0.01,3817.0
+2022-03-28,2022-03-25,HES,Hess Corp,Hill Gregory P.,"COO, Pres, E, P",S - Sale+OE,106.23,-13771.0,101635.0,-12.0,-1462908.0
+2022-03-28,2022-03-24,AVGO,Broadcom Inc.,Kawwas Charlie B,COO,S - Sale,619.89,-2520.0,74656.0,-3.0,-1562113.0
+2022-03-28,2022-03-25,BUKS,Butler National Corp,Hayden David B,Dir,S - Sale,0.68,-294118.0,1087059.0,-21.0,-200000.0
+2022-03-28,2022-03-25,RCL,Royal Caribbean Cruises Ltd,Bayley Michael W,"Pres,CEO,Royal Caribbean Intl",S - Sale,77.02,-3859.0,120588.0,-3.0,-297222.0
+2022-03-28,2022-03-25,BUKS,Butler National Corp,Edgar John M.,Dir,P - Purchase,0.68,294118.0,294118.0,999999.0,200000.0
+2022-03-28,2022-03-28,M,"Macy'S, Inc.",Garcia C Elisa D,"EVP, CLO, Secretary",S - Sale+OE,25.4,-3589.0,69787.0,-5.0,-91174.0
+2022-03-28,2022-03-24,CYRN,Cyren Ltd.,Tamir Michael,"VP, Global Support Services",S - Sale,7.7,-3012.0,482443.0,-1.0,-23192.0
+2022-03-28,2022-03-25,TTC,Toro Co,Rodier Richard W,"Group VP, Construction, RLC",S - Sale+OE,85.95,-3600.0,29429.0,-11.0,-309427.0
+2022-03-28,2022-03-24,CYRN,Cyren Ltd.,Fleck Michael,VP Marketing,S - Sale+OE,7.7,-101.0,314899.0,0.0,-778.0
+2022-03-28,2022-03-24,TTC,Toro Co,Walters Daryn A,"VP, Exmark, Intimidator Group",S - Sale+OE,85.99,-1100.0,3648.0,-23.0,-94590.0
+2022-03-28,2022-03-24,MU,Micron Technology Inc,Arnzen April S,"SVP, Chief People Officer",S - Sale,76.0,-5600.0,89172.0,-6.0,-425600.0
+2022-03-28,2022-03-25,SSKN,"Strata Skin Sciences, Inc.",Humphries William D.,Dir,P - Purchase,1.73,16950.0,484440.0,0.04,29385.0
+2022-03-28,2022-03-24,CYRN,Cyren Ltd.,Johnson Bruce Harold,"VP, Sales North America",S - Sale,7.7,-2343.0,347657.0,-1.0,-18041.0
+2022-03-28,2022-03-25,BNED,"Barnes & Noble Education, Inc.",Golden David G,Dir,P - Purchase,4.0,21818.0,231304.0,0.1,87272.0
+2022-03-28,2022-03-23,QTRX,Quanterix Corp,Duffy David C.,"SVP R, D, CTO",S - Sale,30.0,-3266.0,54730.0,-6.0,-97980.0
+2022-03-28,2022-03-24,FDP,Fresh Del Monte Produce Inc,Pelaez Reyes Jorge,"VP, Central America",S - Sale+OE,25.57,-2447.0,0.0,-100.0,-62570.0
+2022-03-28,2022-03-25,NOVN,"Novan, Inc.",Bierman James L,Dir,P - Purchase,3.55,2000.0,2000.0,999999.0,7090.0
+2022-03-28,2022-03-24,AVGO,Broadcom Inc.,Brazeal Mark David,"Chief Legal, Corp Affairs Ofc",S - Sale,610.0,-11214.0,28750.0,-28.0,-6840540.0
+2022-03-28,2022-03-25,HZN,Horizon Global Corp,Kennedy John C,Dir,P - Purchase,5.47,1104.0,1132492.0,0.0,6039.0
+2022-03-28,2022-03-24,GMS,Gms Inc.,"Coliseum Capital Management, LLC",10%,P - Purchase,51.5,10000.0,5537572.0,0.0,515000.0
+2022-03-28,2022-03-22,EKSO,"Ekso Bionics Holdings, Inc.",Glenn John,CFO,S - Sale,2.82,-3462.0,35130.0,-9.0,-9762.0
+2022-03-28,2022-03-24,CYRN,Cyren Ltd.,Markowitz Eva Lilias,"VP, HR",S - Sale,7.7,-2343.0,385097.0,-1.0,-18041.0
+2022-03-28,2022-03-28,KEX,Kirby Corp,Day C Sean,Dir,S - Sale+OE,72.3,-6000.0,71090.0,-8.0,-433787.0
+2022-03-28,2022-03-24,SGRY,"Surgery Partners, Inc.",Taparo Anthony,Chief Growth Officer,S - Sale,53.5,-5000.0,99169.0,-5.0,-267500.0
+2022-03-28,2022-03-25,SO,Southern Co,"Greene Kimberly S,","COB, Pres, CEO, GAS",S - Sale+OE,70.05,-100005.0,123120.0,-45.0,-7005287.0
+2022-03-28,2022-03-25,LFG,Archaea Energy Inc.,Aria Renewable Energy Systems LLC,"Dir, 10%",S - Sale+OE,17.04,-14942643.0,0.0,-100.0,-254622637.0
+2022-03-28,2022-03-25,LFG,Archaea Energy Inc.,Ares Management LLC,"Dir, 10%",S - Sale+OE,17.04,-14942643.0,1877.0,-100.0,-254622637.0
+2022-03-28,2022-03-24,EPM,Evolution Petroleum Corp,Stash Ryan,"SVP, CFO",S - Sale,5.54,-4870.0,209383.0,-2.0,-26980.0
+2022-03-28,2020-08-26,LMAT,Lemaitre Vascular Inc,Roush John A,Dir,P - Purchase,31.06,30.0,27681.0,0.0,932.0
+2022-03-28,2022-03-25,LSEA,Landsea Homes Corp,Zhou Qin,Dir,P - Purchase,8.91,20000.0,32241.0,1.63,178200.0
+2022-03-28,2022-03-24,RLAY,"Relay Therapeutics, Inc.",Catinazzo Thomas,CFO,S - Sale+OE,30.0,-13286.0,54259.0,-20.0,-398580.0
+2022-03-28,2022-03-24,RLAY,"Relay Therapeutics, Inc.",Bergstrom Donald A,"Pres, R, D",S - Sale+OE,30.0,-10000.0,94926.0,-10.0,-300000.0
+2022-03-28,2022-03-25,OCX,Oncocyte Corp,Ross Douglas T.,Chief Scientific Officer,P - Purchase,1.4,15000.0,20317.0,2.82,21000.0
+2022-03-28,2022-03-28,SMTC,Semtech Corp,Chang Christopher H,SVP,S - Sale+OE,70.57,-6950.0,16726.0,-29.0,-490448.0
+2022-03-28,2022-03-25,AIRC,Apartment Income Reit Corp.,Beldin Paul,"EVP, CFO",S - Sale,52.84,-14500.0,53732.0,-21.0,-766190.0
+2022-03-28,2022-03-25,LCTX,"Lineage Cell Therapeutics, Inc.",Culley Brian M,"Pres, CEO",P - Purchase,1.38,5250.0,81280.0,0.07,7245.0
+2022-03-28,2022-03-24,TRUP,"Trupanion, Inc.",Doak Michael,Dir,S - Sale+OE,90.35,-700.0,332.0,-68.0,-63245.0
+2022-03-28,2022-03-24,GEVO,"Gevo, Inc.",Mize Gary W.,Dir,S - Sale,4.47,-101343.0,152129.0,-40.0,-453469.0
+2022-03-28,2022-03-24,GEVO,"Gevo, Inc.",Mize Gary W.,Dir,P - Purchase,4.48,35339.0,152129.0,0.3,158319.0
+2022-03-28,2022-03-24,GEVO,"Gevo, Inc.",Baum William H,Dir,S - Sale,4.4,-90000.0,128089.0,-41.0,-396234.0
+2022-03-28,2022-03-25,PLBY,"Plby Group, Inc.",Edmonds Tracey E,Dir,S - Sale,14.48,-14993.0,22501.0,-40.0,-217099.0
+2022-03-28,2022-03-24,POSH,"Poshmark, Inc.",Tung Hans,Dir,S - Sale,13.59,-196012.0,3907004.0,-5.0,-2663180.0
+2022-03-28,2022-03-28,M,"Macy'S, Inc.",Spring Antony,"EVP-Macy's, CEO-Bloomingdale's",S - Sale+OE,25.4,-6407.0,92904.0,-6.0,-162766.0
+2022-03-28,2022-03-28,M,"Macy'S, Inc.",Mitchell Adrian V,"EVP, CFO",S - Sale+OE,25.4,-4460.0,9854.0,-31.0,-113298.0
+2022-03-28,2022-03-24,CNC,Centene Corp,Brooks Mark J,"EVP, CIO",S - Sale+OE,82.71,-3690.0,153755.0,-2.0,-305200.0
+2022-03-28,2022-03-25,MAR,Marriott International Inc /md/,Brown William P,"Group Pres, US, Canada",S - Sale+OE,171.34,-581.0,24701.0,-2.0,-99549.0
+2022-03-28,2022-03-28,M,"Macy'S, Inc.",Kirgan Danielle L.,"EVP, Chief Transformation Off",S - Sale+OE,25.4,-6212.0,92306.0,-6.0,-157814.0
+2022-03-28,2022-03-24,RES,Rpc Inc,Rollins Gary W,"Dir, 10%",S - Sale,10.35,-299785.0,116964893.0,0.0,-3101432.0
+2022-03-28,2022-03-24,RES,Rpc Inc,Lor Inc,10%,S - Sale,10.2,-70000.0,103722784.0,0.0,-713713.0
+2022-03-28,2022-03-25,HONE,"Harborone Bancorp, Inc.",Blake James W.,CEO,S - Sale+OE,14.48,-50000.0,288840.0,-15.0,-723940.0
+2022-03-28,2022-03-28,M,"Macy'S, Inc.",Griscom Paul,"SVP, Controller",S - Sale+OE,25.4,-1039.0,6947.0,-13.0,-26386.0
+2022-03-28,2022-03-28,TWI,Titan International Inc,Eheli Anthony,"VP, Chief Accounting Officer",S - Sale,15.75,-1090.0,30254.0,-3.0,-17168.0
+2022-03-28,2022-03-24,ZI,Zoominfo Technologies Inc.,Carlyle Group Inc.,10%,S - Sale,58.33,-167328.0,42541907.0,0.0,-9760046.0
+2022-03-28,2022-03-25,DKS,"Dick'S Sporting Goods, Inc.",Hayes John Edward III,"SVP, GC",S - Sale,107.39,-2352.0,56517.0,-4.0,-252582.0
+2022-03-28,2022-03-24,CNXN,Pc Connection Inc,Gallup Patricia,"COB, Chief Admin Officer, 10%",S - Sale,51.89,-1952.0,7461926.0,0.0,-101289.0
+2022-03-28,2022-03-24,ZI,Zoominfo Technologies Inc.,Cg Subsidiary Holdings L.L.C.,10%,S - Sale,58.33,-167328.0,42541907.0,0.0,-9760046.0
+2022-03-28,2022-03-24,DELL,Dell Technologies Inc.,Scannell William F,"Pres, Glob. Sales, Cust. Ops",S - Sale,53.76,-162314.0,393316.0,-29.0,-8725393.0
+2022-03-28,2022-03-25,SOWG,Sow Good Inc.,Goldfarb IRA,"Exec COB, 10%",P - Purchase,0.0,6044.0,1783373.0,0.0,0.0
+2022-03-28,2022-03-25,FPI,Farmland Partners Inc.,Pittman Paul A,CEO,P - Purchase,13.44,2000.0,2362907.0,0.0,26870.0
+2022-03-28,2022-03-28,AME,Ametek Inc/,Amato Thomas A,Dir,S - Sale,133.03,-615.0,9560.0,-6.0,-81814.0
+2022-03-28,2022-03-24,KFS,Kingsway Financial Services Inc,Stilwell Joseph,"Dir, 10%",P - Purchase,5.5,20000.0,1733912.0,0.01,110000.0
+2022-03-28,2022-03-25,AME,Ametek Inc/,Conti Anthony James,Dir,S - Sale+OE,133.37,-5160.0,26078.0,-17.0,-688186.0
+2022-03-28,2022-03-25,VAC,Marriott Vacations Worldwide Corp,Yonker Michael E.,"EVP, CHRO",S - Sale,155.35,-1000.0,12371.0,-7.0,-155350.0
+2022-03-28,2022-03-24,ONCT,"Oncternal Therapeutics, Inc.",Vincent Richard G,CFO,P - Purchase,1.44,5000.0,94522.0,0.06,7210.0
+2022-03-28,2022-03-25,SEAS,"Seaworld Entertainment, Inc.",Swanson Marc,CEO,S - Sale,73.88,-6298.0,210243.0,-3.0,-465296.0
+2022-03-28,2022-03-24,AIR,Aar Corp,Storch David P,Dir,S - Sale+OE,50.83,-47500.0,1003532.0,-5.0,-2414387.0
+2022-03-28,2022-03-25,BUDZ,"Weed, Inc.",Breen Nicole M,"Secretary, Treasurer, 10%",S - Sale,0.25,-45000.0,21140584.0,0.0,-11283.0
+2022-03-28,2022-03-24,MAC,Macerich Co,O Hern Thomas E,CEO,P - Purchase,14.62,10000.0,137880.0,0.08,146150.0
+2022-03-28,2022-03-25,WLK,Westlake Corp,Kearns Roger L.,"COO, EVP - PEM",S - Sale+OE,126.0,-10333.0,26389.0,-28.0,-1301928.0
+2022-03-28,2022-03-25,WLK,Westlake Corp,Bender Mark Steven,"EVP, CFO",S - Sale+OE,125.34,-8000.0,30725.0,-21.0,-1002724.0
+2022-03-28,2022-03-25,NUE,Nucor Corp,Keller Michael D,"Vice Pres, Corp. Contro",S - Sale,154.58,-3600.0,26134.0,-12.0,-556474.0
+2022-03-28,2022-03-28,UMH,"Umh Properties, Inc.",Quigley Kenneth K Jr,Dir,P - Purchase,23.76,1000.0,13822.0,0.08,23759.0
+2022-03-28,2022-03-25,WLFC,Willis Lease Finance Corp,Hunziker Hans Jorg,Dir,S - Sale,33.29,-940.0,22494.0,-4.0,-31293.0
+2022-03-28,2022-03-25,TPL,Texas Pacific Land Corp,Stahl Murray,Dir,P - Purchase,1454.5,20.0,368967.0,0.0,29090.0
+2022-03-28,2022-03-24,FOMC,Fomo Corp.,Szoradi Charles Attila,"Advisory Board Member, 10%",S - Sale,0.0,-2370.0,8500000.0,0.0,-2.0
+2022-03-28,2022-03-28,JOUT,Johnson Outdoors Inc,Johnson David W,"VP, CFO",S - Sale,80.08,-1000.0,21204.0,-5.0,-80080.0
+2022-03-28,2022-03-25,GRIL,"Muscle Maker, Inc.",Infante Aimee,CMO,P - Purchase,0.5,1500.0,4102.0,0.58,750.0
+2022-03-28,2022-03-25,GRIL,"Muscle Maker, Inc.",Miller Kenneth Eugene,COO,P - Purchase,0.51,1800.0,33942.0,0.06,909.0
+2022-03-28,2022-03-25,CLH,Clean Harbors Inc,Gerstenberg Eric W,COO(CHESI),S - Sale,106.62,-6927.0,90826.0,-7.0,-738557.0
+2022-03-28,2022-03-25,CMTV,Community Bancorp /vt,Laforce David,Dir,P - Purchase,22.25,100.0,5970.0,0.02,2225.0
+2022-03-28,2022-03-24,XAIR,"Beyond Air, Inc.",Carey Robert,Dir,P - Purchase,6.64,26185.0,547323.0,0.05,173872.0
+2022-03-28,2022-03-25,REX,Rex American Resources Corp,Bruggeman Douglas,"CFO, VP-Finance, Treasurer",S - Sale,104.55,-1100.0,18765.0,-6.0,-115005.0
+2022-03-28,2022-03-25,TNXP,Tonix Pharmaceuticals Holding Corp.,Lederman Seth,CEO,P - Purchase,0.25,100000.0,248024.0,0.68,24500.0
+2022-03-28,2022-03-24,AQMS,"Aqua Metals, Inc.",Cotton Stephen,CEO,S - Sale,1.41,-100605.0,4070975.0,-2.0,-141853.0
+2022-03-28,2022-03-24,AQMS,"Aqua Metals, Inc.",Taecker Benjamin S.,"Chief Eng, Opr Officer",S - Sale,1.41,-13431.0,414647.0,-3.0,-18938.0
+2022-03-28,2022-03-24,TTC,Toro Co,Janey Gregory S,"VP, RLC",S - Sale+OE,86.0,-2200.0,6190.0,-26.0,-189200.0
+2022-03-28,2022-03-25,PFMT,Performant Financial Corp,"Prescott Group Capital Management, L.L.C.",10%,P - Purchase,2.84,100000.0,15454704.0,0.01,284000.0
+2022-03-28,2022-03-24,KEYS,"Keysight Technologies, Inc.",Stephens Kevin A,Dir,P - Purchase,158.92,1000.0,2626.0,0.62,158924.0
+2022-03-28,2022-03-24,EMAN,Emagin Corp,Stillwater Holdings LLC,10%,S - Sale,1.16,-53300.0,3296057.0,-2.0,-61882.0
+2022-03-28,2022-03-25,ATSG,"Air Transport Services Group, Inc.",Vorholt Jeffrey J,Dir,P - Purchase,32.94,2000.0,31643.0,0.07,65877.0
+2022-03-28,2022-03-22,EKSO,"Ekso Bionics Holdings, Inc.",Jones Jason C,VP of Product Development,S - Sale,2.82,-3265.0,81637.0,-4.0,-9206.0
+2022-03-28,2022-03-25,ADBE,Adobe Inc.,Belsky Scott,"EVP, CPO, Creative Cloud",S - Sale,435.44,-2750.0,29789.0,-8.0,-1197460.0
+2022-03-28,2022-03-24,TISI,Team Inc,Davis Jeffery Gerald,Dir,P - Purchase,1.57,50000.0,98490.0,1.03,78697.0
+2022-03-28,2022-03-24,ADBE,Adobe Inc.,Garfield Mark S.,"SVP, CAO, Corp. Controller",S - Sale,425.79,-463.0,2144.0,-18.0,-197141.0
+2022-03-28,2022-03-24,ALTG,Alta Equipment Group Inc.,"B. Riley Financial, Inc.",10%,P - Purchase,12.28,186395.0,6267091.0,0.03,2288931.0
+2022-03-28,2022-03-24,AZO,Autozone Inc,Gould Eric S.,SVP,S - Sale+OE,2000.0,-2550.0,914.0,-74.0,-5100000.0
+2022-03-28,2022-03-24,ABNB,"Airbnb, Inc.",Johnson Belinda J.,Dir,S - Sale,165.0,-20000.0,79327.0,-20.0,-3300000.0
+2022-03-28,2022-03-25,SBOW,"Silverbow Resources, Inc.",Adam Steven W,"EVP, COO",S - Sale,34.5,-10000.0,112718.0,-8.0,-345000.0
+2022-03-28,2022-03-25,WLFC,Willis Lease Finance Corp,Hole Brian Richard,Pres,S - Sale,33.52,-2444.0,82792.0,-3.0,-81923.0
+2022-03-28,2022-03-25,HSY,Hershey Co,Scalia Christopher M,"SVP, CHRO",S - Sale+OE,213.64,-3647.0,9108.0,-29.0,-779130.0
+2022-03-28,2022-03-28,SWAV,"Shockwave Medical, Inc.",Zacharias Isaac,Chief Commercial Officer,S - Sale,188.83,-4000.0,69841.0,-5.0,-755320.0
+2022-03-28,2022-03-24,HMTV,"Hemisphere Media Group, Inc.","Edenbrook Capital, LLC",10%,P - Purchase,4.94,13100.0,2755248.0,0.0,64761.0
+2022-03-28,2022-03-24,FLYW,Flywire Corp,Riese Phillip John,Dir,S - Sale+OE,27.66,-5000.0,7292.0,-41.0,-138293.0
+2022-03-28,2022-03-24,LMB,"Limbach Holdings, Inc.",Bacon Charles A. III,"Pres, CEO",P - Purchase,6.85,3570.0,440275.0,0.01,24455.0
+2022-03-28,2022-03-24,F,Ford Motor Co,Ford William Clay Jr,"Exec Chair, Chair",P - Purchase,16.81,267697.0,15729727.0,0.02,4499987.0
+2022-03-28,2022-03-24,EMAN,Emagin Corp,Ginola Ltd,10%,S - Sale,1.16,-67601.0,351067.0,-16.0,-78456.0
+2022-03-28,2022-03-24,CECE,Ceco Environmental Corp,Gleason Todd R,CEO,P - Purchase,5.56,1776.0,190797.0,0.01,9869.0
+2022-03-28,2022-03-24,NEXI,"Neximmune, Inc.",Verstandig Grant,Dir,P - Purchase,3.94,190600.0,905495.0,0.27,750274.0
+2022-03-28,2022-03-24,AI,"C3.Ai, Inc.",Parkkinen Juho,"SVP, CFO",S - Sale,23.57,-1930.0,171269.0,-1.0,-45490.0
+2022-03-28,2022-03-24,IBKR,"Interactive Brokers Group, Inc.",Peterffy Thomas,COB,S - Sale,66.18,-40000.0,3307511.0,-1.0,-2647054.0
+2022-03-28,2022-03-25,KMI,"Kinder Morgan, Inc.",Schlosser John W,"VP (Pres, Terminals)",S - Sale,18.35,-1500.0,34719.0,-4.0,-27518.0
+2022-03-28,2022-03-25,CRM,"Salesforce.Com, Inc.",Benioff Marc,"COB, co-CEO",S - Sale+OE,210.85,-2300.0,28918241.0,0.0,-484961.0
+2022-03-28,2022-03-25,HSY,Hershey Co,Riggs Kristen J,"SVP, Chief Growth Officer",S - Sale+OE,211.8,-2608.0,9771.0,-21.0,-552374.0
+2022-03-28,2022-03-24,EXPI,"Exp World Holdings, Inc.",Sanford Glenn Darrel,"CEO, COB, 10%",S - Sale+OE,23.01,-18000.0,42034338.0,0.0,-414246.0
+2022-03-28,2022-03-25,QRHC,Quest Resource Holding Corp,Wynnefield Partners Small Cap Value LP I,10%,P - Purchase,6.23,3000.0,2316763.0,0.0,18690.0
+2022-03-29,2020-06-11,SBAC,Sba Communications Corp,Cavanagh Brendan Thomas,"EVP, CFO",P - Purchase,284.6,13.0,50819.0,0.0,3700.0
+2022-03-29,2022-03-25,RIBT,Ricebran Technologies,Continental Grain Co,10%,S - Sale,0.5,-585339.0,10063729.0,-5.0,-290064.0
+2022-03-29,2021-03-02,SBAC,Sba Communications Corp,Cavanagh Brendan Thomas,"EVP, CFO",S - Sale+OE,247.47,-3.0,50819.0,0.0,-742.0
+2022-03-29,2022-03-25,FDP,Fresh Del Monte Produce Inc,Sauter Hans,"SVP, R, D, Agriculture",S - Sale+OE,26.31,-2394.0,2231.0,-52.0,-62981.0
+2022-03-29,2022-03-25,ELVT,"Elevate Credit, Inc.",Greever Scott,COO,S - Sale,3.07,-15000.0,80496.0,-16.0,-46050.0
+2022-03-29,2022-03-28,THG,"Hanover Insurance Group, Inc.",Roche John C,"Pres, CEO",S - Sale+OE,150.23,-7258.0,74843.0,-9.0,-1090397.0
+2022-03-29,2022-03-29,COO,"Cooper Companies, Inc.",Weiss Robert S,Dir,S - Sale+OE,415.24,-13039.0,143070.0,-8.0,-5414368.0
+2022-03-29,2022-03-28,RBOT,Vicarious Surgical Inc.,Sachs Adam David,"Pres, CEO, 10%",S - Sale,4.23,-8537.0,170527.0,-5.0,-36112.0
+2022-03-29,2022-03-25,FDP,Fresh Del Monte Produce Inc,Bezerra Eduardo Guarita,"SVP, CFO",S - Sale+OE,26.31,-245.0,788.0,-24.0,-6446.0
+2022-03-29,2022-03-25,ETR,Entergy Corp /de/,Marsh Andrew S,"EVP, CFO",S - Sale+OE,115.02,-32000.0,105480.0,-23.0,-3680640.0
+2022-03-29,2022-03-25,PINE,"Alpine Income Property Trust, Inc.","Cto Realty Growth, Inc.",10%,P - Purchase,18.49,1291.0,828643.0,0.0,23867.0
+2022-03-29,2022-03-28,RBOT,Vicarious Surgical Inc.,Morris June,"CLO, Gen.Counsel, Sec",S - Sale,4.11,-2285.0,45052.0,-5.0,-9391.0
+2022-03-29,2022-03-25,ETR,Entergy Corp /de/,Denault Leo P,"COB, CEO",S - Sale+OE,115.02,-37662.0,375267.0,-9.0,-4331854.0
+2022-03-29,2022-03-28,NVT,Nvent Electric Plc,Merriman Ronald,Dir,S - Sale+OE,35.17,-3947.0,34519.0,-10.0,-138816.0
+2022-03-29,2022-03-28,GWRS,"Global Water Resources, Inc.",Cohn Andrew M.,Dir,P - Purchase,15.95,3408.0,1955240.0,0.0,54365.0
+2022-03-29,2022-03-25,VRM,"Vroom, Inc.",Mylod Robert J Jr,Dir,S - Sale,2.85,-14667.0,1738678.0,-1.0,-41848.0
+2022-03-29,2022-03-15,GWRS,"Global Water Resources, Inc.",Cohn Andrew M.,Dir,P - Purchase,16.0,1000.0,1951832.0,0.0,16000.0
+2022-03-29,2022-03-25,DBX,"Dropbox, Inc.",Regan Timothy,CFO,S - Sale,23.23,-2500.0,360324.0,-1.0,-58075.0
+2022-03-29,2022-03-25,FTCV,Fintech Acquisition Corp V,"Luxor Capital Group, LP",10%,S - Sale,9.85,-3440618.0,0.0,-100.0,-33898855.0
+2022-03-29,2022-03-29,EA,Electronic Arts Inc.,Wilson Andrew,"CEO, Dir",S - Sale,128.58,-10000.0,161114.0,-6.0,-1285813.0
+2022-03-29,2022-03-28,MACK,Merrimack Pharmaceuticals Inc,Crocker Gary L,See Remarks,P - Purchase,6.16,5000.0,109877.0,0.05,30822.0
+2022-03-29,2022-03-25,INDT,"Indus Realty Trust, Inc.","Ccp Sbs Gp, LLC",10%,P - Purchase,73.12,5200.0,9357.0,1.25,380228.0
+2022-03-29,2022-03-28,IMMR,Immersion Corp,Jose Francis,"CEO, GC",S - Sale+OE,5.26,-3915.0,25990.0,-13.0,-20593.0
+2022-03-29,2022-03-25,PING,Ping Identity Holding Corp.,Durand Andre Wong,"CEO, Dir",S - Sale+OE,26.04,-100000.0,413490.0,-19.0,-2603690.0
+2022-03-29,2022-03-25,CPE,Callon Petroleum Co,Blackstone Holdings III L.P.,10%,S - Sale,61.89,-130000.0,1869062.0,-7.0,-8045168.0
+2022-03-29,2022-03-25,ROIV,Roivant Sciences Ltd.,Kumar Rakhi,Chief Accounting Officer,S - Sale,5.06,-7281.0,165049.0,-4.0,-36842.0
+2022-03-29,2022-03-25,VNOM,Viper Energy Partners LP,Bx Guidon Topco LLC,10%,S - Sale,31.31,-45000.0,12872999.0,0.0,-1408775.0
+2022-03-29,2022-03-25,VNOM,Viper Energy Partners LP,Blackstone Holdings III L.P.,10%,S - Sale,31.31,-45000.0,12872999.0,0.0,-1408775.0
+2022-03-29,2022-03-25,INSP,"Inspire Medical Systems, Inc.",Herbert Timothy P.,"CEO, Pres",S - Sale,250.52,-130000.0,232737.0,-36.0,-32568000.0
+2022-03-29,2022-03-25,HRMY,"Harmony Biosciences Holdings, Inc.",Nielsen Jack,Dir,S - Sale,50.66,-114121.0,4154429.0,-3.0,-5781098.0
+2022-03-29,2022-03-25,OTIC,"Otonomy, Inc.",Cayer Paul E,"Ch. Financial, Business Offcr",S - Sale,2.4,-9639.0,223787.0,-4.0,-23159.0
+2022-03-29,2022-03-25,OTIC,"Otonomy, Inc.",Foster Alan Charles,Chief Scientific Officer,S - Sale,2.4,-4386.0,177017.0,-2.0,-10538.0
+2022-03-29,2022-03-25,OTIC,"Otonomy, Inc.",Savel Robert Michael II,Chief Technical Officer,S - Sale,2.4,-5699.0,145735.0,-4.0,-13692.0
+2022-03-29,2022-03-25,OTIC,"Otonomy, Inc.",Weber David Allen,"Pres, CEO",S - Sale,2.4,-19269.0,399375.0,-5.0,-46295.0
+2022-03-29,2022-03-02,SCND,Scientific Industries Inc,Frampton Marcus,Dir,P - Purchase,5.5,7000.0,17313.0,0.68,38500.0
+2022-03-29,2022-03-25,CPE,Callon Petroleum Co,"Primexx Energy Partners, Ltd",10%,S - Sale,61.89,-130000.0,1869062.0,-7.0,-8045168.0
+2022-03-29,2022-02-10,PD,"Pagerduty, Inc.",Wilson Howard,CFO,S - Sale+OE,34.13,-23164.0,326939.0,-7.0,-790530.0
+2022-03-29,2022-03-25,PD,"Pagerduty, Inc.",Wilson Howard,CFO,S - Sale+OE,35.35,-60336.0,316603.0,-16.0,-2132884.0
+2022-03-29,2022-03-25,CHPT,"Chargepoint Holdings, Inc.",Jansen Colleen,CMO,S - Sale+OE,19.0,-3500.0,362013.0,-1.0,-66500.0
+2022-03-29,2022-03-25,AN,"Autonation, Inc.",Lampert Edward S,10%,S - Sale,112.22,-32985.0,9593557.0,0.0,-3701705.0
+2022-03-29,2022-03-28,TYME,"Tyme Technologies, Inc.",Demurjian Michael,10%,S - Sale,0.35,-20000.0,23728846.0,0.0,-6900.0
+2022-03-29,2022-03-25,INSP,"Inspire Medical Systems, Inc.",Nelson Marilyn C,Dir,S - Sale,255.01,-15000.0,89840.0,-14.0,-3825076.0
+2022-03-29,2022-03-28,CRM,"Salesforce.Com, Inc.",Benioff Marc,"COB, co-CEO",S - Sale+OE,212.58,-2300.0,28918241.0,0.0,-488930.0
+2022-03-29,2022-03-25,ENV,"Envestnet, Inc.",Cooper Barry D.,"SVP, Head of Accounting Mgmt.",S - Sale,73.73,-678.0,27652.0,-2.0,-49989.0
+2022-03-29,2022-03-28,NTRA,"Natera, Inc.",Sheena Jonathan,CO-FOUNDER,S - Sale+OE,39.63,-134.0,564348.0,0.0,-5310.0
+2022-03-29,2022-03-25,ROIV,Roivant Sciences Ltd.,Gline Matthew,CEO,S - Sale,5.06,-35386.0,1471897.0,-2.0,-179053.0
+2022-03-29,2022-03-25,ROIV,Roivant Sciences Ltd.,Venker Eric,"Pres, COO",S - Sale,5.06,-80045.0,1308948.0,-6.0,-405028.0
+2022-03-29,2022-03-29,PWR,"Quanta Services, Inc.",Wayne Donald,"EVP, GC",S - Sale,136.68,-1817.0,65395.0,-3.0,-248348.0
+2022-03-29,2022-03-25,ALIT,"Alight, Inc. / Delaware",Foley William P II,Dir,S - Sale,10.09,-450000.0,14413199.0,-3.0,-4542500.0
+2022-03-29,2022-03-26,DBI,Designer Brands Inc.,Turner Mary,EVP;Pres DesignerBrands Canada,S - Sale+OE,13.69,-2554.0,15050.0,-15.0,-34964.0
+2022-03-29,2022-03-25,SXT,Sensient Technologies Corp,Winder Investment Pte Ltd,10%,P - Purchase,81.01,22800.0,5112886.0,0.0,1847028.0
+2022-03-29,2022-03-25,RVMD,"Revolution Medicines, Inc.",Schroeder Thilo,Dir,P - Purchase,24.79,42725.0,3939529.0,0.01,1059247.0
+2022-03-29,2022-03-28,NVDA,Nvidia Corp,Coxe Tench,Dir,S - Sale,274.06,-100000.0,4285524.0,-2.0,-27405720.0
+2022-03-29,2022-03-28,ASMB,"Assembly Biosciences, Inc.",Okazaki Jason A,COO,S - Sale,2.24,-4617.0,64633.0,-7.0,-10363.0
+2022-03-29,2022-03-25,ISEE,"Iveric Bio, Inc.",Sblendorio Glenn,CEO,S - Sale+OE,17.06,-18775.0,279689.0,-6.0,-320302.0
+2022-03-29,2022-03-25,ISEE,"Iveric Bio, Inc.",Carroll David Francis,CFO,S - Sale+OE,17.02,-16772.0,62935.0,-21.0,-285387.0
+2022-03-29,2022-03-25,STIM,"Neuronetics, Inc.",Cannell Capital LLC,10%,P - Purchase,2.96,60848.0,2728460.0,0.02,179996.0
+2022-03-29,2022-03-28,NTRA,"Natera, Inc.",Brophy Michael Burkes,CFO,S - Sale+OE,39.63,-915.0,161413.0,-1.0,-36260.0
+2022-03-29,2022-03-28,NTRA,"Natera, Inc.",Chapman Steven Leonard,"CEO, Pres",S - Sale+OE,39.63,-2605.0,60676.0,-4.0,-103233.0
+2022-03-29,2022-03-28,NTRA,"Natera, Inc.",Rabinowitz Daniel,"SEC., GC",S - Sale+OE,39.63,-686.0,143039.0,0.0,-27185.0
+2022-03-29,2022-03-28,NTRA,"Natera, Inc.",Schueren Robert Alan,COO,S - Sale+OE,39.63,-1382.0,90105.0,-2.0,-54767.0
+2022-03-29,2022-03-25,CRC,California Resources Corp,Goldentree Asset Management LP,10%,S - Sale,49.35,-609209.0,8104086.0,-7.0,-30065788.0
+2022-03-29,2022-03-29,COST,Costco Wholesale Corp /new,Rose Timothy L.,EVP,S - Sale,566.29,-4000.0,28409.0,-12.0,-2265145.0
+2022-03-29,2022-03-28,MLSS,Milestone Scientific Inc.,Osser Leonard,Dir,S - Sale,1.33,-7110.0,4272238.0,0.0,-9456.0
+2022-03-29,2022-03-25,CMC,Commercial Metals Co,Smith Barbara,"COB, Pres, CEO",S - Sale,43.49,-20899.0,699662.0,-3.0,-908898.0
+2022-03-29,2022-03-25,MORN,"Morningstar, Inc.",Mansueto Joseph D,"Exec COB, 10%",S - Sale,269.98,-19026.0,17323970.0,0.0,-5136544.0
+2022-03-29,2022-03-25,GRIL,"Muscle Maker, Inc.",Roper Michael John,CEO,P - Purchase,0.52,10000.0,130000.0,0.08,5200.0
+2022-03-29,2022-03-28,LMB,"Limbach Holdings, Inc.",Krzeminski Laurel J,Dir,P - Purchase,6.81,3500.0,14599.0,0.32,23848.0
+2022-03-29,2022-03-28,NFJ,"Virtus Dividend, Interest & Premium Strategy Fund",Zino Brian T,Dir,P - Purchase,14.31,850.0,850.0,999999.0,12161.0
+2022-03-29,2022-03-28,LLY,Eli Lilly & Co,Lilly Endowment Inc,10%,S - Sale,292.16,-7538.0,106161027.0,0.0,-2202264.0
+2022-03-29,2022-03-28,TPL,Texas Pacific Land Corp,Stahl Murray,Dir,P - Purchase,1401.9,20.0,368987.0,0.0,28038.0
+2022-03-29,2022-03-28,LEU,Centrus Energy Corp,Poneman Daniel B,"Pres, CEO",S - Sale+OE,32.03,-12000.0,63434.0,-16.0,-384353.0
+2022-03-29,2022-03-28,MAC,Macerich Co,Coppola Edward C,Pres,P - Purchase,14.98,10000.0,556510.0,0.02,149790.0
+2022-03-29,2022-03-28,ADSK,"Autodesk, Inc.",Hope Stephen W.,"VP, Chief Accounting Officer",S - Sale,212.3,-1626.0,2902.0,-36.0,-345200.0
+2022-03-29,2022-03-28,ADSK,"Autodesk, Inc.",Clifford Deborah,"EVP, CFO",S - Sale,212.3,-1820.0,13192.0,-12.0,-386386.0
+2022-03-29,2022-03-28,ALBO,"Albireo Pharma, Inc.",Stephenson Pamela,Chief Commercial Officer,S - Sale,30.53,-454.0,46319.0,-1.0,-13858.0
+2022-03-29,2022-03-15,WKHS,Workhorse Group Inc.,Mader Pamela S.,Dir,P - Purchase,3.18,12600.0,53508.0,0.31,40050.0
+2022-03-29,2022-03-25,MIXT,Mix Telematics Ltd,Dell Paul M,Chief Accounting Officer,S - Sale,0.49,-119124.0,1000.0,-99.0,-58371.0
+2022-03-29,2022-03-25,MITK,Mitek Systems Inc,Diamond Michael E,General Manager,S - Sale,14.22,-572.0,205671.0,0.0,-8134.0
+2022-03-29,2022-03-28,AIR,Aar Corp,Gillen Sean M.,VP-CFO,S - Sale+OE,48.67,-20230.0,35429.0,-36.0,-984657.0
+2022-03-29,2022-03-01,BRTX,"Biorestorative Therapies, Inc.",Broadrick Dale,10%,P - Purchase,5.09,155950.0,507125.0,0.44,794110.0
+2022-03-29,2022-03-29,HLBZ,"Helbiz, Inc.",Palella Salvatore,"CEO, 10%",P - Purchase,2.86,350000.0,900000.0,0.64,1001000.0
+2022-03-29,2022-03-25,RCAT,"Red Cat Holdings, Inc.",Liuzza Nicholas Reyland Jr,Dir,P - Purchase,2.19,6050.0,896915.0,0.01,13223.0
+2022-03-29,2022-03-25,USM,United States Cellular Corp,Crowley J Samuel,Dir,S - Sale,30.56,-2752.0,7445.0,-27.0,-84101.0
+2022-03-29,2022-03-28,PALI,"Palisade Bio, Inc.",Hallam Thomas,CEO,P - Purchase,1.18,10000.0,17592.0,1.32,11800.0
+2022-03-29,2022-03-28,LMPX,"Lmp Automotive Holdings, Inc.",Tawfik Samer,"Pres, CEO, 10%",S - Sale,4.6,-9000.0,3731103.0,0.0,-41400.0
+2022-03-29,2022-03-25,FNKO,"Funko, Inc.","Woodson Capital Management, LP",10%,S - Sale,17.18,-1.0,3999999.0,0.0,-17.0
+2022-03-29,2022-03-25,LH,Laboratory Corp of America Holdings,Williams R Sanders,Dir,S - Sale,272.98,-572.0,6431.0,-8.0,-156145.0
+2022-03-29,2022-03-28,LTBR,Lightbridge Corp,Tobin Mark Robert,Dir,S - Sale,8.94,-1500.0,1774.0,-46.0,-13410.0
+2022-03-29,2022-03-28,KN,Knowles Corp,Giesecke Daniel J.,"SVP, COO",S - Sale+OE,22.19,-47873.0,88608.0,-35.0,-1062302.0
+2022-03-29,2022-03-28,ZDPY,"Zoned Properties, Inc.",Friedman Art,Dir,P - Purchase,0.7,1425.0,144725.0,0.01,994.0
+2022-03-29,2022-02-17,OPBK,Op Bancorp,Dow Ernest,Dir,P - Purchase,13.75,720.0,241564.0,0.0,9900.0
+2022-03-29,2022-02-25,PQEFF,Petroteq Energy Inc.,Cantone Anthony J,10%,P - Purchase,0.32,5243619.0,77548476.0,0.07,1671453.0
+2022-03-29,2022-03-28,RDGL,Vivos Inc,Korenko Michael K,"CEO, Pres",P - Purchase,0.06,100000.0,9584890.0,0.01,6240.0
+2022-03-29,2022-03-25,CREX,"Creative Realities, Inc.",Harris Donald A,Dir,P - Purchase,0.86,75400.0,266293.0,0.39,64844.0
+2022-03-29,2022-03-25,RCAT,"Red Cat Holdings, Inc.",Thompson Jeffrey M,"COB, CEO, 10%",P - Purchase,2.08,1500.0,12674468.0,0.0,3125.0
+2022-03-29,2022-03-25,GNLN,"Greenlane Holdings, Inc.",Schoenfeld Adam,"CMO, 10%",S - Sale,0.7,-33000.0,267244.0,-11.0,-23057.0
+2022-03-29,2022-03-25,AVGO,Broadcom Inc.,Delly Gayla J,Dir,S - Sale,624.67,-200.0,3051.0,-6.0,-124934.0
+2022-03-29,2022-03-25,SXT,Sensient Technologies Corp,Winder Investment Pte Ltd,10%,S - Sale,81.01,-22800.0,5112886.0,0.0,-1847028.0
+2022-03-29,2022-03-28,V,Visa Inc.,McInerney Ryan,Pres,S - Sale+OE,220.0,-6466.0,159696.0,-4.0,-1422520.0
+2022-03-29,2022-03-26,TRNS,Transcat Inc,Rudow Lee D.,"Pres, CEO",S - Sale+OE,74.21,-5210.0,126397.0,-4.0,-386634.0
+2022-03-29,2022-03-28,NFG,National Fuel Gas Co,Tanski Ronald J,Dir,S - Sale,68.96,-42555.0,385562.0,-10.0,-2934388.0
+2022-03-29,2022-03-25,DASH,"Doordash, Inc.",Sherringham Tia,"GC, Secretary",S - Sale+OE,113.94,-625.0,23757.0,-3.0,-71213.0
+2022-03-29,2022-03-25,CLR,"Continental Resources, Inc",Stark Jack H,Pres,S - Sale,64.23,-25000.0,790311.0,-3.0,-1605630.0
+2022-03-29,2022-03-23,VIA,"Via Renewables, Inc.",Maxwell W Keith III,"CEO, 10%",P - Purchase,8.06,4000.0,3555002.0,0.0,32230.0
+2022-03-29,2022-03-25,HD,"Home Depot, Inc.",Padilla Hector A,"EVP - Outside Sales, Service",S - Sale+OE,309.8,-504.0,11229.0,-4.0,-156139.0
+2022-03-29,2022-03-28,BSX,Boston Scientific Corp,Meredith Ian T,EVP Global Chief Med Officer,S - Sale,43.68,-6588.0,28082.0,-19.0,-287764.0
+2022-03-29,2022-03-25,LPG,Dorian Lpg Ltd.,Coleman Thomas Jason,Dir,S - Sale,14.9,-100000.0,3545336.0,-3.0,-1490000.0
+2022-03-29,2022-03-28,HONE,"Harborone Bancorp, Inc.",Blake James W.,CEO,S - Sale+OE,14.11,-50000.0,288840.0,-15.0,-705295.0
+2022-03-29,2022-03-16,PLMR,"Palomar Holdings, Inc.",Uchida T Christopher,CFO,S - Sale,62.2,-500.0,26425.0,-2.0,-31100.0
+2022-03-29,2022-03-25,MRO,Marathon Oil Corp,Tillman Lee M,"COB, Pres, CEO",S - Sale+OE,26.09,-270588.0,1070088.0,-20.0,-7059830.0
+2022-03-29,2022-03-25,COUP,Coupa Software Inc,Riggs Mark,Chief Customer Officer,S - Sale,104.87,-1013.0,0.0,-100.0,-106233.0
+2022-03-29,2022-03-25,AR,Antero Resources Corp,Clark Robert J,Dir,S - Sale,30.0,-10000.0,83107.0,-11.0,-300000.0
+2022-03-29,2022-03-28,TISI,Team Inc,Lederman Evan S.,Dir,P - Purchase,1.56,8300.0,34300.0,0.32,12950.0
+2022-03-29,2022-03-28,NET,"Cloudflare, Inc.",Ledbetter Carl,Dir,S - Sale,127.21,-20000.0,1978612.0,-1.0,-2544148.0
+2022-03-29,2022-03-25,FUSN,Fusion Pharmaceuticals Inc.,Valliant John,CEO,S - Sale,7.54,-10300.0,367260.0,-3.0,-77694.0
+2022-03-29,2022-03-25,BAH,Booz Allen Hamilton Holding Corp,Laben Nancy,"EVP, GC",S - Sale+OE,88.63,-27164.0,11064.0,-71.0,-2407580.0
+2022-03-29,2022-03-28,DLTR,"Dollar Tree, Inc.",Heinrich Daniel J,Dir,P - Purchase,156.1,425.0,3575.0,0.13,66340.0
+2022-03-29,2022-03-29,SAIC,Science Applications International Corp,Mayopoulos Timothy J,Dir,S - Sale+OE,92.94,-3500.0,9486.0,-27.0,-325290.0
+2022-03-29,2022-03-25,AMP,Ameriprise Financial Inc,Alvero Gumer,"Pres-INSURANCE, ANNUITIES",S - Sale+OE,314.3,-2044.0,8732.0,-19.0,-642425.0
+2022-03-29,2022-03-28,SRE,Sempra Energy,Martin Jeffrey W,"COB, CEO, Pres",S - Sale,162.23,-30796.0,27427.0,-53.0,-4996049.0
+2022-03-29,2022-03-28,LCTX,"Lineage Cell Therapeutics, Inc.",Amin Dipti,Dir,P - Purchase,1.63,35000.0,35000.0,999999.0,57050.0
+2022-03-29,2022-03-28,GLPI,"Gaming & Leisure Properties, Inc.",Moore Brandon John,"EVP, GC,amp; Sec",S - Sale,45.04,-5000.0,194993.0,-3.0,-225200.0
+2022-03-29,2022-03-25,NOW,"Servicenow, Inc.",Bedi Christopher,CIO,S - Sale+OE,581.04,-700.0,13172.0,-5.0,-406728.0
+2022-03-29,2022-03-28,FISV,Fiserv Inc,Chiarello Guy,COO,S - Sale+OE,100.04,-10000.0,280363.0,-3.0,-1000400.0
+2022-03-29,2022-03-25,FET,"Forum Energy Technologies, Inc.","Scf Partners, Inc.","Member of Group, 10%",S - Sale,23.42,-39787.0,697614.0,-5.0,-931674.0
+2022-03-29,2022-03-29,FCPT,"Four Corners Property Trust, Inc.",Hansen Douglas B,Dir,P - Purchase,26.83,1000.0,40170.0,0.03,26830.0
+2022-03-29,2022-03-29,FCPT,"Four Corners Property Trust, Inc.",Hansen Douglas B,Dir,S - Sale,26.8,-1000.0,40170.0,-2.0,-26800.0
+2022-03-29,2022-03-25,AMP,Ameriprise Financial Inc,Cracchiolo James M,"COB, CEO",S - Sale,314.16,-56622.0,162241.0,-26.0,-17788523.0
+2022-03-30,2022-03-28,IVZ,Invesco Ltd.,"Trian Fund Management, L.P.",10%,P - Purchase,23.04,3529920.0,52034034.0,0.07,81330906.0
+2022-03-30,2022-03-29,DXCM,Dexcom Inc,Regan Barry J.,EVP Global Operations,S - Sale,500.0,-1106.0,16345.0,-6.0,-553000.0
+2022-03-30,2022-03-29,GL,Globe Life Inc.,Henrie Michael Shane,"SVP, Chief Accounting Officer",S - Sale+OE,102.94,-1500.0,126.0,-92.0,-154409.0
+2022-03-30,2022-03-28,RDI,Reading International Inc,James J. Cotter Living Trust,"Member of Sec.13(d)(3) Group, 10%",S - Sale,4.3,-8250.0,1301149.0,-1.0,-35465.0
+2022-03-30,2022-03-29,ADI,Analog Devices Inc,Doluca Tunc,Dir,S - Sale,170.0,-4600.0,766484.0,-1.0,-782000.0
+2022-03-30,2022-03-28,RDI,Reading International Inc,Cotter Margaret,"Chairperson, EVP - RE Dev, NY, 10%",S - Sale,4.3,-8250.0,2156754.0,0.0,-35465.0
+2022-03-30,2022-03-29,EXPE,"Expedia Group, Inc.",Khosrowshahi Dara,Dir,S - Sale,200.0,-5000.0,304022.0,-2.0,-1000000.0
+2022-03-30,2022-03-29,AKAM,Akamai Technologies Inc,McGowan Edward J,CFO,S - Sale,120.0,-3805.0,15348.0,-20.0,-456600.0
+2022-03-30,2022-03-28,RDI,Reading International Inc,Cotter Ellen M,"Vice Chair, Pres, CEO, 10%",S - Sale,4.3,-8250.0,2115953.0,0.0,-35465.0
+2022-03-30,2022-03-29,EPAC,Enerpac Tool Group Corp,Dillon Ricky T,EVP-CFO,S - Sale,22.41,-8955.0,85261.0,-10.0,-200663.0
+2022-03-30,2022-03-28,ON,On Semiconductor Corp,Mascarenas Paul Anthony,Dir,S - Sale,65.0,-20000.0,41981.0,-32.0,-1300000.0
+2022-03-30,2022-03-29,SSB,Southstate Corp,Williams Douglas Lloyd,"Pres, Atlanta Banking Grp",S - Sale,85.02,-4950.0,89269.0,-5.0,-420849.0
+2022-03-30,2022-03-29,CRM,"Salesforce.Com, Inc.",Benioff Marc,"COB, co-CEO",S - Sale+OE,219.93,-2300.0,28918241.0,0.0,-505839.0
+2022-03-30,2022-03-28,NOVN,"Novan, Inc.",Bierman James L,Dir,P - Purchase,3.45,1000.0,3000.0,0.5,3450.0
+2022-03-30,2022-03-28,BNED,"Barnes & Noble Education, Inc.",Levenick Zachary,Dir,P - Purchase,3.63,30000.0,613045.0,0.05,108900.0
+2022-03-30,2022-03-28,NSYS,Nortech Systems Inc,Kunin David B,"Dir, 10%",P - Purchase,10.1,4752.0,1407668.0,0.0,47982.0
+2022-03-30,2022-03-28,SITM,Sitime Corp,Bonnot Lionel,See Remarks,S - Sale,260.0,-1315.0,114864.0,-1.0,-341900.0
+2022-03-30,2022-03-28,SITM,Sitime Corp,Sevalia Piyush B,EVP Marketing,S - Sale,260.0,-657.0,117739.0,-1.0,-170820.0
+2022-03-30,2022-03-28,AIZ,"Assurant, Inc.",Lonergan Robert,EVP,S - Sale,183.19,-2200.0,16451.0,-12.0,-403009.0
+2022-03-30,2022-03-29,AIZ,"Assurant, Inc.",Luthi Francesca,"EVP, CAO",S - Sale,181.81,-4000.0,11632.0,-26.0,-727255.0
+2022-03-30,2022-03-28,PLYA,Playa Hotels & Resorts N.V.,Peterson Karl Mr.,Dir,S - Sale,8.46,-30000.0,3084033.0,-1.0,-253800.0
+2022-03-30,2022-03-29,QS,Quantumscape Corp,Singh Mohit,Chief Development Officer,S - Sale+OE,18.96,-5360.0,344255.0,-2.0,-101643.0
+2022-03-30,2022-03-29,EPR,Epr Properties,Peterson Mark Alan,"EVP, CFO",S - Sale,55.02,-4543.0,98700.0,-4.0,-249956.0
+2022-03-30,2022-03-29,DOCU,"Docusign, Inc.",Olrich Scott V.,COO,S - Sale+OE,110.14,-13335.0,270978.0,-5.0,-1468690.0
+2022-03-30,2022-03-28,IBKR,"Interactive Brokers Group, Inc.",Peterffy Thomas,COB,S - Sale,66.84,-40000.0,3267511.0,-1.0,-2673480.0
+2022-03-30,2022-03-28,LPG,Dorian Lpg Ltd.,Coleman Thomas Jason,Dir,S - Sale,14.76,-24000.0,3521336.0,-1.0,-354240.0
+2022-03-30,2022-03-29,NET,"Cloudflare, Inc.",Seifert Thomas J,CFO,S - Sale+OE,129.35,-10000.0,86433.0,-10.0,-1293468.0
+2022-03-30,2022-03-28,KALU,Kaiser Aluminum Corp,Gerard Leo Wilfred,Dir,S - Sale,92.48,-663.0,2941.0,-18.0,-61316.0
+2022-03-30,2022-03-28,QS,Quantumscape Corp,Leohold Jurgen,Dir,S - Sale+OE,18.02,-20717.0,152589.0,-12.0,-373271.0
+2022-03-30,2020-12-24,NSYS,Nortech Systems Inc,Jones Christopher Dean,CFO,P - Purchase,6.02,5803.0,50000.0,0.13,34913.0
+2022-03-30,2022-03-28,ILMN,"Illumina, Inc.",Dadswell Charles,"SVP, GC",S - Sale,342.83,-368.0,7795.0,-5.0,-126161.0
+2022-03-30,2022-03-28,OSG,Overseas Shipholding Group Inc,"Cyrus Capital Partners, L.P.",10%,S - Sale,2.1,-70323.0,16833474.0,0.0,-147678.0
+2022-03-30,2022-03-28,EXEL,"Exelixis, Inc.",Hessekiel Jeffrey,"EVP, GC, Sec",S - Sale,22.0,-18000.0,606235.0,-3.0,-396000.0
+2022-03-30,2022-03-29,MA,Mastercard Inc,Vosburg Craig,Chief Product Officer,S - Sale,365.0,-1561.0,41314.0,-4.0,-569766.0
+2022-03-30,2022-03-30,SBOW,"Silverbow Resources, Inc.",Woolverton Sean C,CEO,S - Sale,35.14,-10000.0,250721.0,-4.0,-351400.0
+2022-03-30,2022-03-28,PRVA,"Privia Health Group, Inc.",Mehrotra Parth,"Pres, COO",S - Sale+OE,25.09,-20000.0,97391.0,-17.0,-501800.0
+2022-03-30,2022-03-28,PRVA,"Privia Health Group, Inc.",Bartrum Thomas,"EVP, GC",S - Sale+OE,25.09,-10000.0,27391.0,-27.0,-250900.0
+2022-03-30,2022-03-28,BOX,Box Inc,Berkovitch Eli,"VP Chief Acct Ofr, Controller",S - Sale,28.37,-8000.0,128727.0,-6.0,-226920.0
+2022-03-30,2022-03-29,NEXI,"Neximmune, Inc.",Jones Kristi,"Pres, CEO",P - Purchase,3.74,10000.0,73078.0,0.16,37400.0
+2022-03-30,2022-03-28,ACEL,"Accel Entertainment, Inc.",Peterson Karl Mr.,Dir,S - Sale,12.51,-35000.0,2813145.0,-1.0,-437787.0
+2022-03-30,2022-03-28,FORA,Forian Inc.,Wygod Martin J,Dir,P - Purchase,6.43,15373.0,2522845.0,0.01,98813.0
+2022-03-30,2021-09-13,JAGX,"Jaguar Health, Inc.",Conte Lisa A,"CEO, Pres",P - Purchase,2.51,7968.0,8003.0,999999.0,20000.0
+2022-03-30,2021-09-13,JAGX,"Jaguar Health, Inc.",Lizak Carol R.,CFO,P - Purchase,2.51,7968.0,7968.0,999999.0,20000.0
+2022-03-30,2022-03-28,MYPS,"Playstudios, Inc.",Pascal Andrew S,"COB, CEO, 10%",P - Purchase,4.62,13000.0,12594032.0,0.0,60102.0
+2022-03-30,2022-03-29,JOAN,Joann Inc.,Webb Darrell,Dir,S - Sale,12.5,-94568.0,107812.0,-47.0,-1182374.0
+2022-03-30,2022-03-28,JOAN,Joann Inc.,Webb Darrell,Dir,S - Sale,12.29,-10165.0,202380.0,-5.0,-124883.0
+2022-03-30,2022-03-28,TMDX,"Transmedics Group, Inc.",Carey John F,VP of Operations,S - Sale+OE,25.01,-4500.0,379.0,-92.0,-112545.0
+2022-03-30,2022-03-28,TSLA,"Tesla, Inc.",Baglino Andrew D,"SVP Powertrain, Energy Eng.",S - Sale+OE,1065.0,-3500.0,20138.0,-15.0,-3727500.0
+2022-03-30,2022-03-28,PSMT,Pricesmart Inc,Price Robert E,"Dir, 10%",S - Sale,79.52,-20000.0,2106122.0,-1.0,-1590446.0
+2022-03-30,2022-03-28,DASH,"Doordash, Inc.",Payne Christopher D,"Pres, COO",S - Sale+OE,114.66,-44000.0,304402.0,-13.0,-5044932.0
+2022-03-30,2022-03-29,ZUMZ,Zumiez Inc,Visser Chris K.,"GC, Sec.",S - Sale+OE,41.78,-8888.0,12339.0,-42.0,-371360.0
+2022-03-30,2022-03-29,RPRX,Royalty Pharma Plc,Riggs Rory B,Dir,S - Sale,38.59,-60000.0,701899.0,-8.0,-2315322.0
+2022-03-30,2022-03-29,IIVI,II-Vi Inc,Kramer Francis J,Dir,S - Sale+OE,75.0,-22610.0,589231.0,-4.0,-1695800.0
+2022-03-30,2022-03-29,IIVI,II-Vi Inc,Xia Howard H.,Dir,S - Sale+OE,74.4,-6000.0,35746.0,-14.0,-446400.0
+2022-03-30,2022-03-29,ESS,"Essex Property Trust, Inc.",Schall Michael J,"Pres, CEO",S - Sale+OE,349.19,-12132.0,51384.0,-19.0,-4236373.0
+2022-03-30,2022-03-28,TW,Tradeweb Markets Inc.,Bruni Enrico,"MD, Europe, Asia",S - Sale,90.09,-18766.0,82702.0,-18.0,-1690664.0
+2022-03-30,2022-03-28,OGE,Oge Energy Corp.,Horn Patricia D,"VP-Governance, Corp Sec",S - Sale,39.95,-4015.0,35018.0,-10.0,-160399.0
+2022-03-30,2022-03-29,ESS,"Essex Property Trust, Inc.",Kleiman Angela L.,"Sr. EVP, COO",S - Sale+OE,354.21,-6309.0,8110.0,-44.0,-2234710.0
+2022-03-30,2022-03-29,MANT,Mantech International Corp,Pedersen George J,10%,S - Sale+OE,78.22,-9384843.0,2195157.0,-81.0,-734093355.0
+2022-03-30,2022-03-28,TRUP,"Trupanion, Inc.",Rawlings Darryl,CEO,S - Sale,90.8,-4000.0,857109.0,0.0,-363200.0
+2022-03-30,2022-03-28,TRUP,"Trupanion, Inc.",Tooth Margaret,Pres,S - Sale,91.24,-150.0,36030.0,0.0,-13686.0
+2022-03-30,2022-03-28,EOLS,"Evolus, Inc.",Moatazedi David,See Remarks,S - Sale,11.62,-6104.0,547282.0,-1.0,-70928.0
+2022-03-30,2022-03-28,PSMT,Pricesmart Inc,Price Philanthropies Foundation,10%,S - Sale,79.52,-20000.0,3433755.0,-1.0,-1590446.0
+2022-03-30,2022-03-29,HONE,"Harborone Bancorp, Inc.",Blake James W.,CEO,S - Sale+OE,14.33,-49389.0,288840.0,-15.0,-707976.0
+2022-03-30,2022-03-28,OXY,Occidental Petroleum Corp /de/,Hollub Vicki A.,"Pres, CEO",P - Purchase,56.24,14191.0,490672.0,0.03,798102.0
+2022-03-30,2022-03-29,MKL,Markel Corp,Markel Steven A,Dir,S - Sale,1486.02,-1500.0,91615.0,-2.0,-2229033.0
+2022-03-30,2022-03-25,QNBC,Qnb Corp,Bimes Randy S.,Dir,P - Purchase,36.77,272.0,109422.0,0.0,10000.0
+2022-03-30,2022-03-25,QNBC,Qnb Corp,Mann Jennifer L,Dir,P - Purchase,36.77,163.0,4249.0,0.04,6000.0
+2022-03-30,2022-03-29,TLRS,Timberline Resources Corp,Osterberg Steven A.,"VP, Exploration",P - Purchase,0.14,71425.0,1108994.0,0.07,10000.0
+2022-03-30,2022-03-28,BUDZ,"Weed, Inc.",Breen Nicole M,"Secretary, Treasurer, 10%",S - Sale,0.28,-20000.0,21120584.0,0.0,-5600.0
+2022-03-30,2022-03-28,AIR,Aar Corp,Jessup Christopher A.,VP-CCO,S - Sale+OE,49.61,-1200.0,43206.0,-3.0,-59526.0
+2022-03-30,2022-03-29,OGEN,Oragenics Inc,Sullivan Michael O'Keefe,"Interim PEO, CFO",P - Purchase,0.35,20000.0,34255.0,1.4,6922.0
+2022-03-30,2022-03-28,WM,Waste Management Inc,Fish James C Jr,"Pres, CEO",S - Sale,158.21,-35724.0,209502.0,-15.0,-5651757.0
+2022-03-30,2022-03-28,AIR,Aar Corp,Holmes John McClain III,"Pres, CEO",S - Sale+OE,48.27,-32619.0,244041.0,-12.0,-1574355.0
+2022-03-30,2022-03-28,AIR,Aar Corp,Pachapa Eric,"VP-CAO, Controller",S - Sale+OE,48.44,-20650.0,19440.0,-52.0,-1000360.0
+2022-03-30,2022-03-28,LMB,"Limbach Holdings, Inc.",Brooks Jayme L.,"EVP, CFO",P - Purchase,6.89,2170.0,53197.0,0.04,14951.0
+2022-03-30,2022-03-28,OFC,Corporate Office Properties Trust,Thor Greg J,"SVP--CAO, Controller",S - Sale,29.05,-4333.0,18096.0,-19.0,-125859.0
+2022-03-30,2022-03-29,MCB,Metropolitan Bank Holding Corp.,Defazio Mark R,"Pres, CEO",S - Sale+OE,106.86,-5336.0,93268.0,-5.0,-570193.0
+2022-03-30,2022-03-29,MCB,Metropolitan Bank Holding Corp.,Defazio Mark R,"Pres, CEO",S - Sale+OE,106.64,-3974.0,89294.0,-4.0,-423767.0
+2022-03-30,2022-03-29,LMB,"Limbach Holdings, Inc.",Young Norbert W.,Dir,P - Purchase,7.02,1000.0,24699.0,0.04,7020.0
+2022-03-30,2022-03-29,MCB,Metropolitan Bank Holding Corp.,Defazio Mark R,"Pres, CEO",S - Sale+OE,106.41,-2467.0,86827.0,-3.0,-262502.0
+2022-03-30,2022-03-29,EDSA,"Edesa Biotech, Inc.",Nijhawan Pardeep,"CEO, 10%",P - Purchase,3.02,2000.0,3288285.0,0.0,6034.0
+2022-03-30,2022-03-29,VIRI,"Virios Therapeutics, Inc.",Pridgen William,Dir,P - Purchase,4.94,600.0,732253.0,0.0,2964.0
+2022-03-30,2022-03-29,REGN,"Regeneron Pharmaceuticals, Inc.",Landry Robert E,EVP Finance CFO,S - Sale+OE,687.9,-2683.0,28973.0,-8.0,-1845630.0
+2022-03-30,2022-03-29,TCON,"Tracon Pharmaceuticals, Inc.",Brown Scott B.,CFO,P - Purchase,2.82,1000.0,8628.0,0.13,2820.0
+2022-03-30,2022-03-28,IRMD,Iradimed Corp,Susi Roger E.,"Pres, CEO, COB, 10%",S - Sale,52.95,-10000.0,5397950.0,0.0,-529546.0
+2022-03-30,2022-03-28,CMTV,Community Bancorp /vt,Couture Jacques R,Dir,P - Purchase,22.75,750.0,35184.0,0.02,17063.0
+2022-03-30,2022-03-29,PQEFF,Petroteq Energy Inc.,Cantone Anthony J,10%,P - Purchase,0.32,426100.0,77974576.0,0.01,134903.0
+2022-03-30,2022-03-29,LPTH,Lightpath Technologies Inc,Peck Darcie,Dir,P - Purchase,2.08,22500.0,45907.0,0.96,46876.0
+2022-03-30,2022-03-28,RMBS,Rambus Inc,Seraphin Luc,"Pres, CEO",S - Sale,32.3,-12500.0,276182.0,-4.0,-403778.0
+2022-03-30,2022-03-28,CLNN,Clene Inc.,Matlin David J,Dir,P - Purchase,3.16,18648.0,1861397.0,0.01,58933.0
+2022-03-30,2022-03-28,MTEX,Mannatech Inc,Robbins Kevin Andrew,Dir,S - Sale,36.57,-1100.0,13031.0,-8.0,-40227.0
+2022-03-30,2022-03-29,CYTH,"Cyclo Therapeutics, Inc.",Sieger Markus,Dir,P - Purchase,2.73,10000.0,81689.0,0.14,27300.0
+2022-03-30,2022-03-29,NXST,"Nexstar Media Group, Inc.",Muse John R,Dir,S - Sale,186.93,-10775.0,2400.0,-82.0,-2014115.0
+2022-03-30,2022-03-28,AXR,Amrep Corp.,Karabots Nick G,10%,S - Sale,10.45,-2096061.0,0.0,-100.0,-21903837.0
+2022-03-30,2022-03-28,DRI,Darden Restaurants Inc,Chugg Juliana L,Dir,P - Purchase,129.02,1925.0,1925.0,999999.0,248354.0
+2022-03-30,2022-03-29,TPL,Texas Pacific Land Corp,Stahl Murray,Dir,P - Purchase,1430.97,20.0,369007.0,0.0,28619.0
+2022-03-30,2022-03-29,MCB,Metropolitan Bank Holding Corp.,Defazio Mark R,"Pres, CEO",S - Sale+OE,106.12,-2239.0,84588.0,-3.0,-237607.0
+2022-03-30,2022-03-29,WLK,Westlake Corp,Bender Mark Steven,"EVP, CFO",S - Sale+OE,122.44,-4000.0,30725.0,-12.0,-489748.0
+2022-03-30,2022-03-28,CBU,"Community Bank System, Inc.",Levy Jeffrey M,"Pres, Commercial Banking",S - Sale+OE,70.54,-954.0,4992.0,-16.0,-67292.0
+2022-03-30,2022-03-28,ENPH,"Enphase Energy, Inc.",Kothandaraman Badrinarayanan,"Pres, CEO",S - Sale,200.01,-37500.0,988302.0,-4.0,-7500356.0
+2022-03-30,2022-03-28,ZI,Zoominfo Technologies Inc.,Cg Subsidiary Holdings L.L.C.,10%,S - Sale,58.42,-111777.0,42430130.0,0.0,-6529531.0
+2022-03-30,2022-03-28,ABNB,"Airbnb, Inc.",Gebbia Joseph,"See Remarks, 10%",S - Sale+OE,165.85,-504166.0,5267976.0,-9.0,-83617359.0
+2022-03-30,2022-03-28,ZI,Zoominfo Technologies Inc.,Carlyle Group Inc.,10%,S - Sale,58.42,-111777.0,42430130.0,0.0,-6529531.0
+2022-03-30,2022-03-28,NARI,"Inari Medical, Inc.",Tu Thomas,Chief Medical Officer,S - Sale+OE,90.0,-2000.0,78499.0,-2.0,-180000.0
+2022-03-30,2022-03-29,PLAY,"Dave & Buster'S Entertainment, Inc.",Metzinger Michael Joseph,"VP of Accounting, Controller",S - Sale+OE,50.0,-2526.0,14679.0,-15.0,-126304.0
+2022-03-30,2022-03-28,AVGO,Broadcom Inc.,Spears Kirsten M.,"VP CFO, Chief Accounting Ofcr",S - Sale,630.01,-5000.0,34546.0,-13.0,-3150025.0
+2022-03-30,2022-03-28,SXT,Sensient Technologies Corp,Winder Investment Pte Ltd,10%,P - Purchase,81.83,17429.0,5130315.0,0.0,1426264.0
+2022-03-30,2022-03-30,SAIC,Science Applications International Corp,Mayopoulos Timothy J,Dir,S - Sale+OE,93.75,-7721.0,3134.0,-71.0,-723872.0
+2022-03-30,2022-03-29,LLY,Eli Lilly & Co,Lilly Endowment Inc,10%,S - Sale,292.39,-4341.0,106156686.0,0.0,-1269254.0
+2022-03-30,2022-03-28,XPEL,"Xpel, Inc.",Crumly Richard K.,Dir,S - Sale,56.44,-38000.0,2207199.0,-2.0,-2144530.0
+2022-03-30,2022-03-29,HEI,Heico Corp,Irwin Thomas S,Sr EVP,S - Sale,125.22,-20000.0,46424.0,-30.0,-2504330.0
+2022-03-30,2022-03-28,BFI,"Burgerfi International, Inc.",John Rosatti Revocable Trust,10%,S - Sale,4.36,-9000.0,3755540.0,0.0,-39270.0
+2022-03-30,2022-03-28,EMAN,Emagin Corp,Stillwater Holdings LLC,10%,S - Sale,1.16,-51700.0,3244357.0,-2.0,-59766.0
+2022-03-30,2022-03-29,EXPI,"Exp World Holdings, Inc.",Jacklin Darren Lee,Dir,S - Sale,23.79,-5000.0,119592.0,-4.0,-118936.0
+2022-03-30,2022-03-30,RKT,"Rocket Companies, Inc.",Farner Jay,CEO,P - Purchase,11.2,8900.0,1713307.0,0.01,99645.0
+2022-03-30,2022-03-28,WMG,Warner Music Group Corp.,Benet Lincoln E,Dir,S - Sale,37.97,-10000.0,444341.0,-2.0,-379700.0
+2022-03-30,2022-03-29,SAIC,Science Applications International Corp,Mahon Steven G,"EVP GC, Secretary",S - Sale,91.03,-4132.0,28965.0,-12.0,-376136.0
+2022-03-30,2022-03-28,EXPI,"Exp World Holdings, Inc.",Sanford Glenn Darrel,"CEO, COB, 10%",S - Sale+OE,22.57,-18000.0,42034338.0,0.0,-406238.0
+2022-03-30,2022-03-29,RFIL,R F Industries Ltd,Holdsworth Mark Keith,Dir,P - Purchase,7.2,50000.0,582645.0,0.09,360135.0
+2022-03-30,2022-03-29,MMC,"Marsh & McLennan Companies, Inc.",Beswick Paul,"SVP, CIO",S - Sale,171.21,-1791.0,9289.0,-16.0,-306637.0
+2022-03-30,2022-03-28,YMTX,"Yumanity Therapeutics, Inc.",Peters Richard,"Pres, CEO",S - Sale,1.85,-10715.0,115708.0,-8.0,-19775.0
+2022-03-30,2022-03-28,ABC,Amerisourcebergen Corp,Clark Gina,EVP,S - Sale+OE,153.71,-43704.0,15814.0,-73.0,-6717742.0
+2022-03-30,2022-03-28,ASPN,Aspen Aerogels Inc,Koch Industries Inc,10%,P - Purchase,27.9,1791986.0,5254110.0,0.52,49999993.0
+2022-03-30,2022-03-28,ZDPY,"Zoned Properties, Inc.",Kane Jody Kevin,Dir,P - Purchase,0.69,13847.0,54521.0,0.34,9573.0
+2022-03-30,2022-03-28,TYME,"Tyme Technologies, Inc.",Hoffman Steve,"Chief Science Officer, 10%",S - Sale,0.35,-156250.0,20960066.0,-1.0,-54578.0
+2022-03-30,2022-03-28,KFS,Kingsway Financial Services Inc,Stilwell Joseph,"Dir, 10%",P - Purchase,5.5,12984.0,7518964.0,0.0,71352.0
+2022-03-30,2022-03-28,LILA,Liberty Latin America Ltd.,Winter John M,"SVP, CLO, SECRETARY",S - Sale,9.84,-40000.0,44469.0,-47.0,-393692.0
+2022-03-30,2022-03-29,RFIL,R F Industries Ltd,Holdsworth Mark Keith,Dir,P - Purchase,7.2,50000.0,582645.0,0.09,360135.0
+2022-03-30,2022-03-28,EMAN,Emagin Corp,Ginola Ltd,10%,S - Sale,1.15,-61186.0,289881.0,-17.0,-70595.0
+2022-03-30,2022-03-28,AMP,Ameriprise Financial Inc,Berman Walter Stanley,"EVP, CFO",S - Sale,312.01,-8711.0,11098.0,-44.0,-2717958.0
+2022-03-30,2022-03-29,ZDPY,"Zoned Properties, Inc.",McLaren Bryan,"CEO, CFO",P - Purchase,0.77,7500.0,40000.0,0.23,5765.0
+2022-03-31,2022-03-31,SSRM,Ssr Mining Inc.,White Alison Lynn,CFO,S - Sale,22.07,-4223.0,45808.0,-8.0,-93202.0
+2022-03-31,2022-03-29,RLAY,"Relay Therapeutics, Inc.",Adams Brian,GC,S - Sale,29.87,-333.0,64584.0,-1.0,-9947.0
+2022-03-31,2022-03-29,RLAY,"Relay Therapeutics, Inc.",Bergstrom Donald A,"Pres, R, D",S - Sale,29.87,-622.0,94304.0,-1.0,-18579.0
+2022-03-31,2022-03-29,SLNO,Soleno Therapeutics Inc,Abingworth LLP,10%,P - Purchase,0.0,7720000.0,18022602.0,0.75,0.0
+2022-03-31,2022-03-29,SEAC,Seachange International Inc,Aquino Peter D,"Pres, C.E.O.",S - Sale,1.21,-9723.0,577777.0,-2.0,-11765.0
+2022-03-31,2022-03-29,RLAY,"Relay Therapeutics, Inc.",Catinazzo Thomas,CFO,S - Sale,29.87,-282.0,53977.0,-1.0,-8423.0
+2022-03-31,2022-03-29,NGS,Natural Gas Services Group Inc,Chisholm John,Dir,S - Sale,11.92,-3000.0,10792.0,-22.0,-35750.0
+2022-03-31,2022-03-31,AMC,"Amc Entertainment Holdings, Inc.",McDonald John D,"EVP, US OPERATIONS",S - Sale,23.91,-25000.0,1463.0,-94.0,-597625.0
+2022-03-31,2022-03-29,CRC,California Resources Corp,Goldentree Asset Management LP,10%,S - Sale,48.6,-376691.0,7727395.0,-5.0,-18306770.0
+2022-03-31,2022-03-29,RLAY,"Relay Therapeutics, Inc.",Porter Andy,Chief Administrative Officer,S - Sale,29.87,-294.0,47023.0,-1.0,-8782.0
+2022-03-31,2022-03-29,TRUP,"Trupanion, Inc.",Doak Michael,Dir,S - Sale+OE,95.0,-450.0,332.0,-58.0,-42750.0
+2022-03-31,2022-03-29,MORN,"Morningstar, Inc.",Mansueto Joseph D,"Exec COB, 10%",S - Sale,279.85,-29786.0,17294184.0,0.0,-8335561.0
+2022-03-31,2022-03-29,LYFT,"Lyft, Inc.",Sverchek Kristin,Pres of Business Affairs,S - Sale,40.0,-7938.0,309385.0,-3.0,-317526.0
+2022-03-31,2022-03-29,STE,Steris Plc,Burton Karen L,"VP, Controller, CAO",S - Sale+OE,246.0,-4000.0,6375.0,-39.0,-984000.0
+2022-03-31,2022-03-29,CSTL,Castle Biosciences Inc,Bradbury Daniel,Dir,S - Sale,45.12,-17704.0,380351.0,-4.0,-798809.0
+2022-03-31,2022-03-31,AOUT,"American Outdoor Brands, Inc.",Fulmer Hugh Andrew,"EVP, CFO, Treasurer",P - Purchase,13.55,3700.0,52273.0,0.08,50152.0
+2022-03-31,2022-03-29,CWK,Cushman & Wakefield Plc,McDonald Andrew R.,Pres,S - Sale,21.0,-2061.0,109935.0,-2.0,-43281.0
+2022-03-31,2022-03-29,KFRC,Kforce Inc,Kelly David M,"EVP, CFO",S - Sale,75.44,-5000.0,96407.0,-5.0,-377200.0
+2022-03-31,2022-03-30,SO,Southern Co,"Greene Kimberly S,","COB, Pres, CEO, GAS",S - Sale+OE,72.7,-100005.0,123120.0,-45.0,-7270532.0
+2022-03-31,2022-03-30,PRPL,"Purple Innovation, Inc.","Coliseum Capital Management, LLC","Dir, 10%",P - Purchase,6.47,650000.0,30927798.0,0.02,4205500.0
+2022-03-31,2022-03-29,VRM,"Vroom, Inc.",Hennessy Paul J.,CEO,S - Sale,2.94,-19389.0,326989.0,-6.0,-57087.0
+2022-03-31,2022-03-29,VRM,"Vroom, Inc.",Stott Carol Denise,"Chief People, Culture Officer",S - Sale,2.94,-7812.0,137233.0,-5.0,-23001.0
+2022-03-31,2022-03-31,FRST,Primis Financial Corp.,Brockwell Bruce Todd,"EVP, Head of Commercial",S - Sale+OE,13.98,-147.0,10757.0,-1.0,-2055.0
+2022-03-31,2022-03-29,NVST,Envista Holdings Corp,Aghdaei Amir,CEO,S - Sale,51.66,-10538.0,364779.0,-3.0,-544391.0
+2022-03-31,2022-03-29,JAMF,Jamf Holding Corp.,Klausmeyer Kevin,Dir,S - Sale,36.04,-9146.0,17686.0,-34.0,-329604.0
+2022-03-31,2022-03-29,PMVP,"Pmv Pharmaceuticals, Inc.",Orbimed Advisors LLC,10%,S - Sale,21.63,-474500.0,6589330.0,-7.0,-10264415.0
+2022-03-31,2022-03-29,JHG,Janus Henderson Group Plc,Peltz Nelson,"Dir, 10%",P - Purchase,35.63,682514.0,31867800.0,0.02,24321061.0
+2022-03-31,2022-03-29,JHG,Janus Henderson Group Plc,Garden Edward P,"Dir, 10%",P - Purchase,35.63,682514.0,31867800.0,0.02,24321061.0
+2022-03-31,2022-03-29,CELH,"Celsius Holdings, Inc.",Milmoe William H.,10%,S - Sale,60.04,-20000.0,83814.0,-19.0,-1200800.0
+2022-03-31,2022-03-29,DELL,Dell Technologies Inc.,Elias Howard D,"CCO, Pres, Svcs., Digital",S - Sale,54.67,-67613.0,316243.0,-18.0,-3696403.0
+2022-03-31,2022-03-29,LIVN,Livanova Plc,McDonald Damien,CEO,S - Sale+OE,81.5,-2784.0,85969.0,-3.0,-226896.0
+2022-03-31,2022-03-30,PMD,Psychemedics Corp,Kamin Peter,10%,P - Purchase,6.89,12403.0,1021150.0,0.01,85516.0
+2022-03-31,2022-03-29,SIG,Signet Jewelers Ltd,Ptak Stash,* See Remarks,S - Sale,80.0,-421.0,37974.0,-1.0,-33680.0
+2022-03-31,2022-03-29,TRU,Transunion,Cello Todd M,"EVP, CFO",S - Sale,105.0,-392.0,73442.0,-1.0,-41160.0
+2022-03-31,2022-03-29,SLNO,Soleno Therapeutics Inc,Sinclair Andrew,Dir,P - Purchase,0.0,7720000.0,18022602.0,0.75,0.0
+2022-03-31,2022-03-30,FET,"Forum Energy Technologies, Inc.","Scf Partners, Inc.","Member of Group, 10%",S - Sale,24.52,-30833.0,666781.0,-4.0,-756124.0
+2022-03-31,2022-03-29,SWAV,"Shockwave Medical, Inc.",Francis Laura,Dir,S - Sale+OE,201.93,-4200.0,3551.0,-54.0,-848106.0
+2022-03-31,2022-03-29,SWKS,"Skyworks Solutions, Inc.",Griffin Liam,"COB, CEO, Pres",S - Sale,140.0,-10000.0,65296.0,-13.0,-1400000.0
+2022-03-31,2022-03-29,BLFS,Biolife Solutions Inc,Mathew Aby J.,"EVP, Chief Scientific Officer",S - Sale,22.24,-658.0,225523.0,0.0,-14634.0
+2022-03-31,2022-03-29,DEA,"Easterly Government Properties, Inc.",Trimble William C.,"Pres, CEO",S - Sale+OE,21.4,-7000.0,91279.0,-7.0,-149800.0
+2022-03-31,2020-04-01,SPLP,Steel Partners Holdings L.P.,Walker Gordon A.,SVP,P - Purchase,5.06,11860.0,11860.0,999999.0,60055.0
+2022-03-31,2020-04-06,SPLP,Steel Partners Holdings L.P.,Walker Gordon A.,SVP,P - Purchase,5.14,8140.0,20000.0,0.69,41876.0
+2022-03-31,2022-03-31,ORIC,"Oric Pharmaceuticals, Inc.",Piscitelli Dominic,CFO,P - Purchase,5.36,60000.0,60000.0,999999.0,321624.0
+2022-03-31,2022-03-31,EYEN,"Eyenovia, Inc.",Mather Charles E IV,Dir,P - Purchase,3.12,4000.0,41322.0,0.11,12460.0
+2022-03-31,2022-03-29,BMRN,Biomarin Pharmaceutical Inc,Ajer Jeffrey Robert,"EVP, Chief Commercial Officer",S - Sale,79.49,-2999.0,56257.0,-5.0,-238390.0
+2022-03-31,2022-03-29,GIII,G III Apparel Group Ltd /de/,Nackman Neal,"CFO, Treas",S - Sale,29.06,-15000.0,95625.0,-14.0,-435900.0
+2022-03-31,2022-03-30,ASMB,"Assembly Biosciences, Inc.",Samar Michael P.,CFO,S - Sale+OE,2.17,-2285.0,76748.0,-3.0,-4953.0
+2022-03-31,2022-03-29,BLFS,Biolife Solutions Inc,Foster Karen A.,Chief Quality Officer,S - Sale,22.24,-547.0,85115.0,-1.0,-12165.0
+2022-03-31,2022-03-29,BLFS,Biolife Solutions Inc,Rice Michael,CEO,S - Sale,22.24,-830.0,327155.0,0.0,-18459.0
+2022-03-31,2022-03-29,BLFS,Biolife Solutions Inc,Berard Todd,CMO,S - Sale,22.24,-475.0,90437.0,-1.0,-10564.0
+2022-03-31,2022-03-29,MMI,"Marcus & Millichap, Inc.",Nadji Hessam,CEO,S - Sale,50.27,-10000.0,175058.0,-5.0,-502691.0
+2022-03-31,2022-03-29,JELD,"Jeld-Wen Holding, Inc.",Turtle Creek Asset Management Inc.,10%,P - Purchase,21.81,453790.0,11692075.0,0.04,9897396.0
+2022-03-31,2022-03-29,FORA,Forian Inc.,Trotman Stanley S Jr,Dir,P - Purchase,6.45,10000.0,127500.0,0.09,64500.0
+2022-03-31,2022-03-29,MSLP,Musclepharm Corp,"White Winston Select Asset Fund Series Fund Mp-18, LLC",10%,S - Sale,0.0,-626826.0,3021529.0,-17.0,0.0
+2022-03-31,2022-03-31,CRM,"Salesforce.Com, Inc.",Benioff Marc,"COB, co-CEO",S - Sale+OE,214.3,-2300.0,28918241.0,0.0,-492887.0
+2022-03-31,2022-03-29,POSH,"Poshmark, Inc.",Tung Hans,Dir,S - Sale,13.16,-316605.0,3590399.0,-8.0,-4165275.0
+2022-03-31,2022-03-29,TW,Tradeweb Markets Inc.,Olesky Lee,CEO,S - Sale+OE,90.59,-500.0,270377.0,0.0,-45294.0
+2022-03-31,2022-03-29,TW,Tradeweb Markets Inc.,Hult William,Pres,S - Sale+OE,91.0,-100.0,213626.0,0.0,-9100.0
+2022-03-31,2022-03-29,SMAR,Smartsheet Inc,Hansen Megan,"Chief People, Culture Officer",S - Sale,55.46,-10694.0,2244.0,-83.0,-593089.0
+2022-03-31,2022-03-29,WSM,Williams Sonoma Inc,Simmons Sabrina,Dir,S - Sale,153.85,-2030.0,6594.0,-24.0,-312316.0
+2022-03-31,2022-03-28,MULN,Mullen Automotive Inc.,Michery David,"CEO, Pres, 10%",S - Sale,2.48,-300000.0,8661066.0,-3.0,-744116.0
+2022-03-31,2022-03-29,META,"Meta Platforms, Inc.",Newstead Jennifer,GC,S - Sale,226.24,-476.0,14878.0,-3.0,-107690.0
+2022-03-31,2022-03-29,AXNX,"Axonics, Inc.",Kiernan Jane E,Dir,S - Sale,60.5,-5250.0,7594.0,-41.0,-317607.0
+2022-03-31,2022-03-29,AXNX,"Axonics, Inc.",Cohen Raymond W,CEO,S - Sale,60.0,-50000.0,193635.0,-21.0,-3000000.0
+2022-03-31,2022-03-29,OSW,Onespaworld Holdings Ltd,Heyer Andrew R,Dir,S - Sale,10.52,-19454.0,1071687.0,-2.0,-204640.0
+2022-03-31,2022-03-31,LQDT,Liquidity Services Inc,Daunt John,Chief Commercial Officer,S - Sale+OE,17.85,-4594.0,71971.0,-6.0,-82003.0
+2022-03-31,2022-03-29,OSS,"One Stop Systems, Inc.",Cooper Steve D,10%,S - Sale,4.12,-2100.0,2832137.0,0.0,-8652.0
+2022-03-31,2022-03-30,SLB,Schlumberger Limited/nv,Jaramillo Claudia,"VP, Treasurer",S - Sale,43.0,-11628.0,41483.0,-22.0,-500004.0
+2022-03-31,2022-03-29,TTD,"Trade Desk, Inc.",Grayson Blake Jeffrey,CFO,S - Sale+OE,72.5,-6084.0,151803.0,-4.0,-441090.0
+2022-03-31,2022-03-29,CMPS,Compass Pathways Plc,Goldsmith George Jay,"CEO, 10%",S - Sale,12.48,-12744.0,8552398.0,0.0,-159045.0
+2022-03-31,2022-03-29,SKKY,"Skkynet Cloud Systems, Inc.",Thomas Paul E,Pres,P - Purchase,0.19,10000.0,5010000.0,0.0,1875.0
+2022-03-31,2022-03-29,CMT,Core Molding Technologies Inc,Smith Andrew O,Dir,P - Purchase,11.11,2000.0,67365.0,0.03,22220.0
+2022-03-31,2022-03-29,CMPS,Compass Pathways Plc,Malievskaia Ekaterina,"Chief Innovation Officer, 10%",S - Sale,12.48,-12744.0,8552398.0,0.0,-159045.0
+2022-03-31,2022-03-30,VIR,"Vir Biotechnology, Inc.",Hanly Ann M.,CTO,S - Sale,26.24,-2627.0,81485.0,-3.0,-68925.0
+2022-03-31,2022-03-29,DKS,"Dick'S Sporting Goods, Inc.",Germano Donald J.,"EVP, Stores",S - Sale+OE,110.33,-23961.0,166708.0,-13.0,-2643655.0
+2022-03-31,2022-03-29,HQI,"Hirequest, Inc.",Shanahan Kathleen M,Dir,P - Purchase,19.39,999.0,44126.0,0.02,19371.0
+2022-03-31,2022-03-30,SPRO,"Spero Therapeutics, Inc.","Aquilo Capital Management, LLC",10%,P - Purchase,8.79,50000.0,5281504.0,0.01,439420.0
+2022-03-31,2022-03-30,IGXT,Intelgenx Technologies Corp.,Matzen Dana,"VP BD, Corp.Dev.of Subsidiary",P - Purchase,0.27,25000.0,60000.0,0.71,6625.0
+2022-03-31,2022-03-29,BRX,Brixmor Property Group Inc.,Siegel Steven F,See Remarks,S - Sale,26.0,-20000.0,324000.0,-6.0,-520000.0
+2022-03-31,2022-03-29,DV,"Doubleverify Holdings, Inc.",Zagorski Mark,CEO,P - Purchase,25.64,19846.0,310422.0,0.07,508844.0
+2022-03-31,2022-03-30,FHI,"Federated Hermes, Inc.",Donahue Thomas R,"VP, CFO, Treasurer",S - Sale,34.18,-30000.0,1122274.0,-3.0,-1025511.0
+2022-03-31,2022-03-29,REGN,"Regeneron Pharmaceuticals, Inc.",Brown Michael S,Dir,S - Sale+OE,699.0,-1930.0,13244.0,-13.0,-1349070.0
+2022-03-31,2022-03-29,FUBO,Fubotv Inc. /fl,Horihuela Alberto,Chief Growth Officer,S - Sale+OE,7.56,-161454.0,1193852.0,-12.0,-1220899.0
+2022-03-31,2022-03-29,CERE,"Cerevel Therapeutics Holdings, Inc.",Renger John,Chief Scientific Officer,S - Sale+OE,35.0,-10000.0,1980.0,-83.0,-350000.0
+2022-03-31,2022-03-29,SITC,Site Centers Corp.,Vesy Christa A,"EVP, CAO",S - Sale,16.88,-35000.0,89309.0,-28.0,-590765.0
+2022-03-31,2022-03-29,ENTG,Entegris Inc,Beckman Bruce W.,"SVP, Finance",S - Sale+OE,140.0,-2530.0,25921.0,-9.0,-354200.0
+2022-03-31,2022-03-29,CMPS,Compass Pathways Plc,Norton David Y,Dir,S - Sale,12.48,-3384.0,20356.0,-14.0,-42232.0
+2022-03-31,2022-03-29,CMPS,Compass Pathways Plc,Jenkins Annalisa,Dir,S - Sale,12.48,-3384.0,20356.0,-14.0,-42232.0
+2022-03-31,2022-03-29,CTAS,Cintas Corp,Hansen J. Michael,"VP, CFO",S - Sale+OE,424.24,-8200.0,81110.0,-9.0,-3478725.0
+2022-03-31,2022-03-29,RNDB,"Randolph Bancorp, Inc.",Friedman Martin S.,10%,S - Sale,26.48,-119292.0,4947.0,-96.0,-3158852.0
+2022-03-31,2022-03-29,SLP,"Simulations Plus, Inc.",Woltosz Walter S,"Dir, 10%",S - Sale,48.75,-20000.0,4197259.0,0.0,-974972.0
+2022-03-31,2022-03-29,MPC,Marathon Petroleum Corp,Rucker Kim K.W.,Dir,S - Sale,83.0,-5000.0,39037.0,-11.0,-415000.0
+2022-03-31,2022-03-29,PALI,"Palisade Bio, Inc.",Dawson Michael John,Chief Medical Officer,P - Purchase,1.14,15000.0,15000.0,999999.0,17093.0
+2022-03-31,2022-03-29,AFL,Aflac Inc,Riggieri Albert,"SVP, Chief Actuary",S - Sale+OE,65.05,-1687.0,26240.0,-6.0,-109739.0
+2022-03-31,2022-03-29,LH,Laboratory Corp of America Holdings,Van Der Vaart Sandra D,"EVP, GC",S - Sale,277.11,-2449.0,5287.0,-32.0,-678642.0
+2022-03-31,2022-03-29,LH,Laboratory Corp of America Holdings,Schroeder Mark S,"EVP, Pres-Diagnostics Lab",S - Sale,277.11,-2356.0,6605.0,-26.0,-652871.0
+2022-03-31,2022-03-30,EDSA,"Edesa Biotech, Inc.",Nijhawan Pardeep,"CEO, 10%",P - Purchase,3.05,2000.0,3290285.0,0.0,6098.0
+2022-03-31,2022-03-29,DASH,"Doordash, Inc.",Tang Stanley,Dir,S - Sale+OE,120.17,-80000.0,28388.0,-74.0,-9613680.0
+2022-03-31,2022-03-30,HGBL,Heritage Global Inc.,Hexner Michael,Dir,P - Purchase,1.35,18657.0,151026.0,0.14,25187.0
+2022-03-31,2022-03-30,WLK,Westlake Corp,Bender Mark Steven,"EVP, CFO",S - Sale+OE,124.8,-6000.0,30725.0,-16.0,-748810.0
+2022-03-31,2022-03-30,TPL,Texas Pacific Land Corp,Stahl Murray,Dir,P - Purchase,1450.35,20.0,369027.0,0.0,29007.0
+2022-03-31,2022-03-31,CMTV,Community Bancorp /vt,Moore Jeffrey Lee,Dir,P - Purchase,22.8,500.0,5212.0,0.11,11400.0
+2022-03-31,2022-03-30,MCB,Metropolitan Bank Holding Corp.,Defazio Mark R,"Pres, CEO",S - Sale+OE,106.51,-2600.0,81988.0,-3.0,-276935.0
+2022-03-31,2022-03-29,TELA,"Tela Bio, Inc.","Ew Healthcare Partners Fund 2, L.P.",See footnote 2,P - Purchase,11.65,5697.0,3311236.0,0.0,66370.0
+2022-03-31,2022-03-30,KN,Knowles Corp,Anderson John S.,"SVP, CFO",S - Sale+OE,22.77,-25000.0,135882.0,-16.0,-569250.0
+2022-03-31,2022-03-30,LLY,Eli Lilly & Co,Lilly Endowment Inc,10%,S - Sale,292.03,-2500.0,106154186.0,0.0,-730075.0
+2022-03-31,2022-03-29,MRVL,"Marvell Technology, Inc.",Christman Dan,"EVP, Storage Business Group",S - Sale,75.87,-15000.0,123509.0,-11.0,-1138050.0
+2022-03-31,2022-03-29,ENTG,Entegris Inc,Rucci Corey,"SVP, Business Development",S - Sale,140.0,-2130.0,28540.0,-7.0,-298200.0
+2022-03-31,2021-02-19,VINO,"Gaucho Group Holdings, Inc.",Cannon Reuben,Dir,P - Purchase,6.0,3333.0,10376.0,0.47,19998.0
+2022-03-31,2022-03-29,ALIT,"Alight, Inc. / Delaware",Foley William P II,Dir,S - Sale,10.39,-1085429.0,13327770.0,-8.0,-11274594.0
+2022-03-31,2022-03-29,USAU,U.S. Gold Corp.,Bee George M,"CEO, Pres",P - Purchase,7.15,1567.0,389527.0,0.0,11204.0
+2022-03-31,2022-03-30,ASMB,"Assembly Biosciences, Inc.",McHutchison John G,"CEO, Pres",S - Sale+OE,2.17,-4614.0,204829.0,-2.0,-10000.0
+2022-03-31,2022-03-30,PXD,Pioneer Natural Resources Co,Berg Mark Stephen,"EVP, Corporate Operations",S - Sale,256.71,-2500.0,99531.0,-2.0,-641763.0
+2022-03-31,2022-03-29,BTTX,"Better Therapeutics, Inc.",Parker Geoffrey M.,Dir,P - Purchase,2.15,15000.0,68333.0,0.28,32231.0
+2022-03-31,2022-03-30,PXD,Pioneer Natural Resources Co,Cheatwood Chris J,"EVP, Advisor to Management",S - Sale,257.19,-4653.0,46871.0,-9.0,-1196710.0
+2022-03-31,2022-03-29,AMC,"Amc Entertainment Holdings, Inc.",Cox Chris A,"SVP, Chief Accounting Officer",S - Sale,28.8,-14931.0,13250.0,-53.0,-429998.0
+2022-03-31,2022-03-31,JNPR,Juniper Networks Inc,Leelanivas Manoj,EVP COO,S - Sale,38.0,-13366.0,108504.0,-11.0,-507908.0
+2022-03-31,2022-03-29,BTTX,"Better Therapeutics, Inc.",Armanino Andrew J.,Dir,P - Purchase,2.14,40000.0,139662.0,0.4,85620.0
+2022-03-31,2022-03-31,SEEL,"Seelos Therapeutics, Inc.",Mehra Raj,See Remarks,P - Purchase,0.85,66667.0,3281546.0,0.02,56840.0
+2022-03-31,2022-03-29,PINS,"Pinterest, Inc.",Morgenfeld Todd R,CFO,S - Sale+OE,26.37,-53016.0,641025.0,-8.0,-1398213.0
+2022-03-31,2022-03-29,IRM,Iron Mountain Inc,Evens Deirdre,"EVP, GM, Asset Lifestyle Mgmt",S - Sale+OE,55.0,-29037.0,67687.0,-30.0,-1597035.0
+2022-03-31,2022-03-31,PXD,Pioneer Natural Resources Co,Risch Frank A,Dir,S - Sale,254.81,-1000.0,14371.0,-7.0,-254810.0
+2022-03-31,2022-03-30,ASMB,"Assembly Biosciences, Inc.",Delaney William E IV,Chief Scientific Officer,S - Sale+OE,2.17,-1038.0,78083.0,-1.0,-2250.0
+2022-03-31,2022-03-30,ASMB,"Assembly Biosciences, Inc.",Stamm Luisa M,Chief Medical Officer,S - Sale+OE,2.17,-1038.0,40315.0,-3.0,-2250.0
+2022-03-31,2022-03-29,PZN,"Pzena Investment Management, Inc.",Pzena Richard Stanton,"COB, CEO, Co-CIO",P - Purchase,5.45,779586.0,24783304.0,0.03,4248744.0
+2022-03-31,2022-03-29,PZN,"Pzena Investment Management, Inc.",Pzena Richard Stanton,"COB, CEO, Co-CIO",S - Sale+OE,5.45,-779586.0,24783304.0,-3.0,-4248744.0
+2022-03-31,2022-03-30,CVS,Cvs Health Corp,Shah Prem S,"EVP, Co-Pres of Retail",S - Sale+OE,104.7,-5346.0,103998.0,-5.0,-559726.0
+2022-03-31,2022-03-29,PD,"Pagerduty, Inc.",Justice Dave,Chief Revenue Officer,S - Sale,37.23,-3474.0,301901.0,-1.0,-129351.0
+2022-03-31,2022-03-30,ASMB,"Assembly Biosciences, Inc.",Okazaki Jason A,COO,S - Sale+OE,2.17,-1269.0,94614.0,-1.0,-2750.0
+2022-03-31,2022-03-29,SXT,Sensient Technologies Corp,Winder Investment Pte Ltd,10%,P - Purchase,85.77,35846.0,5166161.0,0.01,3074412.0
+2022-03-31,2022-03-29,AMC,"Amc Entertainment Holdings, Inc.",Frank Elizabeth F,"EVP, CHIEF CONTENT OFFICER",S - Sale,29.91,-20000.0,4168.0,-83.0,-598240.0
+2022-03-31,2022-03-30,PXD,Pioneer Natural Resources Co,Shah Neal H,"SVP, CFO",S - Sale,256.97,-3500.0,19376.0,-15.0,-899392.0
+2022-03-31,2022-03-29,NDAQ,"Nasdaq, Inc.",Peterson Bradley J,EVP,S - Sale,180.0,-7500.0,25016.0,-23.0,-1350000.0
+2022-03-31,2022-03-30,CRM,"Salesforce.Com, Inc.",Benioff Marc,"COB, co-CEO",S - Sale+OE,216.02,-2300.0,28918241.0,0.0,-496849.0
+2022-03-31,2022-03-29,RCL,Royal Caribbean Cruises Ltd,Bayley Michael W,"Pres,CEO,Royal Caribbean Intl",S - Sale,80.0,-3637.0,116951.0,-3.0,-290960.0
+2022-03-31,2022-03-29,NDAQ,"Nasdaq, Inc.",Dillard Lauren B.,EVP,S - Sale,180.0,-2500.0,49370.0,-5.0,-450000.0
+2022-03-31,2022-03-29,EMR,Emerson Electric Co,Bulanda Mark J,Exec Pres Auto Sols,S - Sale+OE,97.35,-4574.0,193339.0,-2.0,-445297.0
+2022-03-31,2022-03-31,LFT,"Lument Finance Trust, Inc.",Briggs James A,CFO,P - Purchase,2.73,5000.0,48750.0,0.11,13645.0
+2022-03-31,2022-03-28,SEDG,"Solaredge Technologies, Inc.",Lando Zvi,CEO,S - Sale+OE,332.74,-45199.0,45231.0,-50.0,-15039558.0
+2022-03-31,2022-03-29,NXRT,"Nexpoint Residential Trust, Inc.",Mitts Brian,"CFO, EVP Finance, Secy, Treas",S - Sale,90.8,-1100.0,77488.0,-1.0,-99880.0
+2022-03-31,2022-03-30,CREX,"Creative Realities, Inc.",Nesbit Stephen,Dir,P - Purchase,0.86,171800.0,225781.0,3.18,147696.0
+2022-03-31,2022-03-29,RYTM,"Rhythm Pharmaceuticals, Inc.",Roberts William T.,Chief Accounting Officer,S - Sale+OE,11.13,-1023.0,1477.0,-41.0,-11386.0
+2022-03-31,2022-03-29,ABNB,"Airbnb, Inc.",Balogh Aristotle N,CTO,S - Sale,174.0,-1000.0,290468.0,0.0,-174000.0
+2022-03-31,2022-03-29,BSX,Boston Scientific Corp,Butcher Arthur C,"EVP, Pres, Asia Pacific",S - Sale+OE,45.0,-10269.0,32827.0,-24.0,-462105.0
+2022-03-31,2022-03-29,VTR,"Ventas, Inc.",Cafaro Debra A,"COB, CEO",S - Sale+OE,63.4,-69602.0,904103.0,-7.0,-4412976.0
+2022-03-31,2022-03-29,AMBA,Ambarella Inc,Chen Yun-Lung,"VP, Business Development",S - Sale,104.22,-8000.0,41287.0,-16.0,-833760.0
+2022-03-31,2022-03-30,JEF,Jefferies Financial Group Inc.,Jones Thomas W,Dir,P - Purchase,33.48,10000.0,15697.0,1.76,334800.0
+2022-03-31,2022-03-29,AMBA,Ambarella Inc,Paisley Christopher B,Dir,S - Sale+OE,100.05,-250.0,31263.0,-1.0,-25013.0
+2022-03-31,2022-03-29,PXD,Pioneer Natural Resources Co,Montemayor Margaret,"VP, CAO",S - Sale,250.34,-500.0,5012.0,-9.0,-125168.0
+2022-04-01,2022-03-30,GTES,Gates Industrial Corp Plc,Blackstone Inc,10%,S - Sale,15.14,-13750000.0,18929892.0,-42.0,-208175000.0
+2022-04-01,2022-03-31,CRKR,"Creek Road Miners, Inc.",Kaufman Scott D,"CEO, Pres, 10%",S - Sale+OE,2.66,-18000.0,1202523.0,-1.0,-47950.0
+2022-04-01,2022-03-30,MPW,Medical Properties Trust Inc,Aldag Edward K Jr,"COB, Pres, CEO",S - Sale,21.33,-615000.0,3497206.0,-15.0,-13117950.0
+2022-04-01,2022-03-31,LNG,"Cheniere Energy, Inc.",Shear Neal A,Dir,S - Sale,140.16,-10318.0,26158.0,-28.0,-1446177.0
+2022-04-01,2022-03-30,GTES,Gates Industrial Corp Plc,Bx Gates Ml-1 Holdco LLC,10%,S - Sale,15.14,-13750000.0,18929892.0,-42.0,-208175000.0
+2022-04-01,2022-03-30,GTES,Gates Industrial Corp Plc,Omaha Aggregator (Cayman) L.P.,10%,S - Sale,15.14,-13750000.0,18929892.0,-42.0,-208175000.0
+2022-04-01,2022-04-01,HPQ,Hp Inc,Lores Enrique,"Pres, CEO",S - Sale,36.27,-34000.0,585204.0,-5.0,-1233180.0
+2022-04-01,2021-03-22,WSR,Whitestone Reit,Jones Jeffrey Alan,Dir,P - Purchase,9.55,6250.0,22402.0,0.39,59688.0
+2022-04-01,2022-03-30,FUSN,Fusion Pharmaceuticals Inc.,Valliant John,CEO,S - Sale,7.52,-300.0,366960.0,0.0,-2256.0
+2022-04-01,2022-03-31,VEEV,Veeva Systems Inc,Sekhri Paul J,Dir,S - Sale,214.02,-11000.0,18613.0,-37.0,-2354254.0
+2022-04-01,2022-03-31,CRNX,"Crinetics Pharmaceuticals, Inc.",Betz Stephen F.,Chief Scientific Officer,S - Sale,21.43,-8328.0,125509.0,-6.0,-178475.0
+2022-04-01,2022-03-31,TWLO,Twilio Inc,Shipchandler Khozema,COO,S - Sale,167.95,-1604.0,101763.0,-2.0,-269383.0
+2022-04-01,2022-04-01,NGS,Natural Gas Services Group Inc,Chisholm John,Dir,S - Sale,10.68,-1500.0,9292.0,-14.0,-16020.0
+2022-04-01,2022-03-31,HPQ,Hp Inc,Broussard Bruce D,Dir,P - Purchase,36.67,6810.0,12023.0,1.31,249723.0
+2022-04-01,2022-03-30,VEEV,Veeva Systems Inc,Chamberlain Paul Edward,Dir,S - Sale,212.92,-100.0,16179.0,-1.0,-21292.0
+2022-04-01,2022-04-01,VTR,"Ventas, Inc.",Cafaro Debra A,"COB, CEO",S - Sale+OE,62.49,-17400.0,904103.0,-2.0,-1087326.0
+2022-04-01,2022-03-30,EMAN,Emagin Corp,Stillwater Holdings LLC,10%,S - Sale,1.16,-56500.0,3187857.0,-2.0,-65511.0
+2022-04-01,2022-03-31,VFF,"Village Farms International, Inc.",Degiglio Michael A,"CEO, 10%",S - Sale,5.32,-90000.0,9259529.0,-1.0,-478602.0
+2022-04-01,2022-03-31,RKT,"Rocket Companies, Inc.",Farner Jay,CEO,P - Purchase,11.1,22000.0,1735307.0,0.01,244215.0
+2022-04-01,2022-03-31,HPQ,Hp Inc,Myers Marie,CFO,S - Sale+OE,36.52,-25138.0,37719.0,-40.0,-918027.0
+2022-04-01,2022-03-30,SMCI,"Super Micro Computer, Inc.",Liang Charles,"Pres, CEO, 10%",S - Sale,41.17,-39612.0,6701922.0,-1.0,-1630657.0
+2022-04-01,2022-03-30,AMZN,Amazon Com Inc,Selipsky Adam,CEO Amazon Web Services,S - Sale,3348.08,-69.0,22296.0,0.0,-231017.0
+2022-04-01,2022-03-30,NEM,Newmont Corp /de/,Buese Nancy,"EVP, CFO",S - Sale,79.0,-10000.0,78374.0,-11.0,-790000.0
+2022-04-01,2022-04-01,ED,Consolidated Edison Inc,Cawley Timothy,"COB, Pres, CEO",P - Purchase,94.38,80.0,17695.0,0.0,7550.0
+2022-04-01,2022-03-31,SO,Southern Co,Wilson Anthony L,"Pres, CEO, MPC",S - Sale,73.0,-6850.0,84817.0,-7.0,-500050.0
+2022-04-01,2022-03-30,RCKT,"Rocket Pharmaceuticals, Inc.",Schwartz Jonathan David,See Remarks,S - Sale,16.41,-45000.0,179529.0,-20.0,-738652.0
+2022-04-01,2022-04-01,NOG,"Northern Oil & Gas, Inc.",Kelly Michael D.,Chief Strategy Officer,S - Sale,28.34,-13000.0,26539.0,-33.0,-368364.0
+2022-04-01,2022-03-31,ARMP,"Armata Pharmaceuticals, Inc.","Innoviva, Inc.","Dir, 10%",P - Purchase,5.0,5385208.0,25076769.0,0.27,26926040.0
+2022-04-01,2022-04-01,GOOG,Alphabet Inc.,O'Toole Amie Thuener,"VP, Chief Accounting Officer",S - Sale,2800.2,-42.0,3512.0,-1.0,-117608.0
+2022-04-01,2022-03-29,BRTX,"Biorestorative Therapies, Inc.",Broadrick Dale,10%,P - Purchase,4.85,15700.0,522825.0,0.03,76088.0
+2022-04-01,2022-04-01,ARQT,"Arcutis Biotherapeutics, Inc.",Welgus Howard G.,Dir,S - Sale+OE,20.02,-7500.0,206887.0,-3.0,-150184.0
+2022-04-01,2022-03-31,V,Visa Inc.,Kelly Alfred F Jr,"COB, CEO",S - Sale+OE,223.91,-9000.0,168887.0,-5.0,-2015190.0
+2022-04-01,2022-04-01,V,Visa Inc.,McInerney Ryan,Pres,S - Sale+OE,223.65,-6467.0,159696.0,-4.0,-1446345.0
+2022-04-01,2022-03-31,ADUS,Addus Homecare Corp,Stevenson Roberton James,"EVP, CHRO",S - Sale,90.77,-72.0,6038.0,-1.0,-6535.0
+2022-04-01,2022-03-18,FTCI,"Ftc Solar, Inc.",Cook Patrick,CHIEF COMMERCIAL OFFICER,S - Sale,6.55,-50888.0,124230.0,-29.0,-333316.0
+2022-04-01,2022-03-30,MDB,"Mongodb, Inc.",Cochran Hope F,Dir,S - Sale+OE,429.3,-1000.0,4913.0,-17.0,-429300.0
+2022-04-01,2022-03-31,KRP,"Kimbell Royalty Partners, LP","Pep I Holdings, LLC",10%,S - Sale+OE,15.04,-3999919.0,0.0,-100.0,-60138782.0
+2022-04-01,2022-03-30,PARR,"Par Pacific Holdings, Inc.",Chai Trust Co LLC,10%,S - Sale,13.03,-30416.0,10267195.0,0.0,-396224.0
+2022-04-01,2022-03-31,KTOS,"Kratos Defense & Security Solutions, Inc.",Fendley Steven S.,"Pres, US Division",S - Sale,20.59,-7000.0,323823.0,-2.0,-144130.0
+2022-04-01,2022-02-02,MTW,Manitowoc Co Inc,Cooney Anne M,Dir,P - Purchase,18.06,1419.0,45937.0,0.03,25620.0
+2022-04-01,2022-03-31,ALHC,"Alignment Healthcare, Inc.",Shrestha Rajesh,"Pres, New Markets, CBO",S - Sale,11.18,-14224.0,170220.0,-8.0,-158962.0
+2022-04-01,2022-03-31,CRKR,"Creek Road Miners, Inc.",Kessler Paul L.,"COB, 10%",S - Sale+OE,2.66,-18000.0,2657725.0,-1.0,-47900.0
+2022-04-01,2022-04-01,ADSK,"Autodesk, Inc.",Hope Stephen W.,"VP, Chief Accounting Officer",S - Sale,215.75,-59.0,2902.0,-2.0,-12729.0
+2022-04-01,2022-03-30,VGR,Vector Group Ltd,Lebow Bennett S,Dir,S - Sale,11.87,-500000.0,1569764.0,-24.0,-5936932.0
+2022-04-01,2022-03-30,CXDO,"Crexendo, Inc.",Wang David Tzat-Kin,CTO,S - Sale+OE,3.63,-4000.0,422597.0,-1.0,-14504.0
+2022-04-01,2022-03-30,IGMS,"Igm Biosciences, Inc.",Keyt Bruce,Chief Scientific Officer,S - Sale+OE,28.5,-7500.0,41028.0,-15.0,-213725.0
+2022-04-01,2022-04-01,NFE,New Fortress Energy Inc.,Nfe Smrs Holdings LLC,10%,S - Sale,44.86,-400000.0,33059846.0,-1.0,-17945682.0
+2022-04-01,2022-03-31,VGR,Vector Group Ltd,Bernstein Ronald J,Dir,S - Sale,12.32,-10000.0,72630.0,-12.0,-123203.0
+2022-04-01,2021-04-06,PRCH,"Porch Group, Inc.",Neagle Matthew,COO,S - Sale+OE,17.56,-125965.0,317864.0,-28.0,-2212423.0
+2022-04-01,2022-03-31,ENSG,"Ensign Group, Inc",Wittekind Beverly B.,"VP, GC",S - Sale+OE,91.0,-4325.0,46084.0,-9.0,-393575.0
+2022-04-01,2022-03-30,SMCI,"Super Micro Computer, Inc.",Liu Liang Chiu-Chu Sara,"Dir, 10%",S - Sale,41.17,-39612.0,6701922.0,-1.0,-1630657.0
+2022-04-01,2022-03-31,MTBC,"Carecloud, Inc.",Daly John N,Dir,S - Sale,5.17,-4350.0,41500.0,-9.0,-22490.0
+2022-04-01,2022-03-31,ALHC,"Alignment Healthcare, Inc.",Maroney Dawn Christine,"Pres, Markets",S - Sale,11.18,-6681.0,1714206.0,0.0,-74664.0
+2022-04-01,2022-03-31,BXMT,"Blackstone Mortgage Trust, Inc.",Keenan Katharine A,"CEO, Pres",S - Sale,32.03,-992.0,131006.0,-1.0,-31770.0
+2022-04-01,2022-03-30,LYV,"Live Nation Entertainment, Inc.",Rapino Michael,"Pres, CEO",S - Sale+OE,117.51,-234000.0,3028520.0,-7.0,-27497460.0
+2022-04-01,2022-03-31,ALHC,"Alignment Healthcare, Inc.",Kumar Dinesh M.,Chief Medical Officer,S - Sale,11.18,-3058.0,1190970.0,0.0,-34175.0
+2022-04-01,2022-02-02,MTW,Manitowoc Co Inc,Pfeifer John Charles,Dir,P - Purchase,18.06,1315.0,45833.0,0.03,23745.0
+2022-04-01,2022-03-30,ROIV,Roivant Sciences Ltd.,Gline Matthew,CEO,S - Sale,4.84,-33686.0,1412957.0,-2.0,-163040.0
+2022-04-01,2022-03-30,ROIV,Roivant Sciences Ltd.,Kumar Rakhi,Chief Accounting Officer,S - Sale,4.84,-2486.0,160486.0,-2.0,-12032.0
+2022-04-01,2022-03-30,ROIV,Roivant Sciences Ltd.,Venker Eric,"Pres, COO",S - Sale,4.84,-19336.0,1274520.0,-1.0,-93586.0
+2022-04-01,2022-03-28,TYME,"Tyme Technologies, Inc.",Hoffman Steve,"Dir, 10%",S - Sale,0.35,-156250.0,20960066.0,-1.0,-54578.0
+2022-04-01,2022-03-30,HRMY,"Harmony Biosciences Holdings, Inc.",Nielsen Jack,Dir,S - Sale,50.21,-37391.0,4121697.0,-1.0,-1877309.0
+2022-04-01,2022-03-31,ALHC,"Alignment Healthcare, Inc.",Cross Richard A.,"SVP, GC",S - Sale,11.18,-1592.0,297927.0,-1.0,-17792.0
+2022-04-01,2022-03-31,ALHC,"Alignment Healthcare, Inc.",Furman Donald Steven,Chief Clinical Officer,S - Sale,11.18,-3006.0,1826538.0,0.0,-33594.0
+2022-04-01,2022-03-31,ALHC,"Alignment Healthcare, Inc.",Kao John E,CEO,S - Sale,11.18,-26366.0,4346744.0,-1.0,-294656.0
+2022-04-01,2022-03-31,ORA,"Ormat Technologies, Inc.",Stern Stanley,Dir,S - Sale+OE,80.85,-7500.0,6037.0,-55.0,-606375.0
+2022-04-01,2022-04-01,BL,"Blackline, Inc.",Unterman Thomas,Dir,S - Sale+OE,73.35,-500.0,95339.0,-1.0,-36675.0
+2022-04-01,2022-03-31,RDI,Reading International Inc,Cotter Ellen M,"Vice Chair, Pres, CEO, 10%",S - Sale,4.31,-5500.0,2110453.0,0.0,-23688.0
+2022-04-01,2022-03-31,RDI,Reading International Inc,Cotter Margaret,"Chairperson, EVP - RE Dev, NY, 10%",S - Sale,4.31,-5500.0,2151254.0,0.0,-23688.0
+2022-04-01,2022-03-30,ATLC,Atlanticus Holdings Corp,Saunders Mitchell,Chief Accounting Officer,S - Sale,55.36,-2000.0,64371.0,-3.0,-110720.0
+2022-04-01,2022-03-31,RDI,Reading International Inc,James J. Cotter Living Trust,"Member of Sec.13(d)(3) Group, 10%",S - Sale,4.31,-5500.0,1295649.0,0.0,-23688.0
+2022-04-01,2022-03-31,STWD,"Starwood Property Trust, Inc.",Sossen Andrew Jay,"COO, GC",S - Sale,24.25,-33750.0,293881.0,-10.0,-818546.0
+2022-04-01,2022-03-30,ISEE,"Iveric Bio, Inc.",Sblendorio Glenn,CEO,S - Sale+OE,17.47,-43369.0,279689.0,-13.0,-757684.0
+2022-04-01,2022-03-31,ALHC,"Alignment Healthcare, Inc.",Freeman Robert Thomas,CFO,S - Sale,11.27,-8236.0,1144208.0,-1.0,-92835.0
+2022-04-01,2022-03-30,SXT,Sensient Technologies Corp,Winder Investment Pte Ltd,10%,P - Purchase,84.8,29015.0,5195176.0,0.01,2460572.0
+2022-04-01,2022-03-30,VNCE,Vince Holding Corp.,Schwefel Jonathan,CEO,S - Sale,8.06,-4585.0,49947.0,-8.0,-36955.0
+2022-04-01,2022-03-30,NEM,Newmont Corp /de/,Lipson Nancy,"EVP, GC",S - Sale,79.0,-19866.0,17298.0,-53.0,-1569414.0
+2022-04-01,2022-03-30,FRAF,Franklin Financial Services Corp /pa/,Duffey Gregory A,Dir,P - Purchase,34.49,29.0,8754.0,0.0,1000.0
+2022-04-01,2022-04-01,PTVE,Pactiv Evergreen Inc.,Wulf Eric,"Pres, Food Merchandising",P - Purchase,10.0,10000.0,91668.0,0.12,100000.0
+2022-04-01,2022-03-30,HEI,Heico Corp,Schriesheim Alan,Dir,S - Sale,127.09,-24865.0,130100.0,-16.0,-3160157.0
+2022-04-01,2022-03-31,MPB,Mid Penn Bancorp Inc,De Soto Matthew G,Dir,P - Purchase,26.81,280.0,44793.0,0.01,7507.0
+2022-04-01,2022-03-31,MPB,Mid Penn Bancorp Inc,Kerwin Gregory M,Dir,P - Purchase,26.81,37.0,37590.0,0.0,992.0
+2022-04-01,2022-03-31,MPB,Mid Penn Bancorp Inc,Mowery Theodore W,Dir,P - Purchase,26.81,74.0,27808.0,0.0,1984.0
+2022-04-01,2022-03-31,MPB,Mid Penn Bancorp Inc,Quandel Noble C Jr,Dir,P - Purchase,26.81,112.0,143323.0,0.0,3003.0
+2022-04-01,2022-03-30,AIR,Aar Corp,Holmes John McClain III,"Pres, CEO",S - Sale+OE,49.01,-11765.0,244041.0,-5.0,-576642.0
+2022-04-01,2022-03-30,CREX,"Creative Realities, Inc.",Nesbit Stephen,Dir,P - Purchase,0.86,86000.0,139981.0,1.59,73930.0
+2022-04-01,2022-04-01,WRLD,World Acceptance Corp,Umstetter Luke J.,"SVP, GC",S - Sale,193.69,-250.0,20224.0,-1.0,-48423.0
+2022-04-01,2022-03-30,NWLI,"National Western Life Group, Inc.",Boone David S,Dir,P - Purchase,217.16,200.0,200.0,999999.0,43432.0
+2022-04-01,2022-03-31,MPB,Mid Penn Bancorp Inc,Grubic Robert C,Dir,P - Purchase,26.81,186.0,55385.0,0.0,4987.0
+2022-04-01,2022-03-31,MPB,Mid Penn Bancorp Inc,Abel Robert A,Dir,P - Purchase,26.81,18.0,18871.0,0.0,483.0
+2022-04-01,2022-03-31,MPB,Mid Penn Bancorp Inc,Brumbaugh Kimberly J,Dir,P - Purchase,26.81,93.0,4421.0,0.02,2493.0
+2022-04-01,2022-03-30,KFS,Kingsway Financial Services Inc,Stilwell Joseph,"Dir, 10%",P - Purchase,5.5,35000.0,1737117.0,0.02,192500.0
+2022-04-01,2022-03-31,ENTG,Entegris Inc,Graves Gregory B,"EVP, CFO",S - Sale+OE,133.1,-12142.0,20980.0,-37.0,-1616092.0
+2022-04-01,2022-03-30,FRAF,Franklin Financial Services Corp /pa/,Carmack Karen K,SVP,P - Purchase,34.49,1.0,2226.0,0.0,34.0
+2022-04-01,2022-03-30,ENTG,Entegris Inc,Edlund Todd James,"EVP, COO",S - Sale+OE,137.32,-24289.0,175399.0,-12.0,-3335408.0
+2022-04-01,2022-03-31,MSM,Msc Industrial Direct Co Inc,Jones Douglas E,"EVP, Chief Supply Chain",S - Sale+OE,86.0,-31635.0,3970.0,-89.0,-2720610.0
+2022-04-01,2022-04-01,LSCC,Lattice Semiconductor Corp,Jensen Mark Edwin,Dir,S - Sale,60.95,-9000.0,84986.0,-10.0,-548532.0
+2022-04-01,2022-03-31,PCYN,Procyon Corp,Speer Foundation,10%,S - Sale,0.38,-40000.0,1460000.0,-3.0,-15144.0
+2022-04-01,2022-03-30,TCON,"Tracon Pharmaceuticals, Inc.",Theuer Charles,"Pres, CEO",P - Purchase,2.7,4000.0,224518.0,0.02,10800.0
+2022-04-01,2022-03-31,GNTX,Gentex Corp,Boehm Neil,CTO,S - Sale,29.24,-4500.0,26022.0,-15.0,-131580.0
+2022-04-01,2022-03-31,CMTV,Community Bancorp /vt,Couture Jacques R,Dir,P - Purchase,22.75,250.0,35434.0,0.01,5688.0
+2022-04-01,2022-03-31,GNTX,Gentex Corp,Chiodo Matthew,VP of Sales,S - Sale,29.24,-5700.0,21577.0,-21.0,-166667.0
+2022-04-01,2022-03-31,LCII,Lci Industries,Lippert Jason,"Pres,amp; CEO",P - Purchase,108.0,9265.0,298992.0,0.03,1000620.0
+2022-04-01,2022-03-31,LCII,Lci Industries,Schnur Jamie,Group Pres - Aftermarket,P - Purchase,107.79,3250.0,20182.0,0.19,350318.0
+2022-04-01,2022-03-31,CVLY,Codorus Valley Bancorp Inc,Giambalvo John W,Dir,P - Purchase,22.25,263.0,36951.0,0.01,5852.0
+2022-04-01,2022-03-31,CCOI,"Cogent Communications Holdings, Inc.",Chang John B.,"VP, GC",S - Sale,66.0,-150.0,41510.0,0.0,-9900.0
+2022-04-01,2022-03-31,EDSA,"Edesa Biotech, Inc.",Nijhawan Pardeep,"CEO, 10%",P - Purchase,2.99,2000.0,3292285.0,0.0,5972.0
+2022-04-01,2022-03-21,SCX,Starrett L S Co,Arntsen Christian,VP International,S - Sale,7.32,-1000.0,43500.0,-2.0,-7320.0
+2022-04-01,2022-03-31,TPL,Texas Pacific Land Corp,Stahl Murray,Dir,P - Purchase,1352.11,18.0,366302.0,0.0,24338.0
+2022-04-01,2022-04-01,DHIL,Diamond Hill Investment Group Inc,Line Thomas Edward,CFO,S - Sale,187.3,-166.0,21263.0,-1.0,-31092.0
+2022-04-01,2022-04-01,DHIL,Diamond Hill Investment Group Inc,Brilliant Heather E,CEO,S - Sale,187.3,-297.0,38814.0,-1.0,-55628.0
+2022-04-01,2022-03-31,REPX,"Riley Exploration Permian, Inc.",Riley Philip A,"CFO, EVP STRATEGY",P - Purchase,24.5,500.0,45092.0,0.01,12250.0
+2022-04-01,2022-03-30,FRAF,Franklin Financial Services Corp /pa/,Hollar Mark R,CFO,P - Purchase,34.49,3.0,7758.0,0.0,103.0
+2022-04-01,2022-03-31,WLK,Westlake Corp,Bender Mark Steven,"EVP, CFO",S - Sale+OE,124.35,-6021.0,30725.0,-16.0,-748734.0
+2022-04-01,2022-03-30,MRNA,"Moderna, Inc.",Bancel Stephane,CEO,S - Sale,175.98,-19000.0,21474787.0,0.0,-3343645.0
+2022-04-01,2022-03-30,FRAF,Franklin Financial Services Corp /pa/,Hanks Patricia A,SVP,P - Purchase,34.49,3.0,4683.0,0.0,103.0
+2022-04-01,2022-04-01,ALGT,Allegiant Travel Co,Deangelo Scott Wayne,"EVP, CMO",S - Sale,162.87,-500.0,8535.0,-6.0,-81435.0
+2022-04-01,2022-03-30,UPST,"Upstart Holdings, Inc.",Nicoll Alison,"GC, Secretary",S - Sale+OE,119.63,-7500.0,186367.0,-4.0,-897237.0
+2022-04-01,2022-04-01,BSX,Boston Scientific Corp,Olson Scott,"SVP, Pres, CRM, Diagnostics",S - Sale,44.55,-700.0,14518.0,-5.0,-31185.0
+2022-04-01,2022-03-30,IBKR,"Interactive Brokers Group, Inc.",Peterffy Thomas,COB,S - Sale,67.09,-40000.0,3227511.0,-1.0,-2683754.0
+2022-04-01,2022-03-30,AMD,Advanced Micro Devices Inc,Papermaster Mark D,"CTO, EVP",S - Sale+OE,125.0,-20180.0,1294632.0,-2.0,-2522500.0
+2022-04-01,2022-03-30,EMAN,Emagin Corp,Ginola Ltd,10%,S - Sale,1.16,-56500.0,233381.0,-19.0,-65511.0
+2022-04-01,2022-03-30,LNTH,"Lantheus Holdings, Inc.",Walker Carol,"SVP, Quality",S - Sale,56.22,-15000.0,64899.0,-19.0,-843300.0
+2022-04-01,2022-03-30,ZI,Zoominfo Technologies Inc.,Carlyle Group Inc.,10%,S - Sale,59.24,-184693.0,42245437.0,0.0,-10940991.0
+2022-04-01,2022-03-10,ISPO,Inspirato Inc,"Millennium Technology Value Partners Ii, L.P.",10%,S - Sale,12.74,-52450.0,1932495.0,-3.0,-668386.0
+2022-04-01,2022-03-25,TRSSF,Terrascend Corp.,"Jw Asset Management, LLC","Exec COB, 10%",S - Sale,5.4,-4764.0,90204738.0,0.0,-25726.0
+2022-04-01,2022-03-31,MRO,Marathon Oil Corp,Wagner Patrick,See Remarks,S - Sale+OE,25.63,-65218.0,179566.0,-27.0,-1671609.0
+2022-04-01,2022-03-30,RIBT,Ricebran Technologies,Continental Grain Co,10%,S - Sale,0.47,-837661.0,9226068.0,-8.0,-397148.0
+2022-04-01,2022-03-30,XPEL,"Xpel, Inc.",Crumly Richard K.,Dir,S - Sale,55.04,-36000.0,2171199.0,-2.0,-1981590.0
+2022-04-01,2022-03-30,MACK,Merrimack Pharmaceuticals Inc,Crocker Gary L,See Remarks,P - Purchase,6.18,461.0,110338.0,0.0,2851.0
+2022-04-01,2022-03-31,ATHA,"Athira Pharma, Inc.",Romano Kelly A,Dir,P - Purchase,13.11,8000.0,8315.0,999999.0,104880.0
+2022-04-01,2022-03-31,PTCT,"Ptc Therapeutics, Inc.",Hill Emily Luisa,CFO,S - Sale,37.78,-7910.0,29259.0,-21.0,-298824.0
+2022-04-01,2022-03-31,CRVS,"Corvus Pharmaceuticals, Inc.",Miller Richard A Md,"Pres, CEO",P - Purchase,1.64,15000.0,1369229.0,0.01,24534.0
+2022-04-01,2022-03-30,ZI,Zoominfo Technologies Inc.,Cg Subsidiary Holdings L.L.C.,10%,S - Sale,59.24,-184693.0,42245437.0,0.0,-10940991.0
+2022-04-01,2022-03-30,NBSE,"Neubase Therapeutics, Inc.",Mann William Roland,COO,P - Purchase,1.92,6200.0,11200.0,1.24,11904.0
+2022-04-01,2022-03-30,OGEN,Oragenics Inc,Telling Fred,Dir,P - Purchase,0.36,183838.0,779916.0,0.31,66053.0
+2022-04-01,2022-03-30,KEYS,"Keysight Technologies, Inc.",Li Jeffrey K,"SVP, Secretary",S - Sale,162.34,-3000.0,20097.0,-13.0,-487011.0
+2022-04-01,2022-03-30,MRNA,"Moderna, Inc.",Andres Juan,See remarks,S - Sale+OE,182.79,-2000.0,9069.0,-18.0,-365580.0
+2022-04-01,2022-03-30,BHR,Braemar Hotels & Resorts Inc.,Nunneley Mark,Chief Accounting Officer,P - Purchase,22.5,9000.0,313954.0,0.03,202500.0
+2022-04-01,2022-04-01,REGN,"Regeneron Pharmaceuticals, Inc.",Landry Robert E,EVP Finance CFO,S - Sale+OE,695.81,-316.0,28973.0,-1.0,-219875.0
+2022-04-01,2022-03-30,WMG,Warner Music Group Corp.,Benet Lincoln E,Dir,S - Sale,38.25,-10000.0,434341.0,-2.0,-382500.0
+2022-04-01,2022-03-30,REGN,"Regeneron Pharmaceuticals, Inc.",Vagelos P Roy,Dir,S - Sale,700.01,-28572.0,501738.0,-5.0,-20000686.0
+2022-04-01,2022-03-30,REGN,"Regeneron Pharmaceuticals, Inc.",Goldstein Joseph L,Dir,S - Sale+OE,700.0,-2431.0,6082.0,-29.0,-1701700.0
+2022-04-01,2022-03-30,REGN,"Regeneron Pharmaceuticals, Inc.",Bassler Bonnie L,Dir,S - Sale+OE,700.0,-1240.0,1082.0,-53.0,-868000.0
+2022-04-01,2022-04-01,GNRC,Generac Holdings Inc.,Jagdfeld Aaron,CEO,S - Sale,298.74,-5000.0,630975.0,-1.0,-1493700.0
+2022-04-01,2022-03-30,HZNP,Horizon Therapeutics Public Ltd Co,Walbert Timothy P,"COB, Pres, CEO",S - Sale,105.26,-50000.0,734511.0,-6.0,-5262787.0
+2022-04-01,2022-03-31,LPI,"Laredo Petroleum, Inc.",Pigott M. Jason,"Pres, CEO",S - Sale+OE,81.88,-5531.0,125089.0,-4.0,-452878.0
+2022-04-01,2022-03-31,LCII,Lci Industries,Gero James,Dir,P - Purchase,105.52,10000.0,314192.0,0.03,1055200.0
+2022-04-01,2022-03-30,EXPI,"Exp World Holdings, Inc.",Gentry Felicia J,Dir,S - Sale+OE,22.64,-2600.0,2507.0,-51.0,-58873.0
+2022-04-01,2022-04-01,FDS,Factset Research Systems Inc,Snow Frederick Philip,CEO,S - Sale+OE,435.37,-2500.0,3988.0,-39.0,-1088425.0
+2022-04-01,2022-03-30,EXPI,"Exp World Holdings, Inc.",Sanford Glenn Darrel,"CEO, COB, 10%",S - Sale+OE,22.33,-18000.0,42034338.0,0.0,-401936.0
+2022-04-01,2022-03-30,AAIC,Arlington Asset Investment Corp.,Tonkel J Rock Jr,"Pres, CEO",P - Purchase,3.52,20000.0,794848.0,0.03,70370.0
+2022-04-04,2022-03-31,GATX,Gatx Corp,Kenney Brian A,"COB, Pres, CEO",S - Sale,123.32,-67591.0,133967.0,-34.0,-8335395.0
+2022-04-04,2022-02-04,VPLM,Voip-Pal.Com Inc,Chang Dennis,Dir,S - Sale,0.01,-8858909.0,26673916.0,-25.0,-113371.0
+2022-04-04,2022-04-04,TYME,"Tyme Technologies, Inc.",Demurjian Michael,10%,S - Sale,0.35,-20000.0,23708846.0,0.0,-7004.0
+2022-04-04,2022-03-31,OSG,Overseas Shipholding Group Inc,"Cyrus Capital Partners, L.P.",10%,S - Sale,2.14,-380233.0,16453241.0,-2.0,-814161.0
+2022-04-04,2022-03-31,FSLR,"First Solar, Inc.",Verma Kuntal Kumar,Chief Mfg. Engineering Officer,S - Sale,82.59,-2219.0,2490.0,-47.0,-183267.0
+2022-04-04,2022-03-31,GRAY,"Graybug Vision, Inc.",Breuil Robert S,CFO,S - Sale+OE,1.25,-2188.0,20529.0,-10.0,-2735.0
+2022-04-04,2022-04-04,COO,"Cooper Companies, Inc.",Lindell Jody S,Dir,S - Sale+OE,421.04,-700.0,19793.0,-3.0,-294728.0
+2022-04-04,2022-03-31,QLYS,"Qualys, Inc.",Thakar Sumedh S,"CEO, Pres",S - Sale+OE,145.13,-6900.0,180978.0,-4.0,-1001420.0
+2022-04-04,2022-04-01,ALIT,"Alight, Inc. / Delaware",Massey Richard N,Dir,P - Purchase,9.54,10000.0,394387.0,0.03,95389.0
+2022-04-04,2022-03-31,ALIT,"Alight, Inc. / Delaware",Foley William P II,Dir,S - Sale,10.02,-189329.0,13146129.0,-1.0,-1897077.0
+2022-04-04,2022-04-01,EA,Electronic Arts Inc.,Miele Laura,"EVP, COO",S - Sale,124.91,-3100.0,23429.0,-12.0,-387210.0
+2022-04-04,2022-04-01,EA,Electronic Arts Inc.,Singh Vijayanthimala,Chief People Officer,S - Sale,126.85,-800.0,20317.0,-4.0,-101480.0
+2022-04-04,2022-04-04,LMPX,"Lmp Automotive Holdings, Inc.",Tawfik Samer,"Pres, CEO, 10%",S - Sale,4.83,-9000.0,3722103.0,0.0,-43470.0
+2022-04-04,2022-03-31,NAVI,Navient Corp,Newbury Investors LLC,10%,P - Purchase,17.13,641408.0,29449997.0,0.02,10987319.0
+2022-04-04,2022-03-31,IVZ,Invesco Ltd.,"Trian Fund Management, L.P.",10%,P - Purchase,23.12,3724600.0,55758634.0,0.07,86124929.0
+2022-04-04,2022-03-31,ZI,Zoominfo Technologies Inc.,Brown Kirk Norman,10%,S - Sale,60.31,-619570.0,15152420.0,-4.0,-37363394.0
+2022-04-04,2022-04-01,CRM,"Salesforce, Inc.",Benioff Marc,"COB, co-CEO",S - Sale+OE,211.58,-2300.0,28918241.0,0.0,-486632.0
+2022-04-04,2022-03-31,SXT,Sensient Technologies Corp,Winder Investment Pte Ltd,10%,P - Purchase,84.23,23859.0,5219035.0,0.0,2009730.0
+2022-04-04,2022-04-01,ZUO,Zuora Inc,Srinivasan Sri,"Chief Product, Tech Officer",S - Sale+OE,14.63,-4366.0,24232.0,-15.0,-63861.0
+2022-04-04,2022-04-01,TMDX,"Transmedics Group, Inc.",Carey John F,VP of Operations,S - Sale+OE,26.85,-1500.0,379.0,-80.0,-40275.0
+2022-04-04,2022-04-01,PFGC,Performance Food Group Co,Hagerty Patrick T.,See Remarks,S - Sale,51.06,-500.0,148325.0,0.0,-25530.0
+2022-04-04,2022-04-01,FRME,First Merchants Corp,Sherman Patrick A,Dir,P - Purchase,41.97,12.0,51113.0,0.0,500.0
+2022-04-04,2022-03-31,AAME,Atlantic American Corp,Robinson Harriett J,"Trustee under Rule 16a-8, 10%",P - Purchase,4.0,1363809.0,15217583.0,0.1,5455236.0
+2022-04-04,2022-03-31,AAME,Atlantic American Corp,Robinson Harriett J,"Trustee under Rule 16a-8, 10%",S - Sale+OE,4.0,-1363809.0,15217583.0,-8.0,-5455236.0
+2022-04-04,2022-04-01,AFL,Aflac Inc,Moskowitz Joseph L,Dir,S - Sale,64.87,-300.0,17947.0,-2.0,-19461.0
+2022-04-04,2022-04-01,RGCO,Rgc Resources Inc,Oliver Lawrence T.,"VP, Secretary",P - Purchase,21.75,9.0,8583.0,0.0,200.0
+2022-04-04,2022-04-01,OM,"Outset Medical, Inc.",Trigg Leslie,"Chair, CEO",S - Sale+OE,46.18,-65000.0,301752.0,-18.0,-3001970.0
+2022-04-04,2022-04-01,ZUO,Zuora Inc,Traube Robert J.,Chief Revenue Officer,S - Sale+OE,14.63,-11069.0,39187.0,-22.0,-161906.0
+2022-04-04,2022-04-01,EXTR,Extreme Networks Inc,Meyercord Edward,"Pres, CEO",S - Sale+OE,12.18,-25000.0,778650.0,-3.0,-304445.0
+2022-04-04,2022-03-31,NVAX,Novavax Inc,Young James F,Dir,S - Sale,73.58,-12500.0,64090.0,-16.0,-919765.0
+2022-04-04,2022-04-01,ZUO,Zuora Inc,McElhatton Todd,CFO,S - Sale+OE,14.63,-9962.0,63063.0,-14.0,-145713.0
+2022-04-04,2022-04-01,OM,"Outset Medical, Inc.",Vazquez Martin,COO,S - Sale+OE,45.77,-20000.0,49495.0,-29.0,-915451.0
+2022-04-04,2022-04-01,OM,"Outset Medical, Inc.",Ahmed Nabeel,CFO,S - Sale+OE,45.19,-300.0,44489.0,-1.0,-13557.0
+2022-04-04,2022-04-01,PI,Impinj Inc,Dossett Jeffrey,Chief Revenue Officer,S - Sale+OE,64.07,-1000.0,48297.0,-2.0,-64070.0
+2022-04-04,2022-03-31,TURN,180 Degree Capital Corp. /ny/,Rendino Kevin,"COB, CEO",P - Purchase,6.79,729.0,483244.0,0.0,4953.0
+2022-04-04,2022-03-31,ZUO,Zuora Inc,Tzuo Tien,"COB, CEO, 10%",S - Sale+OE,15.09,-17500.0,0.0,-100.0,-264041.0
+2022-04-04,2022-03-31,CUE,"Cue Biopharma, Inc.",Fletcher Aaron G.L.,Dir,P - Purchase,4.76,735000.0,908867.0,4.23,3498600.0
+2022-04-04,2022-04-04,TFFP,"Tff Pharmaceuticals, Inc.",Fletcher Aaron G.L.,Dir,P - Purchase,6.47,542000.0,642000.0,5.42,3504380.0
+2022-04-04,2022-03-29,AMED,Amedisys Inc,Kemmerly David L,See Remarks,S - Sale,177.31,-2500.0,16842.0,-13.0,-443285.0
+2022-04-04,2022-03-31,MNTR,"Mentor Capital, Inc.",Billingsley Chester,CEO,S - Sale+OE,0.05,-208000.0,750296.0,-22.0,-10400.0
+2022-04-04,2022-03-31,KULR,"Kulr Technology Group, Inc.",Cochran Terry Keith,"Pres, COO",S - Sale,2.24,-90200.0,275096.0,-25.0,-202048.0
+2022-04-04,2022-04-04,PUBM,"Pubmatic, Inc.",Chow Thomas C.,"GC, Secretary",S - Sale+OE,27.74,-866.0,2801.0,-24.0,-24021.0
+2022-04-04,2022-03-31,BEAM,Beam Therapeutics Inc.,Ciaramella Giuseppe,"Pres, CSO",S - Sale,59.11,-1859.0,115614.0,-2.0,-109885.0
+2022-04-04,2022-04-01,ZS,"Zscaler, Inc.",Blasing Karen,Dir,S - Sale+OE,250.0,-3000.0,28005.0,-10.0,-750000.0
+2022-04-04,2022-03-29,EVER,"Everquote, Inc.",Revesz Tomas Jr,Chief Architect,S - Sale,15.29,-7119.0,460409.0,-2.0,-108850.0
+2022-04-04,2022-04-01,PUBM,"Pubmatic, Inc.",Hirsch Jeffrey K.,Chief Commercial Officer,S - Sale+OE,27.27,-1829.0,5048.0,-27.0,-49882.0
+2022-04-04,2022-03-29,EVER,"Everquote, Inc.",Auguste Darryl,"EVP, Global Analytics",S - Sale,15.29,-638.0,74004.0,-1.0,-9755.0
+2022-04-04,2022-04-01,PUBM,"Pubmatic, Inc.",Goel Amar K.,"Chief Innovation Officer, 10%",S - Sale+OE,27.11,-2262.0,1736.0,-57.0,-61332.0
+2022-04-04,2022-03-31,STIM,"Neuronetics, Inc.",Cannell Capital LLC,10%,P - Purchase,3.0,265305.0,2993765.0,0.1,795696.0
+2022-04-04,2022-04-04,W,Wayfair Inc.,Tan Fiona,CTO,S - Sale+OE,115.78,-2618.0,18797.0,-12.0,-303116.0
+2022-04-04,2022-04-04,PUBM,"Pubmatic, Inc.",Goel Rajeev K.,"CEO, 10%",S - Sale+OE,27.74,-5984.0,5253.0,-53.0,-165986.0
+2022-04-04,2022-04-04,PUBM,"Pubmatic, Inc.",Pantelick Steven,CFO,S - Sale+OE,27.74,-2555.0,12552.0,-17.0,-70871.0
+2022-04-04,2022-03-31,MULN,Mullen Automotive Inc.,New Jonathan,Dir,S - Sale,2.99,-10000.0,8611.0,-54.0,-29902.0
+2022-04-04,2022-04-01,OSTK,"Overstock.Com, Inc",Dalton Krista,Chief Merchandising Officer,S - Sale,43.6,-8036.0,7292.0,-52.0,-350370.0
+2022-04-04,2022-04-01,APLS,"Apellis Pharmaceuticals, Inc.",Scheibler Lukas,CHIEF INNOVATION OFFICER,S - Sale+OE,55.05,-11496.0,52233.0,-18.0,-632855.0
+2022-04-04,2022-04-04,ORCL,Oracle Corp,James Renee Jo,Dir,S - Sale,84.11,-6000.0,41886.0,-13.0,-504663.0
+2022-04-04,2022-03-31,FORA,Forian Inc.,Wygod Martin J,Dir,P - Purchase,6.61,10627.0,2533472.0,0.0,70296.0
+2022-04-04,2022-04-01,PUBM,"Pubmatic, Inc.",Kumar Mukul,"Pres, Engineering",S - Sale+OE,27.27,-1487.0,2395.0,-38.0,-40549.0
+2022-04-04,2022-04-01,SNDR,"Schneider National, Inc.",Geyer David L,"EVP, Pres Transp., Log.",S - Sale,24.71,-16000.0,126075.0,-11.0,-395368.0
+2022-04-04,2022-03-31,BEAM,Beam Therapeutics Inc.,Evans John M.,CEO,S - Sale,59.11,-6261.0,1252070.0,0.0,-370088.0
+2022-04-04,2022-04-01,EXPE,"Expedia Group, Inc.",Khosrowshahi Dara,Dir,S - Sale,198.29,-20000.0,284022.0,-7.0,-3965818.0
+2022-04-04,2022-04-04,ABIO,"Arca Biopharma, Inc.","Funicular Fund, LP",See Footnote 1,P - Purchase,2.26,122342.0,1944993.0,0.07,276309.0
+2022-04-04,2022-04-01,MMI,"Marcus & Millichap, Inc.",Nadji Hessam,CEO,S - Sale,55.34,-10000.0,165058.0,-6.0,-553404.0
+2022-04-04,2022-03-31,FTK,Flotek Industries Inc/cn/,Gibson John W Jr,"CEO, Pres",P - Purchase,1.3,4000.0,862833.0,0.0,5200.0
+2022-04-04,2022-04-01,ELF,"E.L.F. Beauty, Inc.",Amin Tarang,CEO,S - Sale,26.02,-42561.0,782069.0,-5.0,-1107265.0
+2022-04-04,2022-03-31,SNAP,Snap Inc,O'Sullivan Michael J.,GC,S - Sale,36.12,-12500.0,1111829.0,-1.0,-451496.0
+2022-04-04,2022-03-31,GSHD,"Goosehead Insurance, Inc.",Mark & Robyn Jones Descendants Trust 2014,"Member of 10% owner group, 10%",S - Sale+OE,80.65,-123527.0,12423304.0,-1.0,-9962780.0
+2022-04-04,2022-03-31,GRPN,"Groupon, Inc.",Barta Jan,See Footnote 1,P - Purchase,19.25,123346.0,3110712.0,0.04,2374821.0
+2022-04-04,2022-03-31,AEE,Ameren Corp,Lindgren Mark C,SVP & Chief HR Officer of Sub,S - Sale,94.44,-999.0,43540.0,-2.0,-94346.0
+2022-04-04,2022-03-31,AEE,Ameren Corp,Lyons Martin J,"Pres, CEO",S - Sale,94.02,-163.0,211631.0,0.0,-15325.0
+2022-04-04,2022-03-31,AGO,Assured Guaranty Ltd,Buhl G Lawrence,Dir,S - Sale,64.96,-3643.0,44761.0,-8.0,-236649.0
+2022-04-04,2022-03-31,AEE,Ameren Corp,Schukar Shawn E,Chmn & President of Subsidiary,S - Sale,94.48,-574.0,53551.0,-1.0,-54232.0
+2022-04-04,2022-03-31,AEE,Ameren Corp,Mark Richard J,Chmn & President of Subsidiary,S - Sale,93.67,-6000.0,158242.0,-4.0,-562020.0
+2022-04-04,2022-04-01,FLYW,Flywire Corp,Orgel Rob,"Pres, COO",S - Sale+OE,31.13,-20000.0,166019.0,-11.0,-622678.0
+2022-04-04,2022-03-31,GWRS,"Global Water Resources, Inc.",Coy Debra,Dir,P - Purchase,16.65,25.0,16952.0,0.0,416.0
+2022-04-04,2022-04-01,IGMS,"Igm Biosciences, Inc.",Behrens M Kathleen,Dir,P - Purchase,23.0,60869.0,32452.0,-214.0,1399987.0
+2022-04-04,2022-03-31,EXEL,"Exelixis, Inc.",Haley Patrick J.,"EVP, Commercial",S - Sale+OE,22.72,-20000.0,303378.0,-6.0,-454300.0
+2022-04-04,2022-04-01,IGMS,"Igm Biosciences, Inc.",Loberg Michael D,Dir,P - Purchase,23.0,21739.0,65415.0,0.5,499997.0
+2022-04-04,2022-04-01,AMPH,"Amphastar Pharmaceuticals, Inc.",Petersen Floyd F.,Dir,S - Sale,36.69,-500.0,76373.0,-1.0,-18345.0
+2022-04-04,2022-03-31,BEAM,Beam Therapeutics Inc.,Burrell Terry-Ann,CFO,S - Sale,59.11,-1787.0,38278.0,-4.0,-105630.0
+2022-04-04,2022-04-01,MLSS,Milestone Scientific Inc.,Osser Leonard,Dir,S - Sale,1.45,-20100.0,4252138.0,0.0,-29082.0
+2022-04-04,2022-04-01,FATE,Fate Therapeutics Inc,Tahl Cindy,"GC, Secretary",S - Sale+OE,38.85,-25000.0,189151.0,-12.0,-971250.0
+2022-04-04,2022-03-31,SLNO,Soleno Therapeutics Inc,Mackaness James H,CFO,P - Purchase,0.0,40000.0,67295.0,1.47,0.0
+2022-04-04,2022-03-31,HRL,Hormel Foods Corp /de/,Murano Elsa A,Dir,S - Sale,51.57,-5000.0,105169.0,-5.0,-257825.0
+2022-04-04,2022-04-01,DRQ,Dril-Quip Inc,Bird Jeffrey J.,"Pres, CEO",S - Sale,36.95,-5000.0,101498.0,-5.0,-184745.0
+2022-04-04,2022-04-01,DRQ,Dril-Quip Inc,Webster James C.,"VP - GC, Secretary",S - Sale,36.95,-5000.0,58108.0,-8.0,-184725.0
+2022-04-04,2022-03-31,FNF,"Fidelity National Financial, Inc.",Jewkes Roger S,COO,S - Sale,50.01,-7438.0,600779.0,-1.0,-371991.0
+2022-04-04,2022-04-04,GALT,Galectin Therapeutics Inc,Zordani Richard A. Jr.,Dir,P - Purchase,1.61,5000.0,24583.0,0.26,8025.0
+2022-04-04,2022-03-31,SPG,Simon Property Group Inc /de/,Aeppel Glyn,Dir,P - Purchase,134.1,118.0,10734.0,0.01,15824.0
+2022-04-04,2022-03-31,SPG,Simon Property Group Inc /de/,Glasscock Larry C,Dir,P - Purchase,134.1,233.0,31946.0,0.01,31246.0
+2022-04-04,2022-03-31,SPG,Simon Property Group Inc /de/,Horn Karen N,Dir,P - Purchase,134.1,367.0,30301.0,0.01,49216.0
+2022-04-04,2022-03-31,SPG,Simon Property Group Inc /de/,Hubbard Allan B,Dir,P - Purchase,134.1,268.0,25706.0,0.01,35940.0
+2022-04-04,2022-03-31,SPG,Simon Property Group Inc /de/,Leibowitz Reuben S,Dir,P - Purchase,134.1,335.0,54515.0,0.01,44924.0
+2022-04-04,2022-03-31,SPG,Simon Property Group Inc /de/,Rodkin Gary M,Dir,P - Purchase,134.1,129.0,10677.0,0.01,17299.0
+2022-04-04,2022-03-31,SPG,Simon Property Group Inc /de/,Roe Peggy Fang,Dir,P - Purchase,134.1,5.0,467.0,0.01,671.0
+2022-04-04,2022-03-31,SPG,Simon Property Group Inc /de/,Selig Stefan M,Dir,P - Purchase,134.1,104.0,23632.0,0.0,13947.0
+2022-04-04,2022-03-31,SPG,Simon Property Group Inc /de/,Smith Daniel C.,Dir,P - Purchase,134.1,229.0,21839.0,0.01,30710.0
+2022-04-04,2022-03-31,SPG,Simon Property Group Inc /de/,Smith J Albert Jr,Dir,P - Purchase,134.1,464.0,55714.0,0.01,62224.0
+2022-04-04,2022-03-31,SPG,Simon Property Group Inc /de/,Stewart Marta R,Dir,P - Purchase,134.1,96.0,7988.0,0.01,12874.0
+2022-04-04,2022-03-31,MAC,Macerich Co,Coppola Edward C,Pres,P - Purchase,15.9,2100.0,558610.0,0.0,33398.0
+2022-04-04,2022-04-01,U,Unity Software Inc.,Whitten Marc,"SVP, GM, Create Solutions",S - Sale,98.59,-2283.0,219897.0,-1.0,-225081.0
+2022-04-04,2022-03-31,PRPL,"Purple Innovation, Inc.",Anthos Pano,Dir,P - Purchase,6.01,3278.0,29552.0,0.12,19716.0
+2022-04-04,2022-04-01,LLY,Eli Lilly & Co,Lilly Endowment Inc,10%,S - Sale,292.38,-165376.0,105988810.0,0.0,-48352781.0
+2022-04-04,2022-03-31,BATRA,Liberty Media Corp,"Gamco Investors, Inc. Et Al",10%,P - Purchase,28.96,4500.0,114010.0,0.04,130328.0
+2022-04-04,2022-04-01,MGPI,Mgp Ingredients Inc,Mingus Lori L.S.,Dir,S - Sale,87.32,-1202.0,540145.0,0.0,-104962.0
+2022-04-04,2022-04-01,GWW,"W.W. Grainger, Inc.",Howard John L,"SVP, GC",S - Sale+OE,509.24,-1732.0,39567.0,-4.0,-882004.0
+2022-04-04,2022-03-31,PD,"Pagerduty, Inc.",Justice Dave,Chief Revenue Officer,S - Sale,34.68,-3474.0,298427.0,-1.0,-120466.0
+2022-04-04,2022-03-31,VGR,Vector Group Ltd,Bernstein Ronald J,Dir,S - Sale,12.32,-10000.0,72630.0,-12.0,-123203.0
+2022-04-04,2022-03-30,RCKT,"Rocket Pharmaceuticals, Inc.",Schwartz Jonathan David,See Remarks,S - Sale,16.21,-135000.0,89529.0,-60.0,-2187740.0
+2022-04-04,2022-04-01,SAM,Boston Beer Co Inc,Geist John C,Chief Sales Officer,S - Sale+OE,387.98,-1008.0,4752.0,-18.0,-391082.0
+2022-04-04,2022-03-30,SNCY,"Sun Country Airlines Holdings, Inc.",Davis Brian Edward,"CMO, SVP",S - Sale+OE,26.14,-1000.0,1337.0,-43.0,-26139.0
+2022-04-04,2022-03-31,CMI,Cummins Inc,Embree Tracy A,Pres - Distribution,S - Sale+OE,208.41,-1470.0,19902.0,-7.0,-306363.0
+2022-04-04,2022-03-31,CMI,Cummins Inc,Rumsey Jennifer,"Pres, COO",S - Sale+OE,208.41,-420.0,12758.0,-3.0,-87532.0
+2022-04-04,2022-03-31,CMI,Cummins Inc,Linebarger Norman Thomas,"COB, CEO",S - Sale+OE,207.09,-37510.0,190224.0,-16.0,-7767945.0
+2022-04-04,2022-04-01,CCOI,"Cogent Communications Holdings, Inc.",Chang John B.,Dir,S - Sale,68.0,-150.0,41360.0,0.0,-10200.0
+2022-04-04,2022-03-31,AMWD,American Woodmark Corp,Rodriguez David A,Dir,P - Purchase,49.64,1005.0,2882.0,0.54,49887.0
+2022-04-04,2022-04-01,CPSI,Computer Programs & Systems Inc,Dye David A,Chief Growth Officer,S - Sale,34.87,-1000.0,119065.0,-1.0,-34870.0
+2022-04-04,2022-04-01,CPSI,Computer Programs & Systems Inc,Douglas John B Jr,"Pres, CEO",S - Sale,34.82,-1000.0,234565.0,0.0,-34820.0
+2022-04-04,2022-03-31,MORN,"Morningstar, Inc.",Mansueto Joseph D,"Exec COB, 10%",S - Sale,276.75,-5907.0,17288277.0,0.0,-1634754.0
+2022-04-04,2022-04-01,ULCC,"Frontier Group Holdings, Inc.",Filene Jacob F.,"SVP, Customers",S - Sale,11.27,-1000.0,85122.0,-1.0,-11271.0
+2022-04-04,2022-03-31,LMB,"Limbach Holdings, Inc.",McCann Michael M,COO,P - Purchase,7.16,1545.0,64945.0,0.02,11068.0
+2022-04-04,2022-03-31,TELA,"Tela Bio, Inc.","Ew Healthcare Partners Fund 2, L.P.",See footnote 2,P - Purchase,11.53,5684.0,3316920.0,0.0,65532.0
+2022-04-04,2022-04-01,TPL,Texas Pacific Land Corp,Stahl Murray,Dir,P - Purchase,1421.36,18.0,366378.0,0.0,25584.0
+2022-04-04,2022-03-31,EVOL,Evolving Systems Inc,Singer Karen,10%,P - Purchase,1.81,40524.0,4252938.0,0.01,73348.0
+2022-04-04,2022-03-29,RNDB,"Randolph Bancorp, Inc.",Friedman Martin S.,"See Remarks below, 10%",S - Sale,26.48,-119292.0,423034.0,-22.0,-3158352.0
+2022-04-04,2022-04-01,REGN,"Regeneron Pharmaceuticals, Inc.",Ryan Arthur F,Dir,S - Sale,692.81,-100.0,22282.0,0.0,-69281.0
+2022-04-04,2022-04-01,REGN,"Regeneron Pharmaceuticals, Inc.",Larosa Joseph J,"EVP GC, Secret",S - Sale,690.73,-5114.0,24437.0,-17.0,-3532373.0
+2022-04-04,2022-03-31,BTTX,"Better Therapeutics, Inc.",Heinen Mark,See Remarks,P - Purchase,1.98,5000.0,15000.0,0.5,9900.0
+2022-04-04,2021-08-09,EDIT,"Editas Medicine, Inc.",Eaton Bruce,"EVP, Chief Business Officer",S - Sale,26.61,-1545.0,66841.0,-2.0,-41115.0
+2022-04-04,2022-03-31,VACC,Vaccitech Plc,Hammacher Alex,Dir,P - Purchase,5.14,2000.0,3000.0,2.0,10280.0
+2022-04-04,2022-04-01,VACC,Vaccitech Plc,Scheeren Joseph,Dir,P - Purchase,5.09,10000.0,13000.0,3.33,50900.0
+2022-04-04,2022-04-01,BCRX,Biocryst Pharmaceuticals Inc,Thackray Helen M.,"Chief R, D Officer",S - Sale,16.2,-7600.0,136400.0,-5.0,-123120.0
+2022-04-04,2022-03-31,MOVE,Movano Inc.,Fairbairn Emily,Dir,P - Purchase,2.8,8011.0,503428.0,0.02,22461.0
+2022-04-04,2022-04-01,GTN,Gray Television Inc,Ryan James C,"EVP, CFO",S - Sale,22.13,-50000.0,479638.0,-9.0,-1106500.0
+2022-04-04,2022-04-01,NXGN,"Nextgen Healthcare, Inc.",Barbarosh Craig A.,Dir,S - Sale,21.27,-3500.0,74683.0,-4.0,-74436.0
+2022-04-04,2022-04-01,SGRY,"Surgery Partners, Inc.",Evans Jason Eric,CEO,S - Sale,54.96,-11467.0,397872.0,-3.0,-630226.0
+2022-04-04,2022-04-01,JBLU,Jetblue Airways Corp,Hayes Robin,CEO,S - Sale,15.02,-1000.0,583926.0,0.0,-15020.0
+2022-04-04,2022-04-01,KFS,Kingsway Financial Services Inc,Hansen Kent A,"CFO, EVP",P - Purchase,5.63,266.0,90277.0,0.0,1498.0
+2022-04-04,2022-04-01,KFS,Kingsway Financial Services Inc,Fitzgerald John Taylor Maloney,"Pres, CEO",P - Purchase,5.63,369.0,1919311.0,0.0,2077.0
+2022-04-04,2022-04-01,ADI,Analog Devices Inc,Doluca Tunc,Dir,S - Sale,166.5,-4700.0,761784.0,-1.0,-782550.0
+2022-04-04,2022-04-01,BIG,Big Lots Inc,Padovano Nicholas E,EVP,S - Sale,34.82,-3500.0,25841.0,-12.0,-121870.0
+2022-04-04,2021-02-08,CUBI,"Customers Bancorp, Inc.",Bowman Andrew Hertz,"EVP, Chief Credit Officer",S - Sale+OE,25.01,-833.0,9283.0,-8.0,-20829.0
+2022-04-04,2022-04-01,BWXT,"Bwx Technologies, Inc.",Loving Richard W,"SVP, CAO",S - Sale,53.85,-300.0,23501.0,-1.0,-16155.0
+2022-04-04,2022-04-04,GOOG,Alphabet Inc.,Raghavan Prabhakar,SVP,S - Sale,2816.49,-1276.0,36587.0,-3.0,-3593841.0
+2022-04-04,2022-03-31,SLNO,Soleno Therapeutics Inc,Schuler Jack W,10%,P - Purchase,0.0,4000000.0,17619652.0,0.29,0.0
+2022-04-04,2021-07-27,SLNO,Soleno Therapeutics Inc,Schuler Jack W,10%,S - Sale+OE,0.85,-172988.0,17619652.0,-1.0,-146348.0
+2022-04-04,2022-03-31,BTTX,"Better Therapeutics, Inc.",Appelbaum Kevin J,"CEO, 10%",P - Purchase,1.97,2500.0,2412969.0,0.0,4921.0
+2022-04-04,2022-03-31,REGN,"Regeneron Pharmaceuticals, Inc.",Schleifer Leonard S,"Pres, CEO",S - Sale,710.01,-2886.0,690088.0,0.0,-2049089.0
+2022-04-04,2022-03-31,NSYS,Nortech Systems Inc,Kunin David B,"Dir, 10%",P - Purchase,10.1,13.0,1407681.0,0.0,131.0
+2022-04-04,2022-04-01,KRTX,"Karuna Therapeutics, Inc.",Brannan Stephen K.,Chief Medical Officer,S - Sale+OE,128.45,-7728.0,15000.0,-34.0,-992662.0
+2022-04-04,2022-03-31,LEVI,Levi Strauss & Co,Jaffe Seth,"EVP, GC",S - Sale+OE,20.23,-13280.0,148299.0,-8.0,-268654.0
+2022-04-04,2022-04-01,REGN,"Regeneron Pharmaceuticals, Inc.",McCourt Marion,EVP Commercial,S - Sale+OE,701.82,-1000.0,19760.0,-5.0,-701820.0
+2022-04-04,2022-03-31,VRTX,Vertex Pharmaceuticals Inc / Ma,McGlynn Margaret G,Dir,S - Sale+OE,262.27,-5000.0,1099.0,-82.0,-1311346.0
+2022-04-04,2022-03-31,LCTX,"Lineage Cell Therapeutics, Inc.",Culley Brian M,"Pres, CEO",P - Purchase,1.53,6400.0,97787.0,0.07,9792.0
+2022-04-04,2022-03-31,SLNO,Soleno Therapeutics Inc,Hirano Patricia C,See Remarks,P - Purchase,0.0,20000.0,139104.0,0.17,0.0
+2022-04-04,2022-03-31,SLNO,Soleno Therapeutics Inc,Anish Bhatnagar,CEO,P - Purchase,0.0,60000.0,430227.0,0.16,0.0
+2022-04-04,2022-03-31,SLNO,Soleno Therapeutics Inc,Mario Ernest,Dir,P - Purchase,0.0,1860000.0,3293135.0,1.3,0.0
+2022-04-04,2022-04-01,PANW,Palo Alto Networks Inc,Zuk Nir,"EVP, CTO",S - Sale,616.26,-12000.0,812372.0,-1.0,-7395100.0
+2022-04-04,2022-03-31,MDB,"Mongodb, Inc.",Bull Thomas,Principal Accounting Officer,S - Sale+OE,444.14,-2500.0,17904.0,-12.0,-1110346.0
+2022-04-04,2022-03-31,STAG,"Stag Industrial, Inc.",Butcher Benjamin S,"COB, CEO",S - Sale,41.98,-15000.0,22088.0,-40.0,-629654.0
+2022-04-04,2022-04-01,INSW,"International Seaways, Inc.",Pribor Jeffrey,"SVP,CFO, Treasurer",S - Sale,18.13,-1000.0,46681.0,-2.0,-18130.0
+2022-04-04,2022-03-31,ZI,Zoominfo Technologies Inc.,Schuck Henry,CEO,S - Sale,60.07,-265968.0,15968146.0,-2.0,-15976980.0
+2022-04-04,2022-04-01,LPI,"Laredo Petroleum, Inc.",Denny Mark David,"SVP, Gen. Counsel, Secretary",S - Sale+OE,78.92,-2626.0,23785.0,-10.0,-207244.0
+2022-04-04,2022-04-01,ORTX,Orchard Therapeutics Plc,Thomas Frank E,See Remarks,P - Purchase,0.75,10000.0,52081.0,0.24,7474.0
+2022-04-04,2022-04-01,VRSK,"Verisk Analytics, Inc.",Shavel Lee,"Group Pres, CFO",S - Sale,214.88,-483.0,40127.0,-1.0,-103787.0
+2022-04-04,2022-03-31,QRHC,Quest Resource Holding Corp,Wynnefield Partners Small Cap Value LP I,10%,P - Purchase,6.13,1587.0,2318350.0,0.0,9728.0
+2022-04-04,2022-03-31,HMTV,"Hemisphere Media Group, Inc.","Edenbrook Capital, LLC",10%,P - Purchase,4.5,249630.0,3004878.0,0.09,1124102.0
+2022-04-04,2022-04-01,BSX,Boston Scientific Corp,Eddy Jodi Euerle,"SVP, Chief Info, Digital Offic",S - Sale,45.0,-2779.0,23263.0,-11.0,-125055.0
+2022-04-04,2022-03-31,BFI,"Burgerfi International, Inc.",John Rosatti Revocable Trust,10%,S - Sale,4.08,-9000.0,3746540.0,0.0,-36750.0
+2022-04-04,2022-04-01,PPTA,Perpetua Resources Corp.,Sayer Laurel,See Remarks.,P - Purchase,4.09,2000.0,20560.0,0.11,8180.0
