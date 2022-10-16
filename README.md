@@ -1,7 +1,7 @@
 # Unconventional-Investing
 In this repository, we try to see if we can mine insider data and use machine learning to generate investment insights, in lieu of having technical knowledge of investment strategies, the Greeks, etc.
 
-This project is neither an investment pitch, nor does it constitute financial advice. It simply represents my curiosity-driven approach to the scientific method and data-driven knowledge generation!
+This project is neither an investment pitch, nor does it constitute financial advice. It simply represents my curious, exploratory approach to data-driven knowledge generation!
 
 ### Where can the data be found?
 Insider trade filings are published online by the SEC, and they can be found using the EDGAR API. However, it is much easier to pull data from sites that gather the filing data into tabular form such as https://www.benzinga.com/ .
