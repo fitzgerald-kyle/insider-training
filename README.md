@@ -6,6 +6,8 @@ This project is neither an investment pitch, nor does it constitute financial ad
 ### Where can the data be found?
 Insider trade filings are published online by the SEC, and they can be found using the EDGAR API. However, it is much easier to pull data from sites that gather the filing data into tabular form such as https://www.benzinga.com/ .
 
+Historic ticker data (e.g. daily opening, low, high, close, volume) was obtained with the Yahoo Finance API via the "yfinance" Python package.
+
 ### What machine learning model is used?
 So far, I have explored using two model types. One is XGBoost, which is a gradient-boosting decision tree model, and the other is a neural network with one dense hidden layer and a dropout layer, implemented with the Keras Sequential API.
 
