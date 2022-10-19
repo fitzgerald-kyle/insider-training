@@ -1,4 +1,4 @@
-# Unconventional-Investing
+# "Insider Training"
 In this repository, we try to see if we can mine insider data and use machine learning to generate investment insights, in lieu of having technical knowledge of investment strategies, the Greeks, etc.
 
 This project is neither an investment pitch, nor does it constitute financial advice. It simply represents my curious, exploratory approach to data-driven knowledge generation!
