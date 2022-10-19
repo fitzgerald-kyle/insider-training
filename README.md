@@ -12,4 +12,4 @@ Historic ticker data (e.g. daily opening, low, high, close, volume) was obtained
 So far, I have explored using two model types. One is XGBoost, which is a gradient-boosting decision tree model, and the other is a neural network with one dense hidden layer and a dropout layer, implemented with the Keras Sequential API.
 
 ### What evaluation metrics are used?
-You can see my commentary on model performance in the Jupyter notebook files "D" and "E". Also, in order to evaluate the models in a way that is more demonstrative, I develop a simple trading strategy in file "F" and benchmark it against the performance of the S&P500 ETF fund ("SPY") across the given time period.
+You can see my commentary on model performance in the Jupyter notebook files "decision_tree" and "neural_net". Also, in order to evaluate the models in a way that is more demonstrative, I develop a simple trading strategy in "strateg_simulation" and benchmark it against the performance of the S&P500 ETF fund ("SPY") across the given time period.
