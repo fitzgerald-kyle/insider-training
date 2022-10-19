@@ -42,7 +42,6 @@ Filing Date,Trade Date,Ticker,Company Name,Insider Name,Title,Trade Type,Price,Q
 2021-06-01 14:41:17,2021-05-10,OPK,"Opko Health, Inc.",Cohen Jon R,SVP OPKO; Exec COB BRLI,P - Purchase,$3.81,#ERROR!,"125,000",67%,#ERROR!,50000,190500
 2021-06-01 14:56:26,2021-05-28,SKX,Skechers USA Inc,Greenberg Jeffrey,Dir,S - Sale,$47.53,"-5,000","1,237,641",0%,"-$237,633",#N/A,#N/A
 2021-06-01 15:05:14,2021-05-27,UUUU,Energy Fuels Inc,Higgs Dennis Lyle,Dir,S - Sale,$8.26,"-21,575","321,638",-6%,"-$178,111",#N/A,#N/A
-2021-06-01 15:10:16,2021-05-01,NA,Cardinal Ethanol LLC,Forsythe Gerald R,Dir,P - Purchase,"$5,713.75",28,670,4%,#ERROR!,28,159985
 2021-06-01 15:18:06,2021-05-28,HSY,Hershey Co,Buck Michele,"COB, Pres, CEO",S - Sale,$173.52,"-2,500","182,997",-1%,"-$433,800",#N/A,#N/A
 2021-06-01 15:18:18,2021-05-27,OPOF,Old Point Financial Corp,Witt Joseph R,"Pres, Financial Svcs, CSO",P - Purchase,$23.26,40,"14,943",0%,#ERROR!,40,931
 2021-06-01 15:21:20,2021-05-28,CPF,Central Pacific Financial Corp,Rose Crystal,Dir,P - Purchase,$27.59,#ERROR!,"48,985",4%,#ERROR!,1900,52428
@@ -52,7 +51,6 @@ Filing Date,Trade Date,Ticker,Company Name,Insider Name,Title,Trade Type,Price,Q
 2021-06-01 15:24:44,2021-06-01,OPOF,Old Point Financial Corp,Keefe William F,Dir,P - Purchase,$23.00,200,"7,900",3%,#ERROR!,200,4600
 2021-06-01 15:25:12,2021-05-28,CPF,Central Pacific Financial Corp,Ota Saedene K,Dir,P - Purchase,$27.59,#ERROR!,"19,259",10%,#ERROR!,1800,49669
 2021-06-01 15:27:20,2021-05-27,ACGL,Arch Capital Group Ltd.,Hutchings W Preston,"SVP, Chief Investment Officer",S - Sale,$39.51,"-37,500","472,250",-7%,"-$1,481,715",#N/A,#N/A
-2021-06-01 15:27:36,2021-05-01,NA,Cardinal Ethanol LLC,Schwieterman Dale Arthur,Dir,P - Purchase,"$6,000.00",12,44,38%,#ERROR!,12,72000
 2021-06-01 15:37:06,2021-05-27,BWEN,"Broadwind, Inc.",Wagner Thomas A.,Dir,S - Sale,$4.47,"-20,000","70,685",-22%,"-$89,356",#N/A,#N/A
 2021-06-01 15:41:45,2021-05-28,ACA,"Arcosa, Inc.",Collins Jesse E. Jr.,Group Pres,S - Sale,$62.49,"-10,990","18,097",-38%,"-$686,765",#N/A,#N/A
 2021-06-01 15:53:56,2021-05-28,LPX,Louisiana-Pacific Corp,Gottung Lizanne C,Dir,S - Sale+OE,$67.34,"-8,139","32,447",-20%,"-$548,080",#N/A,#N/A
