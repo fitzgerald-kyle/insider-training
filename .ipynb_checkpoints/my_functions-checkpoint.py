@@ -84,8 +84,8 @@ def cleanAndFormatDF(csv_loc, clean_csv_loc, historicDat_loc, newORload='load', 
         endDate (str): 'YYYY-MM-DD' indicating when to stop pulling historic ticker data
         
     OUT:
-        insiderDat (pd.DataFrame): see first cell
-        historicDat (dict): see first cell
+        insiderDat (pd.DataFrame): see top of file
+        historicDat (dict): see top of file
     '''
     
     insiderDat = pd.read_csv(csv_loc + '.csv')
@@ -179,7 +179,7 @@ def getHistoricDat(ticks, startDate, endDate):
         endDate (str): YYYY-MM-DD on which to stop pulling data
         
     OUT:
-        historicDat (dict): see first cell
+        historicDat (dict): see top of file
     '''
     validate(startDate)
     validate(endDate)
@@ -202,7 +202,7 @@ def returnDataOnDate(tick, tickDat, startDate, delta=0, dataName='Close', search
     
     IN:
         tick (str): a ticker
-        tickDat (pd.DataFrame): data from historicDat[tick] (see first cell)
+        tickDat (pd.DataFrame): data from historicDat[tick] (see top of file)
         startDate (str): YYYY-MM-DD
         delta (int): days to look forward (nonnegative)
         dataName (str): 'Open', 'Close', 'High', 'Low', Volume'
@@ -238,8 +238,8 @@ def returnPriceDiff(insiderDat, historicDat, SP500Dat, delta, priceTime):
     'delta' days later for each trade in 'insiderDat'.
     
     IN:
-        insiderDat (pd.DataFrame): see first cell
-        historicDat (dict): see first cell
+        insiderDat (pd.DataFrame): see top of file
+        historicDat (dict): see top of file
         SP500Dat (dict): same format as historicDat, but for SPY data
         delta (int): nonnegative number of days
         priceTime (str): 'Open', 'Close'
@@ -274,7 +274,7 @@ def returnVolumeAndPriceChange(tick, tickDat, refDate, priceTime, daysToLookForw
     
     IN:
         tick (str): a ticker
-        tickDat (pd.DataFrame): data from historicDat[tick] (see first cell)
+        tickDat (pd.DataFrame): data from historicDat[tick] (see top of file)
         refDate (str): YYYY-MM-DD, the reference date
         priceTime (str): 'Open', 'Close', 'High', 'Low'
         daysToLookForward (int): how many future days to consider for max price change; nonnegative
@@ -409,25 +409,37 @@ def createVolumePriceScatters(volPriceDat, daysToLookForward, daysToLookBack):
     plt.show()
     
     
-def plotPriceWithTrades(historicDat, tick, insiderDat, startDate, endDate):
+def plotPriceWithTrades(tick, tickDat, insiderDat, startDate, endDate):
+    '''
+    Plots a ticker's price history with insider trades overlaid.
+    
+    IN:
+        tick (str): a ticker
+        tickDat (pd.DataFrame): data from historicDat[tick] (see top of file)
+        insiderDat (pd.DataFrame): see top of file
+        startDate (str): YYYY-MM-DD representing when to start plotting
+        endDate (str): YYYY-MM-DD representing when to stop plotting     
+    '''
+    
     groups = insiderDat.groupby('TradeType')
     
-    historicDat_Jun = pd.DataFrame(columns=historicDat[tick].columns, index=historicDat[tick].index)
-    historicDat_Jun = historicDat_Jun.astype(float)
+    # store only the ticker data needed for plotting
+    plotDat = pd.DataFrame(columns=tickDat.columns, index=tickDat.index).astype(float)
     for d in pd.date_range(start=startDate, end=endDate):
-        try: historicDat_Jun.loc[d] = historicDat[tick].loc[d]
+        try: plotDat.loc[d] = tickDat.loc[d]
         except KeyError: pass
     
-    #historicDat_Jun = historicDat_Jun.dropna()
-    
-    fin_av = [(historicDat_Jun.High[i] + historicDat_Jun.Low[i])/2 for i in range(len(historicDat_Jun))]
+    # average daily price
+    fin_av = [(plotDat.High[i] + plotDat.Low[i])/2 for i in range(len(plotDat))]
 
-    fig, ax = plt.subplots()
-    ax.plot(historicDat_Jun.index, fin_av)
-    ax.fill_between(historicDat_Jun.index, historicDat_Jun.Low, historicDat_Jun.High, color='b', alpha=.1)
+    fig, ax = plt.subplots(1, 1)
+    ax.plot(plotDat.index, fin_av)
+    ax.fill_between(plotDat.index, plotDat.Low, plotDat.High, color='b', alpha=.1)
+    
     cmap = {'P - Purchase': 'g', 'S - Sale': 'r', 'S - Sale+OE': 'y'}
     for name, group in groups:
         ax.plot(group.FilingDate, group.Price, marker='o', linestyle='', label=name+', filed', color=cmap[name])
+    
     ax.set_xlabel('Price, $')
     ax.legend()
     
@@ -439,14 +451,28 @@ def plotPriceWithTrades(historicDat, tick, insiderDat, startDate, endDate):
 ############################################################################
 ########################## Feature Creation ################################
 ############################################################################
-def createAllFeatures(insiderDat, historicDat, startDate, endDate, daysToLookForward=90, daysToLookBack=1):
+def createAllFeatures(insiderDat, historicDat, daysToLookForward=90, daysToLookBack=1):
+    '''
+    Completes the feature engineering for insider trade data.
+    
+    IN:
+        insiderDat (pd.DataFrame): see top of file
+        historicDat (dict): see top of file
+        daysToLookForward (int): number of days to look ahead for forward-looking features
+        daysToLookBack (int): number of days to look ahead for backward-looking features
+        
+    OUT:
+        insiderDat (pd.DataFrame): input modified to contain engineered features
+    '''
+    
     insiderDat['FilingDate'] = pd.to_datetime(insiderDat['FilingDate']).dt.date
     insiderDat['TradeDate'] = pd.to_datetime(insiderDat['TradeDate']).dt.date
-
+    
+    # create new features
     insiderDat[['NumTrades','TradeToFileTime','ValueOwned','%VolumeChange','%FuturePriceChange']] = 0
-    # ['NumTradesCAT', 'TradeToFileTimeCAT','%VolumeChangeCAT']
-    startDate = dt.datetime.strptime(startDate, '%Y-%m-%d').date()
-    endDate = dt.datetime.strptime(endDate, '%Y-%m-%d').date()
+
+    startDate = min(insiderDat.FilingDate)
+    endDate = max(insiderDat.FilingDate)
     delta = endDate - startDate
 
     for tradeNum, trade in insiderDat.iterrows():
@@ -512,10 +538,16 @@ def createAllFeatures(insiderDat, historicDat, startDate, endDate, daysToLookFor
 ########################## Model Preparation ###############################
 ############################################################################
 def prepareForModel(insiderDat):
+    '''
+    Assigns insider titles to categories and ensures that each feature is the proper dtype.
+    '''
+    
     def fixTitle(title):
         '''
+        Assigns insider titles to categories.
+        
         I figure that the Chair of the Board is the most fiscally powerful person in a company, so to break ties for
-        people who hold multiple titles, I'll prioritize COB, then C-suite, then other directors, then anyone else.
+        people who hold multiple titles, we prioritize COB, then C-suite, then other directors, then anyone else.
         '''
 
         directorKeywords = ['Dir', 'VP', 'Vice', 'V.P.', 'Pres']
@@ -535,9 +567,11 @@ def prepareForModel(insiderDat):
         return newTitle
     
     if 'Title' in insiderDat.columns:
-        insiderDat.Title = [fixTitle(t) for t in insiderDat.Title]
+        insiderDat['TitleCat'] = None
+        insiderDat.TitleCat = [fixTitle(t) for t in insiderDat.Title]
+        insiderDat = insiderDat.drop('Title', axis=1)
 
-    insiderDat['FilingDate'] = pd.to_datetime(insiderDat['FilingDate']).dt.date
+    insiderDat.FilingDate = pd.to_datetime(insiderDat['FilingDate']).dt.date
     insiderDat = insiderDat.astype({'Price': 'float', 
                                     'Qty': 'float', 
                                     'Owned': 'float', 
@@ -552,14 +586,28 @@ def prepareForModel(insiderDat):
 
 
 def returnXandY(insiderDat, startDate, endDate):
-    '''Split the data'''
+    '''
+    Drops features not used for training and splits trade data into input and output sets.
+    
+    IN:
+        insiderDat (pd.DataFrame): see top of file
+        startDate (str): start date for data
+        endDate (str): end date for data
+    OUT:
+        data_XY (pd.DataFrame): contains input and output data together, along with 
+                                'FilingDate' and 'Ticker'
+        data_X (pd.DataFrame): input data for model
+        data_Y (pd.DataFrame): output data for model
+    '''
     dateRange = pd.date_range(start=startDate, end=endDate).date
 
     insiderDat = insiderDat.drop(columns=['CompanyName', 'TradeDate', 'InsiderName'])
-    if 'Unnamed: 0' in insiderDat.columns:
-        insiderDat = insiderDat.drop(columns=['Unnamed: 0'])
     
-    dummies_data = pd.get_dummies(insiderDat, columns=['Title', 'TradeType'], prefix=['Title', None])
+    # Get rid of a column that seems to be created when data is re-indexed
+    if 'Unnamed: 0' in insiderDat.columns: insiderDat = insiderDat.drop(columns=['Unnamed: 0'])
+    
+    # Use one-hot encoding for insider title and trade type
+    dummies_data = pd.get_dummies(insiderDat, columns=['TitleCat', 'TradeType'], prefix=['Title', None])
 
     data_XY = dummies_data[dummies_data['FilingDate'].isin(dateRange)]
     data_XY = data_XY.dropna()
@@ -579,56 +627,69 @@ def returnXandY(insiderDat, startDate, endDate):
 ########################## Trade Simulation ###############################
 ###########################################################################
 def runTradeSimulation(data_XY, historicDat, startDate, endDate, buyThresh, sellThresh):
-    purchasesDict = {}
+    '''
+    Runs the basic investment simulation outlined in strategy_simulation.
+    
+    IN:
+        data_XY (pd.DataFrame): contains input and output data together, along with 
+                                'FilingDate' and 'Ticker'
+        historicDat (dict): see top of file
+        startDate (str): date on which to begin simulation
+        endDate (str): date on which to end simulation
+        buyThresh (float): threshold for predicted % increase, above which we buy shares of the ticker
+        sellThresh (float): threshold for realized % increase, above which we sell shares of the ticker
+    '''
+    
+    myTrades = {}  # logs purchases and sales in the simulation
     totalInvested = 0
     totalProfit = 0
 
     for d in pd.date_range(start=startDate, end=endDate):    
-        currentDate = dt.date.strftime(d.date(), '%Y-%m-%d')
-
+        currDate = dt.date.strftime(d.date(), '%Y-%m-%d')
+        
+        # Check each trade's performance prediction. If high enough, purchase at next day's opening.
         for tradeNum, trade in data_XY[data_XY['FilingDate'] == d.date()].iterrows():
-            # Check prediction. If high enough, purchase at next day's opening.
-            if trade['Prediction'] < buyThresh:
-                continue
+            if trade['Prediction'] < buyThresh: continue
 
             tick = trade['Ticker']
 
-            buyPrice, buyDate = returnDataOnDate(historicDat, tick, currentDate, delta=1, dataName='Open')
-            buyDate = dt.date.strftime(buyDate, '%Y-%m-%d')
+            buyPrice, buyDate = returnDataOnDate(tick, historicDat[tick], currDate, delta=1, dataName='Open')
+            #buyDate = dt.date.strftime(buyDate, '%Y-%m-%d')
 
             totalInvested += 1
 
             print(f'''Buying {tick} on {buyDate}, currently ${round(buyPrice, 2)}''')
-
-            if tick in purchasesDict.keys():
-                purchasesDict[tick]['BuyPrice'].append(buyPrice)
-                purchasesDict[tick]['SellPrice'].append(None)
+            
+            if tick in myTrades.keys():
+                myTrades[tick]['BuyPrice'].append(buyPrice)
+                myTrades[tick]['SellPrice'].append(None)
             else:
-                purchasesDict[tick] = {'BuyPrice': [buyPrice], 'SellPrice': [None]}
+                myTrades[tick] = {'BuyPrice': [buyPrice], 'SellPrice': [None]}
 
 
-        # Check current already-purchased stocks. If value has risen enough, sell at closing.
-        for tick, elem in purchasesDict.items():
+        # Check already-purchased stocks. If any ticker's value has risen enough, sell all shares  at closing.
+        for tick, elem in myTrades.items():
             for buyNum, buyPrice in enumerate(elem['BuyPrice']):
                 try:
-                    currPrice = historicDat[tick].loc[currentDate]['Close']
+                    currPrice = historicDat[tick].loc[currDate]['Close']
+                    
+                    # sell if the price has risen enough and the shares haven't been sold yet
                     if (currPrice > (1. + sellThresh/100)*buyPrice) and (elem['SellPrice'][buyNum] is None):
                         elem['SellPrice'][buyNum] = currPrice
                         profit = (currPrice-buyPrice) / buyPrice
                         totalProfit += profit
-                        print(f'Selling {tick} on {currentDate}, currently ${round(currPrice, 2)}, ' +
+                        print(f'Selling {tick} on {currDate}, currently ${round(currPrice, 2)}, ' +
                                      f'for {round(100*profit, 2)}% profit')
                               
-                except KeyError:
-                    pass  # unable to sell on this day; move on
+                except KeyError: pass  # we can't sell today
 
-            # sell everything that hasn't already been sold on the last day
-            # (make sure that this is a day that the market is open!)
+            # If it's the last day of the simulation, sell everything (for performance evaluation)
+            # !!!Make sure that this is a day that the market is open!!!
             if d.date() == dt.datetime.strptime(endDate, '%Y-%m-%d').date():
-                currPrice = historicDat[tick].loc[currentDate]['Close']
+                currPrice = historicDat[tick].loc[currDate]['Close']
                 totalProfit += sum([(currPrice-elem['BuyPrice'][idx])/elem['BuyPrice'][idx] 
                                     for idx, val in enumerate(elem['SellPrice']) if val is None])
-                elem['SellPrice'] = [currPrice if val is None else val for val in elem['SellPrice']]
+                myTrades[tick]['SellPrice'] = [currPrice if val is None else val for val in elem['SellPrice']]
 
 
     print('\n-----------------------------------------\n')
