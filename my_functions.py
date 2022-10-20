@@ -321,7 +321,7 @@ def returnVolumeAndPriceChange(tick, tickDat, refDate, priceTime, daysToLookForw
 ############################################################################
 ########################### Generating Plots ###############################
 ############################################################################
-def createDifferencePlot(diffDat, delta, labelThresh, ax):
+def plotPriceDifference(diffDat, delta, labelThresh, ax):
     '''
     Makes a scatter plot of percentage price change 'delta' days later for each insider trade represented 
     in 'diffDat'.
@@ -360,7 +360,7 @@ def createDifferencePlot(diffDat, delta, labelThresh, ax):
     
     
     
-def createOutlyingDifferencePlots(outlierClosings, numDays, delta, ax):
+def plotOutlyingPriceDifference(outlierClosings, numDays, delta, ax):
     '''
     Makes a line plot of percentage price change for each ticker whose price 'delta' days after a trade
     is outlying.
@@ -387,7 +387,7 @@ def createOutlyingDifferencePlots(outlierClosings, numDays, delta, ax):
     return ax
     
     
-def createVolumePriceScatters(volPriceDat, daysToLookForward, daysToLookBack):
+def plotVolumePriceScatter(volPriceDat, daysToLookForward, daysToLookBack):
     '''
     Creates a scatter plot of 'max percentage price change in daysToLookForward days' vs 'percentage
     volume change in daysToLookBack days'.
@@ -402,6 +402,7 @@ def createVolumePriceScatters(volPriceDat, daysToLookForward, daysToLookBack):
     fig, ax = plt.subplots(1, 1)
     ax.plot([val[0] for val in volPriceDat], [val[1] for val in volPriceDat], '.b', markersize=8)
     
+    plt.ylim(top=275)
     plt.xlabel(f'% volume change in previous {daysToLookBack} days')
     plt.ylabel(f'Max % price change in {daysToLookForward} days')
     plt.xscale('symlog')
