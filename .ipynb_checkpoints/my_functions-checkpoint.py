@@ -1,7 +1,7 @@
 '''
 This file contains helpful functions.
 
-There are two variable names you will see a lot in this notebook. They are:
+There are two variable names you will see a lot. They are:
     - historicDat (dict): maps a ticker (str) to a DataFrame containing daily Open, Close, 
                             High, Low, and Volume, indexed by 'YYYY-MM-DD' date (str)
 
@@ -34,7 +34,10 @@ import pickle
 import matplotlib.pyplot as plt
 
 from random import random
+from time import sleep
+from pandas_datareader import data as pdr
 
+yf.pdr_override()
 plt.style.use('fivethirtyeight')
 
 
@@ -128,13 +131,15 @@ def cleanAndFormatDF(csv_loc, clean_csv_loc, historicDat_loc, newORload='load', 
     
     
     allTickers = insiderDat.Ticker.unique().tolist()
-    print('There are ' + str(len(allTickers)) + ' unique tickers.\nGetting historic data for these tickers...')
+    print('There are ' + str(len(allTickers)) + ' unique tickers.')
     
     if newORload == 'new':
         historicDat = getHistoricDat(allTickers, startDate, endDate)
         save_obj(historicDat, historicDat_loc)
     elif newORload == 'load':
         historicDat = load_obj(historicDat_loc)
+        historicDat.update(getHistoricDat(allTickers, startDate, endDate, historicDat_loc, historicDat=historicDat))
+        save_obj(historicDat, historicDat_loc)
     else:
         raise ValueError('newORload must be ''new'' or ''load''')
         
@@ -148,11 +153,14 @@ def cleanAndFormatDF(csv_loc, clean_csv_loc, historicDat_loc, newORload='load', 
     Now we want to remove trades for tickers that no longer exist from insiderDat.
     historicDat contains empty DataFrames for these tickers.
     
-    For convenience, we also want to remove trades for tickers that were listed after our start date.
+    For convenience, we also want to remove trades for tickers that were listed after our start date,
+    indicated either by the first listed date being after startDate or by the presence of NaNs.
     '''
     tickersToRemove = set()
     for tick in allTickers:
-        if historicDat[tick].empty or (historicDat[tick].index[0] > dt.datetime.strptime(startDate, '%Y-%m-%d')):
+        if ( historicDat[tick].empty
+            or (historicDat[tick].index[0] > dt.datetime.strptime(startDate, '%Y-%m-%d'))
+            or np.any(np.isnan(historicDat[tick])) ):
             tickersToRemove.add(tick)
 
     print('\nThere are ' + str(len(tickersToRemove)) + ' tickers that no longer exist or were listed on ' +
@@ -169,7 +177,7 @@ def cleanAndFormatDF(csv_loc, clean_csv_loc, historicDat_loc, newORload='load', 
 ############################################################################
 ################ Retrieving and Generating Data ############################
 ############################################################################
-def getHistoricDat(ticks, startDate, endDate):
+def getHistoricDat(ticks, startDate, endDate, historicDat_loc, historicDat={}):
     '''
     Download stock data from the Yahoo Finance API between two dates.
     
@@ -177,19 +185,45 @@ def getHistoricDat(ticks, startDate, endDate):
         ticks (List[str]): list of ticker names
         startDate (str): YYYY-MM-DD on which to begin pulling data
         endDate (str): YYYY-MM-DD on which to stop pulling data
+        historicDat_loc (str): location containing historic ticker data, without '.pkl'
+        historicDat (dict): see top of file
         
     OUT:
-        historicDat (dict): see top of file
+        historicDat (dict): input updated with new tickers
     '''
     validate(startDate)
     validate(endDate)
+        
+    newTicks = [t for t in ticks if t not in historicDat.keys()]
+    print(f'{len(newTicks)} tickers to download.')
+    waitBeforeSleep = 100  # sleep every 100 requests; server is finnicky
+    numBatches = len(newTicks)//waitBeforeSleep + 1
+        
+    for batch in range(numBatches):
+        batchStartIdx = batch*waitBeforeSleep
+        batchEndIdx = min(len(newTicks), batchStartIdx+waitBeforeSleep)
+        
+        batchTicks = newTicks[batchStartIdx:batchEndIdx]
+        
+        tickDat = pdr.get_data_yahoo(batchTicks,
+                                      start=startDate, 
+                                      end=endDate,
+                                      threads=2,
+                                      progress=True, 
+                                      show_errors=False,
+                                      group_by='ticker',
+                                      timeout=10)
+        
+        for t in batchTicks: 
+            try: historicDat.update({t: tickDat[t]})
+            except KeyError: 
+                if len(batchTicks) == 1: historicDat.update({t: tickDat})
+                else: historicDat.update({t: pd.DataFrame()})
+                    
+        save_obj(historicDat, historicDat_loc)
+        
+        if batch < numBatches-1: sleep(30)
     
-    historicDat = {}
-    
-    for t in ticks:
-        stockDat = yf.download(t, start=startDate, end=endDate, progress=False)
-        historicDat[t] = stockDat
-        print(str(len(historicDat))+'/'+str(len(ticks)) + ' done', end='\r')  # print progress
         
     return historicDat
 
@@ -267,54 +301,65 @@ def returnPriceDiff(insiderDat, historicDat, SP500Dat, delta, priceTime):
     return closingDiff
 
 
-def returnVolumeAndPriceChange(tick, tickDat, refDate, priceTime, daysToLookForward, daysToLookBack):
+def returnVolatilities(tickDat, refDate, priceTime, daysToLookBack):
     '''
-    Returns percentage volume change for 'tick' over the last 'daysToLookBack' days, and the max percentage
-    price increase over the next 'daysToLookForward' days.
+    Returns volume and price volatility over the past daysToLookBack days.
+    
+    IN:
+        tickDat (pd.DataFrame): data from historicDat[tick] (see top of file)
+        refDate (str): YYYY-MM-DD, the reference date
+        priceTime (str): 'Open', 'Close', 'High', 'Low'
+        daysToLookBack (int): how many past days to consider for volatility; nonnegative
+    OUT:
+        volumeVolatility (float)
+        priceVolatility (float)
+    '''    
+    maxPastDate = refDate - dt.timedelta(days=daysToLookBack)
+    
+    pastTickVols = tickDat[maxPastDate:refDate]['Volume']
+    pastTickPrices = tickDat[maxPastDate:refDate][priceTime]
+    
+    avgVol = np.mean(pastTickVols)
+    avgPrice = np.mean(pastTickPrices)
+    
+    if avgVol == 0: volumeVolatility = 0
+    else: volumeVolatility = np.std(pastTickVols) / avgVol
+        
+    if avgPrice == 0: priceVolatility = 0
+    else: priceVolatility = np.std(pastTickPrices) / avgPrice
+        
+    return volumeVolatility, priceVolatility
+
+
+def returnMeanPriceChange(tick, tickDat, refDate, priceTime, minDaysToLookForward, maxDaysToLookForward):
+    '''
+    Returns avg % price change in minDaysToLookForward to maxDaysToLookForward days.
     
     IN:
         tick (str): a ticker
         tickDat (pd.DataFrame): data from historicDat[tick] (see top of file)
         refDate (str): YYYY-MM-DD, the reference date
         priceTime (str): 'Open', 'Close', 'High', 'Low'
-        daysToLookForward (int): how many future days to consider for max price change; nonnegative
-        daysToLookBack (int): how many past days to consider for volume change; nonnegative
+        minDaysToLookForward (int): min days to look forward in computing max price change
+        maxDaysToLookForward (int): max days to look forward in computing max price chang
+    OUT:
+        meanPercentChangePrice (float)
     '''
-    
-    # 'dateUsed' is the actual reference date used for time-of-filing data
-    currentVol, dateUsed = returnDataOnDate(tick, 
+    currentPrice, dateUsed = returnDataOnDate(tick,
                                             tickDat, 
                                             dt.date.isoformat(refDate), 
-                                            dataName='Volume', 
+                                            dataName=priceTime, 
                                             searchDirection=-1)
     
-    previousVol, _ = returnDataOnDate(tick,
-                                      tickDat,  
-                                      dt.date.isoformat(dateUsed-dt.timedelta(days=daysToLookBack)), 
-                                      dataName='Volume', 
-                                      searchDirection=-1)
+    minFutureDate = dateUsed + dt.timedelta(days=minDaysToLookForward)
+    maxFutureDate = dateUsed + dt.timedelta(days=maxDaysToLookForward)
     
-    if previousVol == 0 and currentVol == 0: percentChangeVol = 0  
-    elif previousVol == 0: percentChangeVol = 9999  # assign a large increase instead of infinity
-    else: percentChangeVol = 100*(currentVol-previousVol) / previousVol
-    
-    currentPrice = tickDat.loc[dt.date.isoformat(dateUsed)][priceTime]
-    
-    '''
-    Determine the max percentage price change, starting the day after 'dateUsed'.
-    '''
-    highestPrice = 0
-    for i in range(1, daysToLookForward):
-        tempPrice, _ = returnDataOnDate(tick, 
-                                        tickDat, 
-                                        dt.date.isoformat(dateUsed), 
-                                        delta=i)
-        if tempPrice > highestPrice:
-            highestPrice = tempPrice
+    meanPriceChange = np.mean(tickDat[minFutureDate:maxFutureDate][priceTime])
             
-    percentChangePrice = 100*(highestPrice-currentPrice) / currentPrice
+    meanPercentChangePrice = 100*(meanPriceChange-currentPrice) / currentPrice
     
-    return percentChangeVol, percentChangePrice
+    
+    return meanPercentChangePrice
 
 
 
@@ -379,36 +424,40 @@ def plotOutlyingPriceDifference(outlierClosings, numDays, delta, ax):
         ax.plot(list(range(numDays)), row, '-b', markersize=6)
     for row in outlierClosings['neg']:
         ax.plot(list(range(numDays)), row, '-r', markersize=6)
-
+    
+    ymin, ymax = ax.get_ylim()
+    
+    ax.set_ylim(top=min(ymax, 400))
     ax.set_xlabel(f'Days after insider trade')
-    ax.set_ylabel(f'Price % change after {delta} days')
+    ax.set_ylabel(f'Price % change')
     ax.set_title(f'Outlying {delta}-day ticker prices')
     
     return ax
     
     
-def plotVolumePriceScatter(volPriceDat, daysToLookForward, daysToLookBack):
+def plotVolatilityPriceScatter(volatilities, priceChanges, minDaysToLookForward, maxDaysToLookForward,
+                               daysToLookBack):
     '''
-    Creates a scatter plot of 'max percentage price change in daysToLookForward days' vs 'percentage
-    volume change in daysToLookBack days'.
+    Creates a scatter plots of 'avg % price change in minDaysToLookForward to maxDaysToLookForward days' vs 
+    'volume/price volatility over the past daysToLookBack days'.
     
     IN:
-        volPriceDat (List[List[float]]): first index represents trade ID; second index represents 
-                                            (volume change, price change)
-        daysToLookForward (int)
+        volatilities (List[(float, float)])
+        priceChanges (list)
+        minDaysToLookForward (int)
+        maxDaysToLookForward (int)
         daysToLookBack (int)
     '''
     
-    fig, ax = plt.subplots(1, 1)
-    ax.plot([val[0] for val in volPriceDat], [val[1] for val in volPriceDat], '.b', markersize=8)
-    
-    plt.ylim(top=275)
-    plt.xlabel(f'% volume change in previous {daysToLookBack} days')
-    plt.ylabel(f'Max % price change in {daysToLookForward} days')
-    plt.xscale('symlog')
-    plt.title(f'Price Change vs Volume Change')
+    fig, axs = plt.subplots(1, 2, figsize=(6.4*2, 4.8))
+    for i, name in enumerate(['Volume', 'Price']):
+        axs[i].plot([vol[i] for vol in volatilities], priceChanges, '.b', markersize=8)
+
+        axs[i].set_xlabel(f'{name} volatility in previous {daysToLookBack} days')
+        axs[i].set_ylabel(f'Avg % price change in {minDaysToLookForward} to {maxDaysToLookForward} days')
+        axs[i].set_title(f'Price Change vs {name} Volatility')
+
     plt.show()
-    
     
 def plotPriceWithTrades(tick, tickDat, insiderDat, startDate, endDate):
     '''
@@ -452,15 +501,16 @@ def plotPriceWithTrades(tick, tickDat, insiderDat, startDate, endDate):
 ############################################################################
 ########################## Feature Creation ################################
 ############################################################################
-def createAllFeatures(insiderDat, historicDat, daysToLookForward=90, daysToLookBack=1):
+def createAllFeatures(insiderDat, historicDat, minDaysToLookForward, maxDaysToLookForward, daysToLookBack):
     '''
     Completes the feature engineering for insider trade data.
     
     IN:
         insiderDat (pd.DataFrame): see top of file
         historicDat (dict): see top of file
-        daysToLookForward (int): number of days to look ahead for forward-looking features
-        daysToLookBack (int): number of days to look ahead for backward-looking features
+        minDaysToLookForward (int): min number of days to look ahead for forward-looking features
+        maxDaysToLookForward (int): max number of days to look ahead for forward-looking features
+        daysToLookBack (int): max number of days to look back for backward-looking features
         
     OUT:
         insiderDat (pd.DataFrame): input modified to contain engineered features
@@ -470,7 +520,8 @@ def createAllFeatures(insiderDat, historicDat, daysToLookForward=90, daysToLookB
     insiderDat['TradeDate'] = pd.to_datetime(insiderDat['TradeDate']).dt.date
     
     # create new features
-    insiderDat[['NumTrades','TradeToFileTime','ValueOwned','%VolumeChange','%FuturePriceChange']] = 0
+    insiderDat[['NumTrades','TradeToFileTime','ValueOwned','VolumeVolatility',
+                'PriceVolatility','%FuturePriceChange']] = 0
 
     startDate = min(insiderDat.FilingDate)
     endDate = max(insiderDat.FilingDate)
@@ -483,7 +534,7 @@ def createAllFeatures(insiderDat, historicDat, daysToLookForward=90, daysToLookB
         tradeDate = trade['TradeDate']
         fileDate = trade['FilingDate']
 
-        # skip the first DAYS_TO_LOOK_BACK days so we have data to look back at
+        # skip the first daysToLookBack days so we have data to look back at
         if (fileDate - dt.timedelta(days=daysToLookBack)) < startDate:
             continue
 
@@ -504,32 +555,38 @@ def createAllFeatures(insiderDat, historicDat, daysToLookForward=90, daysToLookB
         insiderDat.at[tradeNum, 'ValueOwned'] = owned*price
 
 
-        # compute and categorize time gaps between trades and filings
+        # compute time gaps between trades and filings
         tradeToFileTime = (fileDate - tradeDate).days
         insiderDat.at[tradeNum, 'TradeToFileTime'] = tradeToFileTime
 
 
-        # compute and categorize the number of same-ticker trades in the last DAYS_TO_LOOK_BACK days
-        recentTrades = insiderDat.apply(lambda x: True if (x['Ticker'] == tick) 
-                                                    and (x['FilingDate'] <= fileDate)
-                                                    and (x['FilingDate'] 
-                                                         >= fileDate-dt.timedelta(days=daysToLookBack))
-                                                    else False, axis=1)
+        # compute the number of same-ticker trades in the last daysToLookBack days, taking
+        # advantage of supposed backend speedup with pd.eval
+        prevDate = fileDate-dt.timedelta(days=daysToLookBack)
+        recentTrades = pd.DataFrame()
+        recentTrades = pd.eval('isRecentTrade = (insiderDat.Ticker==tick) and (insiderDat.FilingDate <= fileDate)' +
+                      ' and (insiderDat.FilingDate >= prevDate)', target=recentTrades)
 
-        insiderDat.at[tradeNum, 'NumTrades'] = len(recentTrades[recentTrades == True].index)
+        insiderDat.at[tradeNum, 'NumTrades'] = len(recentTrades[recentTrades['isRecentTrade'] == True].index)
 
 
-        # compute and categorize the percentage volume change in the last DAYS_TO_LOOK_BACK days
-        # compute the most best closing price percentage change in the next DAYS_TO_LOOK_FORWARD days
-        percentChangeVol, percentChangePrice = returnVolumeAndPriceChange(tick, 
-                                                                          tickDat, 
-                                                                          fileDate,
-                                                                          'Close',
-                                                                          daysToLookForward, 
-                                                                          daysToLookBack)
+        # compute volatilities in the last daysToLookBack days
+        # compute avg price percentage change in the next minDaysToLookForward to maxDaysToLookForward days
+        volatilities = returnVolatilities(tickDat, 
+                                            fileDate, 
+                                            'Close',
+                                            daysToLookBack)
+    
+        priceChange = returnMeanPriceChange(tick, 
+                                            tickDat, 
+                                            fileDate, 
+                                            'Close', 
+                                            minDaysToLookForward, 
+                                            maxDaysToLookForward)
         
-        insiderDat.at[tradeNum, '%VolumeChange'] = percentChangeVol
-        insiderDat.at[tradeNum, '%FuturePriceChange'] = percentChangePrice
+        insiderDat.at[tradeNum, 'VolumeVolatility'] = volatilities[0]
+        insiderDat.at[tradeNum, 'PriceVolatility'] = volatilities[1]
+        insiderDat.at[tradeNum, '%FuturePriceChange'] = priceChange
         
     return insiderDat
 
@@ -627,13 +684,14 @@ def returnXandY(insiderDat, startDate, endDate):
 ###########################################################################
 ########################## Trade Simulation ###############################
 ###########################################################################
-def runTradeSimulation(data_XY, historicDat, startDate, endDate, buyThresh, sellThresh):
+def runTradeSimulation(data_XY, predName, historicDat, startDate, endDate, buyThresh, sellThresh):
     '''
     Runs the basic investment simulation outlined in strategy_simulation.
     
     IN:
         data_XY (pd.DataFrame): contains input and output data together, along with 
                                 'FilingDate' and 'Ticker'
+        predName (str): name of data_XY's prediction column, e.g. 'XGB_Prediction'
         historicDat (dict): see top of file
         startDate (str): date on which to begin simulation
         endDate (str): date on which to end simulation
@@ -650,7 +708,7 @@ def runTradeSimulation(data_XY, historicDat, startDate, endDate, buyThresh, sell
         
         # Check each trade's performance prediction. If high enough, purchase at next day's opening.
         for tradeNum, trade in data_XY[data_XY['FilingDate'] == d.date()].iterrows():
-            if trade['Prediction'] < buyThresh: continue
+            if trade[predName] < buyThresh: continue
 
             tick = trade['Ticker']
 
