@@ -331,9 +331,9 @@ def returnVolatilities(tickDat, refDate, priceTime, daysToLookBack):
     return volumeVolatility, priceVolatility
 
 
-def returnMeanPriceChange(tick, tickDat, refDate, priceTime, minDaysToLookForward, maxDaysToLookForward):
+def returnBestPriceChange(tick, tickDat, refDate, priceTime, windowLen, daysToLookForward):
     '''
-    Returns avg % price change in minDaysToLookForward to maxDaysToLookForward days.
+    Returns best median % price change across 'windowLen' days, in minDaysToLookForward to maxDaysToLookForward days.
     
     IN:
         tick (str): a ticker
@@ -343,7 +343,7 @@ def returnMeanPriceChange(tick, tickDat, refDate, priceTime, minDaysToLookForwar
         minDaysToLookForward (int): min days to look forward in computing max price change
         maxDaysToLookForward (int): max days to look forward in computing max price chang
     OUT:
-        meanPercentChangePrice (float)
+        meanPercentChange (float)
     '''
     currentPrice, dateUsed = returnDataOnDate(tick,
                                             tickDat, 
@@ -351,15 +351,20 @@ def returnMeanPriceChange(tick, tickDat, refDate, priceTime, minDaysToLookForwar
                                             dataName=priceTime, 
                                             searchDirection=-1)
     
-    minFutureDate = dateUsed + dt.timedelta(days=minDaysToLookForward)
-    maxFutureDate = dateUsed + dt.timedelta(days=maxDaysToLookForward)
+    minFutureDate = dateUsed + dt.timedelta(days=1)
+    maxFutureDate = dateUsed + dt.timedelta(days=daysToLookForward)
     
-    meanPriceChange = np.mean(tickDat[minFutureDate:maxFutureDate][priceTime])
-            
-    meanPercentChangePrice = 100*(meanPriceChange-currentPrice) / currentPrice
+    priceChanges = tickDat[minFutureDate:maxFutureDate][priceTime]
+    
+    bestMedian = max(
+        [np.median(priceChanges[idx:idx+dt.timedelta(days=windowLen)])
+         for idx in priceChanges.index[:-windowLen]]
+    )
+        
+    medianPercentChange = 100*(bestMedian-currentPrice) / currentPrice
     
     
-    return meanPercentChangePrice
+    return medianPercentChange
 
 
 
@@ -435,10 +440,9 @@ def plotOutlyingPriceDifference(outlierClosings, numDays, delta, ax):
     return ax
     
     
-def plotVolatilityPriceScatter(volatilities, priceChanges, minDaysToLookForward, maxDaysToLookForward,
-                               daysToLookBack):
+def plotVolatilityPriceScatter(volatilities, priceChanges, daysToLookForward, daysToLookBack):
     '''
-    Creates a scatter plots of 'avg % price change in minDaysToLookForward to maxDaysToLookForward days' vs 
+    Creates scatter plots of 'avg % price change in minDaysToLookForward to maxDaysToLookForward days' vs 
     'volume/price volatility over the past daysToLookBack days'.
     
     IN:
@@ -453,8 +457,9 @@ def plotVolatilityPriceScatter(volatilities, priceChanges, minDaysToLookForward,
     for i, name in enumerate(['Volume', 'Price']):
         axs[i].plot([vol[i] for vol in volatilities], priceChanges, '.b', markersize=8)
 
+        axs[i].set_ylim(top=500)
         axs[i].set_xlabel(f'{name} volatility in previous {daysToLookBack} days')
-        axs[i].set_ylabel(f'Avg % price change in {minDaysToLookForward} to {maxDaysToLookForward} days')
+        axs[i].set_ylabel(f'Best median % price change in {daysToLookForward} days')
         axs[i].set_title(f'Price Change vs {name} Volatility')
 
     plt.show()
@@ -497,11 +502,25 @@ def plotPriceWithTrades(tick, tickDat, insiderDat, startDate, endDate):
     plt.title(tick + ' price in June')
     
     
+def plotPredictedVsActual(y_pred, y_true):
+    '''
+    Makes a scatter plot of model-predicted price change (y_pred) vs actual price change (y_true).  
+    '''
+    fig, ax = plt.subplots(1, 1)
+    ax.scatter(y_pred, y_true)
+    ax.plot([min(y_pred), max(y_pred)], [min(y_pred), max(y_pred)], '--r', label='Predicted = Actual')
+    ax.set_xlabel('Predicted % increase')
+    ax.set_ylabel('Actual % increase')
+    ax.set_title('Predicted vs. Actual Avg % Increase')
+    ax.legend()
+    plt.show()
+    
+    
     
 ############################################################################
 ########################## Feature Creation ################################
 ############################################################################
-def createAllFeatures(insiderDat, historicDat, minDaysToLookForward, maxDaysToLookForward, daysToLookBack):
+def createAllFeatures(insiderDat, historicDat, daysToLookForward, windowLen, daysToLookBack):
     '''
     Completes the feature engineering for insider trade data.
     
@@ -577,12 +596,12 @@ def createAllFeatures(insiderDat, historicDat, minDaysToLookForward, maxDaysToLo
                                             'Close',
                                             daysToLookBack)
     
-        priceChange = returnMeanPriceChange(tick, 
+        priceChange = returnBestPriceChange(tick, 
                                             tickDat, 
                                             fileDate, 
                                             'Close', 
-                                            minDaysToLookForward, 
-                                            maxDaysToLookForward)
+                                            windowLen, 
+                                            daysToLookForward)
         
         insiderDat.at[tradeNum, 'VolumeVolatility'] = volatilities[0]
         insiderDat.at[tradeNum, 'PriceVolatility'] = volatilities[1]
@@ -637,7 +656,8 @@ def prepareForModel(insiderDat):
                                     'Value': 'float', 
                                     'NumTrades': 'int', 
                                     'TradeToFileTime': 'int', 
-                                    '%VolumeChange': 'float', 
+                                    'VolumeVolatility': 'float',
+                                    'PriceVolatility': 'float',
                                     '%FuturePriceChange': 'float'})
     
     return insiderDat
