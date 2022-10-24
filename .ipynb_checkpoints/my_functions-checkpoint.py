@@ -364,10 +364,10 @@ class my_retrieval:
             tickDat (pd.DataFrame): data from historicDat[tick] (see top of file)
             refDate (str): YYYY-MM-DD, the reference date
             priceTime (str): 'Open', 'Close', 'High', 'Low'
-            minDaysToLookForward (int): min days to look forward in computing max price change
-            maxDaysToLookForward (int): max days to look forward in computing max price chang
+            windowLen (int): number of days over which to compute price change median
+            daysToLookForward (int): days to look forward in computing best median price change
         OUT:
-            meanPercentChange (float)
+            medianPercentChange (float): best median price change
         '''
         currentPrice, dateUsed = my_retrieval.returnDataOnDate(
             tick, tickDat, dt.date.isoformat(refDate), dataName=priceTime, searchDirection=-1
@@ -394,6 +394,8 @@ class my_retrieval:
 ########################### Generating Plots ###############################
 ############################################################################
 from random import random
+import seaborn as sn
+from sklearn.metrics import confusion_matrix
 
 class my_plots:
 
@@ -468,14 +470,13 @@ class my_plots:
 
     def plotVolatilityPriceScatter(volatilities, priceChanges, daysToLookForward, daysToLookBack):
         '''
-        Creates scatter plots of 'avg % price change in minDaysToLookForward to maxDaysToLookForward days' vs 
+        Creates scatter plots of 'best median % price change in daysToLookForward' vs 
         'volume/price volatility over the past daysToLookBack days'.
 
         IN:
             volatilities (List[(float, float)])
             priceChanges (list)
-            minDaysToLookForward (int)
-            maxDaysToLookForward (int)
+            daysToLookForward (int)
             daysToLookBack (int)
         '''
 
@@ -526,7 +527,7 @@ class my_plots:
         ax.legend()
 
         plt.xticks(rotation=75)
-        plt.title(tick + ' price in June')
+        plt.title(tick + ' Price History')
 
 
     def plotPredictedVsActual(train_pred, train_true, cv_pred, cv_true):
@@ -551,6 +552,46 @@ class my_plots:
             axs[i].set_title('Predicted vs. Actual % Increase')
             axs[i].legend()
         
+        plt.show()
+        
+        
+    def confusionMatrix(y_pred, y_true, benchmark, maxCatVal):
+        '''
+        Create a confusion matrix for actual vs predicted price change values.
+        
+        IN:
+            y_pred, y_true (ndarray)
+            benchmark (float): sets the matrix groups' interval size
+            maxCatVal (int): maximum number of outputs in a category (for visualization purposes)
+        '''
+        def returnPriceLabels(priceChange, labels):
+            '''
+            Categorizes a percentage price change via comparison to a benchmark S&P500 gain.
+            '''
+            if priceChange < 0: return labels[0]
+            elif (priceChange >= 0) and (priceChange < benchmark): return labels[1]
+            elif (priceChange >= benchmark) and (priceChange < 2*benchmark): return labels[2]
+            elif (priceChange >= 2*benchmark) and (priceChange < 3*benchmark): return labels[3]
+            else: return labels[4]
+
+        labels = ['<0%', 
+                  f'0-{benchmark}%',
+                  f'{benchmark}-{2*benchmark}%',
+                  f'{2*benchmark}-{3*benchmark}%',
+                  f'>{3*benchmark}%']
+
+        pred_labels = [returnPriceLabels(p, labels) for p in y_pred]
+        true_labels = [returnPriceLabels(t, labels) for t in y_true]
+
+        confMat = confusion_matrix(true_labels, pred_labels, labels=labels)
+        
+        plt.figure(figsize = (8,8))
+        sn.heatmap(pd.DataFrame(confMat, labels, labels), annot=True, fmt='g', cbar=False, vmin=0, vmax=maxCatVal)
+        plt.xlabel('Predicted')
+        plt.ylabel('Actual')
+        plt.xticks(rotation=45)
+        plt.yticks(rotation=45)
+        plt.title('Price Change Confusion Matrix')
         plt.show()
     
     
@@ -661,7 +702,7 @@ class my_model_prep:
     
     def prepareForModel(insiderDat):
         '''
-        Assigns all insider titles to categories and ensures that each feature is the proper dtype.
+        Assigns all insider titles and trade types to a category and ensures that each feature is the proper dtype.
         '''
         def fixTitle(title):
             '''
@@ -680,14 +721,11 @@ class my_model_prep:
         
         def fixTradeType(tradeType):
             '''
-            Assigns an insider title to a category. Splits people into people likely to have insider knowledge
-            vs all others (e.g. 10% holders).
+            Assigns a trade type to a category. 
+            
+            We don't perform one-hot encoding because the three categories (sal, sale+OE, purchase) are actually 
+            incrasingly bullish in that order.
             '''
-
-            importantKeywords = ['Dir', 'VP', 'Vice', 'V.P.', 'Pres',  # directors to the left; C-suite below
-                                 'CEO', 'C.E.O' 'COO', 'C.O.O', 'CHRO', 'C.H.R.O', 'CFO', 'C.F.O', 'CTO', 'C.T.O', 'Chief',
-                                 'COB', 'C.O.B.', 'Chair']  # chair keywords
-
             if tradeType == 'S - Sale': newType = 0
             elif tradeType == 'S - Sale+OE': newType = 1
             elif tradeType == 'P - Purchase': newType = 2
