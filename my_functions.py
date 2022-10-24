@@ -28,17 +28,10 @@ There are two variable names you will see a lot. They are:
 import re
 import pandas as pd
 import numpy as np
-import yfinance as yf
 import datetime as dt
 import pickle
 import matplotlib.pyplot as plt
 
-from random import random
-from time import sleep
-from pandas_datareader import data as pdr
-from imblearn.over_sampling import RandomOverSampler
-
-yf.pdr_override()  # supposedly faster for getting stock data
 plt.style.use('fivethirtyeight')
 
 
@@ -76,6 +69,12 @@ class my_misc:
 ############################################################################
 #####3########### Cleaning and Formatting CSV Data #########################
 ############################################################################
+import yfinance as yf
+from pandas_datareader import data as pdr
+from time import sleep
+
+yf.pdr_override()  # supposedly faster for getting stock data
+
 class my_cleaning:
     
     def cleanAndFormatDF(csv_loc, clean_csv_loc, historicDat_loc, newORload='load', startDate=None, endDate=None):
@@ -204,8 +203,12 @@ class my_retrieval:
         my_misc.validate(endDate)
 
         newTicks = [t for t in ticks if t not in historicDat.keys()]
+        if len(newTicks) == 0: return historicDat  # nothing to download!
+        
         print(f'{len(newTicks)} tickers to download.')
+        
         waitBeforeSleep = 100  # sleep every 100 requests; server is finnicky
+        
         numBatches = len(newTicks)//waitBeforeSleep + 1
 
         for batch in range(numBatches):
@@ -390,6 +393,8 @@ class my_retrieval:
 ############################################################################
 ########################### Generating Plots ###############################
 ############################################################################
+from random import random
+
 class my_plots:
 
     def plotPriceDifference(diffDat, delta, labelThresh, ax):
@@ -524,21 +529,28 @@ class my_plots:
         plt.title(tick + ' price in June')
 
 
-    def plotPredictedVsActual(y_pred, y_true):
+    def plotPredictedVsActual(train_pred, train_true, cv_pred, cv_true):
         '''
-        Makes a scatter plot of model-predicted price change (y_pred) vs actual price change (y_true).  
+        Makes a scatter plot of model-predicted price change vs actual price change.  
         '''
-        fig, ax = plt.subplots(1, 1)
-        ax.scatter(y_pred, y_true)
-        ax.plot([min(y_pred), max(y_pred)], [min(y_pred), max(y_pred)], '--r', label='Predicted = Actual')
+        ls = [[train_pred, train_true], [cv_pred, cv_true]]
+        
+        fig, axs = plt.subplots(1, 2, figsize=(2*6.4, 4.8))
+        for i in [0,1]:
+            y_pred = ls[i][0]
+            y_true=ls[i][1]
+            
+            axs[i].scatter(y_pred, y_true)
+            axs[i].plot([min(y_pred), max(y_pred)], [min(y_pred), max(y_pred)], '--r', label='Predicted = Actual')
 
-        ymin, ymax = ax.get_ylim()
+            ymin, ymax = axs[i].get_ylim()
 
-        ax.set_ylim(top=min(ymax, 500))
-        ax.set_xlabel('Predicted % increase')
-        ax.set_ylabel('Actual % increase')
-        ax.set_title('Predicted vs. Actual Avg % Increase')
-        ax.legend()
+            axs[i].set_ylim(top=min(ymax, 500))
+            axs[i].set_xlabel('Predicted % price increase')
+            axs[i].set_ylabel('Actual % price increase')
+            axs[i].set_title('Predicted vs. Actual % Increase')
+            axs[i].legend()
+        
         plt.show()
     
     
@@ -577,7 +589,7 @@ class my_features:
         delta = endDate - startDate
 
         for tradeNum, trade in insiderDat.iterrows():
-            print(f'Processing trade {tradeNum}', end='\r')
+            print(f'Processing trade: {tradeNum}', end='\r')
             tick = trade['Ticker']
             tickDat = historicDat[tick]
             tradeDate = trade['TradeDate']
@@ -632,9 +644,10 @@ class my_features:
             insiderDat.at[tradeNum, 'VolumeVolatility'] = volatilities[0]
             insiderDat.at[tradeNum, 'PriceVolatility'] = volatilities[1]
             
-            # cap the outputs in the interval [-10,70), as discussed in exploratory_analysis
+            # cap the outputs in the interval [-minOutput, maxOutput), as discussed in exploratory_analysis
             insiderDat.at[tradeNum, '%FuturePriceChange'] = min(max(priceChange, minOutput), maxOutput-1e-6)
-
+        
+        print('Processing trade: Done!')
         return insiderDat
 
 
@@ -642,6 +655,8 @@ class my_features:
 ############################################################################
 ########################## Model Preparation ###############################
 ############################################################################
+from imblearn.over_sampling import RandomOverSampler
+
 class my_model_prep:
     
     def prepareForModel(insiderDat):
@@ -650,32 +665,51 @@ class my_model_prep:
         '''
         def fixTitle(title):
             '''
-            Assigns an insider title to a category.
-
-            I figure that the Chair of the Board is the most fiscally powerful person in a company, so to break ties for
-            people who hold multiple titles, we prioritize COB, then C-suite, then other directors, then anyone else.
+            Assigns an insider title to a category. Splits people into people likely to have insider knowledge
+            vs all others (e.g. 10% holders).
             '''
 
-            directorKeywords = ['Dir', 'VP', 'Vice', 'V.P.', 'Pres']
-            officerKeywords = ['CEO', 'C.E.O' 'COO', 'C.O.O', 'CHRO', 'C.H.R.O', 'CFO', 'C.F.O', 'CTO', 'C.T.O', 'Chief']
-            chairKeywords = ['COB', 'C.O.B.', 'Chair']
+            importantKeywords = ['Dir', 'VP', 'Vice', 'V.P.', 'Pres',  # directors to the left; C-suite below
+                                 'CEO', 'C.E.O' 'COO', 'C.O.O', 'CHRO', 'C.H.R.O', 'CFO', 'C.F.O', 'CTO', 'C.T.O', 'Chief',
+                                 'COB', 'C.O.B.', 'Chair']  # chair keywords
 
-            if any([re.search(key, title, re.IGNORECASE) for key in chairKeywords]): newTitle = 'Chair'
-            elif any([re.search(key, title, re.IGNORECASE) for key in officerKeywords]): newTitle = 'Officer'
-            elif any([re.search(key, title, re.IGNORECASE) for key in directorKeywords]): newTitle = 'Director'
-            else: newTitle = 'Other'
+            if any([re.search(key, title, re.IGNORECASE) for key in importantKeywords]): newTitle = 1
+            else: newTitle = 0
 
             return newTitle
+        
+        def fixTradeType(tradeType):
+            '''
+            Assigns an insider title to a category. Splits people into people likely to have insider knowledge
+            vs all others (e.g. 10% holders).
+            '''
+
+            importantKeywords = ['Dir', 'VP', 'Vice', 'V.P.', 'Pres',  # directors to the left; C-suite below
+                                 'CEO', 'C.E.O' 'COO', 'C.O.O', 'CHRO', 'C.H.R.O', 'CFO', 'C.F.O', 'CTO', 'C.T.O', 'Chief',
+                                 'COB', 'C.O.B.', 'Chair']  # chair keywords
+
+            if tradeType == 'S - Sale': newType = 0
+            elif tradeType == 'S - Sale+OE': newType = 1
+            elif tradeType == 'P - Purchase': newType = 2
+            else: raise ValueError('Trade type couldn''t be assigned')
+
+            return newType
+        
+        #################################################################
 
         if 'Title' in insiderDat.columns:
             insiderDat['TitleCat'] = None
             insiderDat.TitleCat = [fixTitle(t) for t in insiderDat.Title]
             insiderDat = insiderDat.drop('Title', axis=1)
+            
+        if 'TradeType' in insiderDat.columns:
+            insiderDat['TradeTypeCat'] = None
+            insiderDat.TradeTypeCat = [fixTradeType(t) for t in insiderDat.TradeType]
+            insiderDat = insiderDat.drop('TradeType', axis=1)
 
         insiderDat.FilingDate = pd.to_datetime(insiderDat['FilingDate']).dt.date
+        
         insiderDat = insiderDat.astype({'Price': 'float', 
-                                        'Qty': 'float', 
-                                        'Owned': 'float', 
                                         'DeltaOwn': 'float', 
                                         'Value': 'float', 
                                         'NumTrades': 'int', 
@@ -729,15 +763,15 @@ class my_model_prep:
         '''
         dateRange = pd.date_range(start=startDate, end=endDate).date
 
-        insiderDat = insiderDat.drop(columns=['CompanyName', 'TradeDate', 'InsiderName'])
+        insiderDat = insiderDat.drop(columns=['CompanyName', 'TradeDate', 'InsiderName', 'Owned', 'Qty'])
 
         # Get rid of a column that I created when re-indexing the dataframe
         if 'Unnamed: 0' in insiderDat.columns: insiderDat = insiderDat.drop(columns=['Unnamed: 0'])
 
-        # Use one-hot encoding for insider title and trade type
-        dummies_data = pd.get_dummies(insiderDat, columns=['TitleCat', 'TradeType'], prefix=['Title', None])
+        # Use one-hot encoding for trade type
+        #dummies_data = pd.get_dummies(insiderDat, columns=['TradeType'], prefix=[None])
 
-        data_XY = dummies_data[dummies_data['FilingDate'].isin(dateRange)]
+        data_XY = insiderDat[insiderDat['FilingDate'].isin(dateRange)]
         
         if binStarts: data_XY = my_model_prep.oversample(data_XY, binStarts)
         
@@ -751,8 +785,72 @@ class my_model_prep:
         assert np.all(np.isfinite(data_Y)) == True
 
         return data_XY, data_X, data_Y
+    
 
+###########################################################################
+############################# Models ######################################
+###########################################################################
+import xgboost as xgb
+from operator import itemgetter
+from sklearn.model_selection import RandomizedSearchCV
 
+class my_models:
+    
+    def XGBReg(train_X, train_Y, cv_X, cv_Y, objective, metric, parameters, earlyStopping, n_estimators):
+        '''
+        Uses a randomized search to get the best parameters for an XGBoost model, and then fits the model with these
+        parameters.
+        
+        IN:
+            train_X, train_Y, cv_X, cv_Y (pd.DataFrame)
+            objective (function): defined appropriately according to XGBoost docs
+            metric (function): evaluation metric, also defined appropriately
+            parameters (dict): maps parameter names to lists of values to try
+            earlyStopping (int): number of rounds to wait for loss improvement
+            n_estimators (int): number of estimators to be used by the model
+        OUT:
+            xgb_model (an Fit object)
+        '''
+        xgb_reg = xgb.XGBRegressor(
+            verbosity=0, 
+            objective=objective,
+            eval_metric=metric,
+            early_stopping_rounds=earlyStopping,
+            n_estimators=n_estimators,
+            tree_method='hist'
+        )
+        
+        xgb_rscv = RandomizedSearchCV(
+            xgb_reg,
+            param_distributions=parameters,
+            verbose=0,
+            random_state=40,
+            error_score='raise'
+        )
+
+        xgb_rscv_model = xgb_rscv.fit(
+            train_X, 
+            train_Y, 
+            eval_set=[(train_X, train_Y), (cv_X, cv_Y)],
+            verbose=0
+        )
+
+        print('Best learning_rate, min_split_loss, max_depth, max_delta_step, colsample_bytree, subsample,\n' +
+              'reg_lambda, min_child_weight:\n' +
+              f'''{itemgetter(
+                'learning_rate', 'min_split_loss', 'max_depth', 'max_delta_step', 'colsample_bytree', 'subsample', 
+                'reg_lambda', 'min_child_weight'
+               )(xgb_rscv_model.best_estimator_.get_params())
+              }''')
+        
+        xgb_model = xgb.XGBRegressor(**xgb_rscv_model.best_estimator_.get_params()).fit(
+            train_X, train_Y, 
+            eval_set=[(train_X, train_Y), (cv_X, cv_Y)], verbose=0
+        )
+        
+        return xgb_model
+        
+        
 
 ###########################################################################
 ########################## Trade Simulation ###############################
@@ -822,7 +920,9 @@ class my_sims:
                 # If it's the last day of the simulation, sell everything (for performance evaluation)
                 # !!!Make sure that this is a day that the market is open!!!
                 if d.date() == dt.datetime.strptime(endDate, '%Y-%m-%d').date():
-                    currPrice = historicDat[tick].loc[currDate]['Close']
+                    try: currPrice = historicDat[tick].loc[currDate]['Close']
+                    except: raise ValueError('Market must be open on simulation end date!')
+                        
                     totalProfit += sum([(currPrice-elem['BuyPrice'][idx])/elem['BuyPrice'][idx] 
                                         for idx, val in enumerate(elem['SellPrice']) if val is None])
                     myTrades[tick]['SellPrice'] = [currPrice if val is None else val for val in elem['SellPrice']]
