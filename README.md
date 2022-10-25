@@ -1,7 +1,7 @@
 # "Insider Training": An Exploration of Insider Trades
 According to [Investopedia](https://www.investopedia.com/terms/i/insider.asp), an **insider** is "anyone who trades a company's shares based on material nonpublic knowledge."
 
-In this repository's notebooks, we try to see if we can mine insider data and use machine learning to generate investment insights, in lieu of having any technical knowledge of investment strategies, the Greeks, etc. I know what "bullish" and "bearish" mean, but not much more than that :)
+In this repository's notebooks, arranged alphabetically in the order of my workflow, we try to see if we can mine insider data and use machine learning to generate investment insights, in lieu of having any technical knowledge of investment strategies, the Greeks, etc. I know what "bullish" and "bearish" mean, but not much more than that :)
 
 This project is neither an investment pitch nor financial advice. It's an exploratoration driven by data and curiosity!
 
