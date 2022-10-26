@@ -1,5 +1,5 @@
 # "Insider Training": An Exploration of Insider Trades
-****For a quick results overview and demonstration, see E_strategy_simulation.ipynb****
+***\*For a quick overview and demonstration of results, see E_strategy_simulation.ipynb!\****
 
 According to [Investopedia](https://www.investopedia.com/terms/i/insider.asp), an **insider** is "anyone who trades a company's shares based on material nonpublic knowledge."
 
