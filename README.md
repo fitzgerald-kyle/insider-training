@@ -3,8 +3,6 @@ According to [Investopedia](https://www.investopedia.com/terms/i/insider.asp), a
 
 In this repository's notebooks, we mine public insider trade data and use machine learning to generate a novel trading strategy that outperforms the S&P 500 during two 3-month periods in 2021 and 2022.
 
-***\*For a quick overview and demonstration of results, see nb5_strategy_simulation.ipynb!\****
-
 ## Where can the data be found?
 Insider trade filings are published online by the SEC, and they can be found using the EDGAR API. However, it is much easier to pull data from sites that gather the filing data into tabular form such as [Benzinga](https://www.benzinga.com/).
 
@@ -17,6 +15,6 @@ So far, I have explored using two model types. One is [XGBoost](https://xgboost.
 You can see my commentary on model performance in nb3_decision_tree.ipynb and nb4_neural_net.ipynb. I create a custom-weighted mean squared error metric that penalizes overestimated losses and underestimated gains more harshly.
 
 In order to evaluate the models in a way that is more demonstrative, I develop a simple trading strategy in nb5_strategy_simulation.ipynb and benchmark it against the performance of the S&P500 ETF fund, [SPY](https://www.google.com/finance/quote/SPY:NYSEARCA), across the given time period.
-
-
+\
+\
 *This project is neither an investment pitch nor financial advice.*
