@@ -17,5 +17,4 @@ You can see my commentary on model performance in nb3_decision_tree.ipynb and nb
 In order to evaluate the models in a way that is more demonstrative, I develop a simple trading strategy in nb5_strategy_simulation.ipynb and benchmark it against the performance of the S&P500 ETF fund, [SPY](https://www.google.com/finance/quote/SPY:NYSEARCA), across the given time period.  
 <br />
 <br />
-<br />
 *This project is neither an investment pitch nor financial advice.*
