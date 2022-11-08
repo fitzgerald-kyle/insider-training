@@ -32,6 +32,9 @@ import datetime as dt
 import pickle
 import matplotlib.pyplot as plt
 
+strptime = dt.datetime.strptime
+strftime = dt.date.strftime
+
 plt.style.use('fivethirtyeight')
 
 
@@ -60,7 +63,7 @@ class my_misc:
         Ensure that all dates have a valid format.
         '''
         try:
-            dt.datetime.strptime(date_text, '%Y-%m-%d')
+            strptime(date_text, '%Y-%m-%d')
         except ValueError:
             raise ValueError("Incorrect data format, should be YYYY-MM-DD")
         
@@ -77,7 +80,7 @@ yf.pdr_override()  # supposedly faster for getting stock data
 
 class my_cleaning:
     
-    def cleanAndFormatDF(csv_loc, clean_csv_loc, historicDat_loc, newORload='load', startDate=None, endDate=None):
+    def cleanAndFormatDF(csv_loc, clean_csv_loc, historicDat_loc, startDate=None, endDate=None):
         '''
         Produces a DataFrame of insider trades and a dictionary of historic ticker data.
 
@@ -85,8 +88,6 @@ class my_cleaning:
             csv_loc (str): location of CSV with insider data, without '.csv'
             clean_csv_loc (str): location to save cleaned insider data to CSV, without '.csv'
             historicDat_loc (str): location containing historic ticker data, without '.pkl'
-            newORload (str): must be either 'new' (pulls new historic ticker data with yfinance and saves to
-                                historicDat_loc.pkl) or 'load' (loads historic ticker data from historicDat.pkl)
             startDate (str): 'YYYY-MM-DD' indicating when to start pulling historic ticker data
             endDate (str): 'YYYY-MM-DD' indicating when to stop pulling historic ticker data
 
@@ -99,17 +100,17 @@ class my_cleaning:
         insiderDat = insiderDat.rename(columns={'Filing Date': 'FilingDate', 
                                                 'Trade Date': 'TradeDate', 
                                                 'Company Name': 'CompanyName', 
-                                                'Insider Name': 'InsiderName', 
+                                                'Insider Name': 'InsiderName',
                                                 'Trade Type': 'TradeType'},
                                        errors='raise')
 
         '''
         NOTE: I am stripping away the filing date's time. Assume we can't take advantage of a filing's
-        information and buy until opening next day.
+        information (e.g. by buying) until the market opens the next day.
         '''
-        insiderDat.FilingDate = [dt.datetime.strptime(str(d), '%Y-%m-%d %H:%M:%S').date() 
+        insiderDat.FilingDate = [strptime(str(d), '%Y-%m-%d %H:%M:%S').date()
                                  for d in insiderDat.FilingDate]  # convert to date object
-        insiderDat.TradeDate = [dt.datetime.strptime(str(d), '%Y-%m-%d').date()
+        insiderDat.TradeDate = [strptime(str(d), '%Y-%m-%d').date()
                                 for d in insiderDat.TradeDate]  # convert to date object
         insiderDat.Price = [float(p.replace(',','').replace('$','')) 
                             for p in insiderDat.Price]
@@ -137,22 +138,24 @@ class my_cleaning:
         allTickers = insiderDat.Ticker.unique().tolist()
         print('There are ' + str(len(allTickers)) + ' unique tickers.')
 
-        if newORload == 'new':
-            historicDat = my_retrieval.getHistoricDat(allTickers, startDate, endDate)
-            my_misc.save_obj(historicDat, historicDat_loc)
-        elif newORload == 'load':
-            historicDat = my_misc.load_obj(historicDat_loc)
-            historicDat.update(
-                my_retrieval.getHistoricDat(allTickers, startDate, endDate, historicDat_loc, historicDat=historicDat)
-            )
-            my_misc.save_obj(historicDat, historicDat_loc)
-        else:
-            raise ValueError('newORload must be ''new'' or ''load''')
+
+        '''
+        Load previously-saved historicDat (if we can) and update it with the historic ticker data we need.
+        Then save to a pickle file.
+        '''
+        try: historicDat = my_misc.load_obj(historicDat_loc)
+        except: historicDat = {}
+
+        historicDat.update(
+            my_retrieval.getHistoricDat(allTickers, startDate, endDate, historicDat_loc, historicDat=historicDat)
+        )
+
+        my_misc.save_obj(historicDat, historicDat_loc)
 
 
-        exampleTick = next(iter(historicDat))
-        print(f'\nExample ticker data for {exampleTick}:')
-        print(historicDat[exampleTick])
+        exampleHistoricDat = list(historicDat.items())[-1]
+        print(f'\nExample ticker data for {exampleHistoricDat[0]}:')
+        print(exampleHistoricDat[1])
 
 
         '''
@@ -164,15 +167,28 @@ class my_cleaning:
         '''
         tickersToRemove = set()
         for tick in allTickers:
+            #print(tick)
             if ( historicDat[tick].empty
-                or (historicDat[tick].index[0] > dt.datetime.strptime(startDate, '%Y-%m-%d'))
-                or np.any(np.isnan(historicDat[tick])) ):
+                or np.any(np.isnan(historicDat[tick]))
+                or (historicDat[tick].index[0] > strptime(startDate, '%Y-%m-%d'))):
                 tickersToRemove.add(tick)
 
+                
+        insiderDat = insiderDat[insiderDat.Ticker.isin(tickersToRemove)==False]
         print('\nThere are ' + str(len(tickersToRemove)) + ' tickers that no longer exist or were listed on ' +
               f'an exchange after {startDate} and are being removed.')
+        
 
-        insiderDat = insiderDat[insiderDat.Ticker.isin(tickersToRemove)==False]
+        '''
+        Finally, we want to remove trades that represent no value. This likely represents a 'gift' to the insider
+        and does not represent an investment based on any insider knowledge.
+        '''
+        insiderDat = insiderDat[insiderDat.Value!=0.]
+
+        
+        '''
+        Drop unused columns, re-index, and write to CSV.
+        '''
         insiderDat = insiderDat.drop(['Qty2', 'Value2'], axis=1).reset_index().drop(['index'], axis=1)
         insiderDat.to_csv(clean_csv_loc + '.csv', index=False)
 
@@ -183,6 +199,8 @@ class my_cleaning:
 ############################################################################
 ################ Retrieving and Generating Data ############################
 ############################################################################
+from pytrends.request import TrendReq
+
 class my_retrieval:
 
     def getHistoricDat(ticks, startDate, endDate, historicDat_loc, historicDat={}):
@@ -207,25 +225,25 @@ class my_retrieval:
         
         print(f'{len(newTicks)} tickers to download.')
         
-        waitBeforeSleep = 100  # sleep every 100 requests; server is finnicky
+        batchSize = 10  # server is finnicky
         
-        numBatches = len(newTicks)//waitBeforeSleep + 1
+        numBatches = len(newTicks)//batchSize + 1
 
         for batch in range(numBatches):
-            batchStartIdx = batch*waitBeforeSleep
-            batchEndIdx = min(len(newTicks), batchStartIdx+waitBeforeSleep)
+            batchStartIdx = batch*batchSize
+            batchEndIdx = min(len(newTicks), batchStartIdx+batchSize)
 
             batchTicks = newTicks[batchStartIdx:batchEndIdx]
-
+            
             tickDat = pdr.get_data_yahoo(
                 batchTicks,
                 start=startDate, 
                 end=endDate,
-                threads=2,
+                threads=1,
                 progress=True, 
                 show_errors=False,
                 group_by='ticker',
-                timeout=10
+                pause=1
             )
 
             for t in batchTicks: 
@@ -236,7 +254,7 @@ class my_retrieval:
 
             my_misc.save_obj(historicDat, historicDat_loc)
 
-            if batch < numBatches-1: sleep(30)
+            if batch < numBatches-1: sleep(1)
 
 
         return historicDat
@@ -260,29 +278,31 @@ class my_retrieval:
             futureDate (dt.date object): the date for which we are returning 'val'
         '''
 
-        futureDate = dt.date.strftime(
-            dt.datetime.strptime(startDate, '%Y-%m-%d') + dt.timedelta(days=delta), '%Y-%m-%d'
+        futureDate = strftime(
+            strptime(startDate, '%Y-%m-%d') + dt.timedelta(days=delta), '%Y-%m-%d'
         )  # first attempt at a future date
 
-        e = 'KeyError'
-        while e is not None:  # continually add 'searchDirection' to 'futureDate' until we can return a value
+        invalidDate = True
+        while invalidDate:  # continually add 'searchDirection' to 'futureDate' until we can return a value
             try:
                 val = tickDat.loc[futureDate][dataName]
-                e = None
+                invalidDate = False
 
             except KeyError:
-                futureDate = dt.date.strftime(
-                    dt.datetime.strptime(futureDate, '%Y-%m-%d') + dt.timedelta(days=searchDirection), '%Y-%m-%d'
+                futureDate = strftime(
+                    strptime(futureDate, '%Y-%m-%d') + dt.timedelta(days=searchDirection), '%Y-%m-%d'
                 )
 
-                # flag if we start searching infinitely backwards
-                if dt.datetime.strptime(futureDate, '%Y-%m-%d') < dt.datetime.strptime('2000-01-01', '%Y-%m-%d'):
+                # flag if we start searching infinitely backwards or forwards
+                if strptime(futureDate, '%Y-%m-%d') < strptime('2010-01-01', '%Y-%m-%d'):
+                    raise ValueError('Out-of-bounds date caused by ' + tick + ' on ' + startDate)
+                if strptime(futureDate, '%Y-%m-%d') > strptime('2030-01-01', '%Y-%m-%d'):
                     raise ValueError('Out-of-bounds date caused by ' + tick + ' on ' + startDate)
 
-        return val, dt.datetime.strptime(futureDate, '%Y-%m-%d').date()
+        return val, strptime(futureDate, '%Y-%m-%d').date()
 
 
-    def returnPriceDiff(insiderDat, historicDat, SP500Dat, delta, priceTime):
+    def returnPriceDiff(insiderDat, historicDat, delta, priceTime):
         '''
         Returns difference between price at 'priceTime' on the initial filing date and price at 'priceTime',
         'delta' days later for each trade in 'insiderDat'.
@@ -290,7 +310,6 @@ class my_retrieval:
         IN:
             insiderDat (pd.DataFrame): see top of file
             historicDat (dict): see top of file
-            SP500Dat (dict): same format as historicDat, but for SPY data
             delta (int): nonnegative number of days
             priceTime (str): 'Open', 'Close'
         OUT:
@@ -303,7 +322,7 @@ class my_retrieval:
         for tradeNum, trade in insiderDat.iterrows():
             tick = trade['Ticker']
             tickDat = historicDat[tick]
-            SPY_Dat = SP500Dat['SPY']
+            SPY_Dat = historicDat['SPY']
             startDate = str(trade['FilingDate'])
 
             startPrice, _ = my_retrieval.returnDataOnDate(
@@ -355,19 +374,18 @@ class my_retrieval:
         return volumeVolatility, priceVolatility
 
 
-    def returnBestPriceChange(tick, tickDat, refDate, priceTime, windowLen, daysToLookForward):
+    def returnBestPriceChange(tick, tickDat, refDate, priceTime, daysToLookForward):
         '''
-        Returns best median % price change across 'windowLen' days, in minDaysToLookForward to maxDaysToLookForward days.
+        Returns best % price change in the next daysToLookForward days.
 
         IN:
             tick (str): a ticker
             tickDat (pd.DataFrame): data from historicDat[tick] (see top of file)
             refDate (str): YYYY-MM-DD, the reference date
             priceTime (str): 'Open', 'Close', 'High', 'Low'
-            windowLen (int): number of days over which to compute price change median
-            daysToLookForward (int): days to look forward in computing best median price change
+            daysToLookForward (int): days to look forward in computing best price change
         OUT:
-            medianPercentChange (float): best median price change
+            bestPercentChange (float): best price change
         '''
         currentPrice, dateUsed = my_retrieval.returnDataOnDate(
             tick, tickDat, dt.date.isoformat(refDate), dataName=priceTime, searchDirection=-1
@@ -376,18 +394,38 @@ class my_retrieval:
         minFutureDate = dateUsed + dt.timedelta(days=1)
         maxFutureDate = dateUsed + dt.timedelta(days=daysToLookForward)
 
-        priceChanges = tickDat[minFutureDate:maxFutureDate][priceTime]
+        futurePrices = tickDat[minFutureDate:maxFutureDate][priceTime]
 
-        bestMedian = max(
-            [np.median(priceChanges[idx:idx+dt.timedelta(days=windowLen)])
-             for idx in priceChanges.index[:-windowLen]]
+        bestFuturePrice = max(futurePrices)
+        #if bestFuturePrice==currentPrice: print(futurePrices)
+        bestPercentChange = 100*(bestFuturePrice-currentPrice) / currentPrice
+
+
+        return bestPercentChange
+    
+    
+    def returnGoogleTrendsChange(tick, targetDate):
+        '''
+        Return the % change in Google Trends data for 'tick' between the given date and the previous week.
+        '''
+        requester = TrendReq(hl='en-US')
+
+        prevDate = strftime(targetDate - dt.timedelta(days=7), '%Y-%m-%d')
+        
+        requester.build_payload(
+            kw_list=[tick],
+            cat='7',  # finance
+            timeframe=[prevDate+' '+strftime(targetDate, '%Y-%m-%d')],
+            sleep=60
         )
-
-        medianPercentChange = 100*(bestMedian-currentPrice) / currentPrice
-
-
-        return medianPercentChange
-
+        
+        data = requester.interest_over_time()
+        
+        if (data[-1] == 0) and (data[0] == 0): percentChange = 0
+        elif data[0] == 0: percentChange = 9999
+        else: percentChange = 100*(data[-1]-data[0])/data[0]
+            
+        return percentChange
 
 
 ############################################################################
@@ -418,7 +456,7 @@ class my_plots:
         SP500Prices = [val[1] for val in diffDat.values()]
 
         ax.plot(diffDat.keys(), tickPrices, '.b', markersize=8)
-        ax.plot(diffDat.keys(), SP500Prices, '--r', label='S&P500')
+        ax.plot(diffDat.keys(), SP500Prices, '-r', label='S&P500')
         ax.set_xticklabels([])
 
         for key in diffDat.keys():
@@ -444,8 +482,7 @@ class my_plots:
         is outlying.
 
         IN:
-            outlierClosings (dict): maps 'pos' or 'neg' (representing the direction of outlying price change) to
-                                    a numpy array, where each row contains daily ticker price for a given trade
+            outlierClosings (ndarray): each row contains daily ticker price for a given trade
             numDays (int): number of future days to plot
             delta (int): number of days after which price is outlying; nonnegative
             ax (pyplot axes object)
@@ -453,14 +490,13 @@ class my_plots:
             ax (pyplot axes object)
         '''
 
-        for row in outlierClosings['pos']:
-            ax.plot(list(range(numDays)), row, '-b', markersize=6)
-        for row in outlierClosings['neg']:
-            ax.plot(list(range(numDays)), row, '-r', markersize=6)
+        for row in outlierClosings: ax.plot(list(range(numDays)), row, linewidth=2)
+        
+        ax.plot([0, numDays], [0, 0], '-k', linewidth=3)
 
         ymin, ymax = ax.get_ylim()
 
-        ax.set_ylim(top=min(ymax, 400))
+        ax.set_ylim(top=min(ymax, 150))
         ax.set_xlabel(f'Days after insider trade')
         ax.set_ylabel(f'Price % change')
         ax.set_title(f'Outlying {delta}-day ticker prices')
@@ -484,7 +520,7 @@ class my_plots:
         for i, name in enumerate(['Volume', 'Price']):
             axs[i].plot([vol[i] for vol in volatilities], priceChanges, '.b', markersize=8)
 
-            axs[i].set_ylim(top=500)
+            axs[i].set_ylim(top=100)
             axs[i].set_xlabel(f'{name} volatility in previous {daysToLookBack} days')
             axs[i].set_ylabel(f'Best median % price change in {daysToLookForward} days')
             axs[i].set_title(f'Price Change vs {name} Volatility')
@@ -555,30 +591,26 @@ class my_plots:
         plt.show()
         
         
-    def confusionMatrix(y_pred, y_true, benchmark, maxCatVal):
+    def confusionMatrix(y_pred, y_true, intervalBounds, maxNumInCat):
         '''
         Create a confusion matrix for actual vs predicted price change values.
         
         IN:
             y_pred, y_true (ndarray)
-            benchmark (float): sets the matrix groups' interval size
-            maxCatVal (int): maximum number of outputs in a category (for visualization purposes)
+            intervalBounds (List[int]): contains boundary values of the maxtrix groups' intervals
+            maxNumInCat (int): maximum number of outputs in a category (for visualization purposes)
         '''
         def returnPriceLabels(priceChange, labels):
             '''
             Categorizes a percentage price change via comparison to a benchmark S&P500 gain.
             '''
-            if priceChange < 0: return labels[0]
-            elif (priceChange >= 0) and (priceChange < benchmark): return labels[1]
-            elif (priceChange >= benchmark) and (priceChange < 2*benchmark): return labels[2]
-            elif (priceChange >= 2*benchmark) and (priceChange < 3*benchmark): return labels[3]
-            else: return labels[4]
+            for i,val in enumerate(intervalBounds[:-1]):
+                if (priceChange >= val) and (priceChange < intervalBounds[i+1]): 
+                    return labels[i]
+            return labels[-1]
 
-        labels = ['<0%', 
-                  f'0-{benchmark}%',
-                  f'{benchmark}-{2*benchmark}%',
-                  f'{2*benchmark}-{3*benchmark}%',
-                  f'>{3*benchmark}%']
+        labels = [f'{val}-{intervalBounds[i+1]}%' for i,val in enumerate(intervalBounds[:-1])]
+        labels += [f'>{intervalBounds[-1]}%']
 
         pred_labels = [returnPriceLabels(p, labels) for p in y_pred]
         true_labels = [returnPriceLabels(t, labels) for t in y_true]
@@ -586,7 +618,7 @@ class my_plots:
         confMat = confusion_matrix(true_labels, pred_labels, labels=labels)
         
         plt.figure(figsize = (8,8))
-        sn.heatmap(pd.DataFrame(confMat, labels, labels), annot=True, fmt='g', cbar=False, vmin=0, vmax=maxCatVal)
+        sn.heatmap(pd.DataFrame(confMat, labels, labels), annot=True, fmt='g', cbar=False, vmin=0, vmax=maxNumInCat)
         plt.xlabel('Predicted')
         plt.ylabel('Actual')
         plt.xticks(rotation=45)
@@ -601,7 +633,7 @@ class my_plots:
 ############################################################################
 class my_features:
     
-    def createAllFeatures(insiderDat, historicDat, daysToLookForward, windowLen, daysToLookBack, minOutput, maxOutput):
+    def createAllFeatures(insiderDat, historicDat, daysToLookForward, daysToLookBack, minOutput, maxOutput):
         '''
         Completes the feature engineering for insider trade data.
 
@@ -622,8 +654,9 @@ class my_features:
         insiderDat['TradeDate'] = pd.to_datetime(insiderDat['TradeDate']).dt.date
 
         # create new features
-        insiderDat[['NumTrades','TradeToFileTime','ValueOwned','VolumeVolatility',
-                    'PriceVolatility','%FuturePriceChange']] = 0
+        insiderDat[['RecentTickerTrades','TradeToFileTime','ValueOwned','VolumeVolatility',
+                    'PriceVolatility','%FuturePriceChange','val_SPY']] = 0
+        ################# add Google trends data
 
         startDate = min(insiderDat.FilingDate)
         endDate = max(insiderDat.FilingDate)
@@ -669,7 +702,7 @@ class my_features:
             recentTrades = pd.eval('isRecentTrade = (insiderDat.Ticker==tick) and (insiderDat.FilingDate <= fileDate)' +
                           ' and (insiderDat.FilingDate >= prevDate)', target=recentTrades)
 
-            insiderDat.at[tradeNum, 'NumTrades'] = len(recentTrades[recentTrades['isRecentTrade'] == True].index)
+            insiderDat.at[tradeNum, 'RecentTickerTrades'] = len(recentTrades[recentTrades['isRecentTrade'] == True].index)
 
 
             # compute volatilities in the last daysToLookBack days
@@ -679,7 +712,7 @@ class my_features:
             )
 
             priceChange = my_retrieval.returnBestPriceChange(
-                tick, tickDat, fileDate, 'Close', windowLen, daysToLookForward
+                tick, tickDat, fileDate, 'Close', daysToLookForward
             )
 
             insiderDat.at[tradeNum, 'VolumeVolatility'] = volatilities[0]
@@ -687,6 +720,11 @@ class my_features:
             
             # cap the outputs in the interval [-minOutput, maxOutput), as discussed in exploratory_analysis
             insiderDat.at[tradeNum, '%FuturePriceChange'] = min(max(priceChange, minOutput), maxOutput-1e-6)
+            
+            # retrieve SPY's closing value on the filing date
+            insiderDat.at[tradeNum, 'val_SPY'], _ = my_retrieval.returnDataOnDate(
+                tick, historicDat['SPY'], str(fileDate), searchDirection=-1
+            )
         
         print('Processing trade: Done!')
         return insiderDat
@@ -702,7 +740,8 @@ class my_model_prep:
     
     def prepareForModel(insiderDat):
         '''
-        Assigns all insider titles and trade types to a category and ensures that each feature is the proper dtype.
+        Assigns all insider titles and trade types to a category, drops unused colums, and ensures that 
+        each feature is the proper dtype.
         '''
         def fixTitle(title):
             '''
@@ -710,12 +749,11 @@ class my_model_prep:
             vs all others (e.g. 10% holders).
             '''
 
-            importantKeywords = ['Dir', 'VP', 'Vice', 'V.P.', 'Pres',  # directors to the left; C-suite below
-                                 'CEO', 'C.E.O' 'COO', 'C.O.O', 'CHRO', 'C.H.R.O', 'CFO', 'C.F.O', 'CTO', 'C.T.O', 'Chief',
-                                 'COB', 'C.O.B.', 'Chair']  # chair keywords
+            keywords = ['Dir', 'VP', 'Vice', 'V.P.', 'Pres',  # directors 
+                        'CEO', 'C.E.O' 'COO', 'C.O.O', 'CHRO', 'C.H.R.O', 'CFO', 'C.F.O', 'CTO', 'C.T.O', 'Chief',  # C-suite
+                        'COB', 'C.O.B.', 'Chair']  # chair
 
-            if any([re.search(key, title, re.IGNORECASE) for key in importantKeywords]): newTitle = 1
-            else: newTitle = 0
+            newTitle = 1 if (title==title and any([re.search(key, title, re.IGNORECASE) for key in keywords])) else 0
 
             return newTitle
         
@@ -744,17 +782,17 @@ class my_model_prep:
             insiderDat['TradeTypeCat'] = None
             insiderDat.TradeTypeCat = [fixTradeType(t) for t in insiderDat.TradeType]
             insiderDat = insiderDat.drop('TradeType', axis=1)
+            
+            
+        # drop unneeded columns
+        insiderDat = insiderDat.drop(columns=['CompanyName', 'TradeDate', 'InsiderName', 'Owned', 'Qty'])
+        if 'Unnamed: 0' in insiderDat.columns: insiderDat = insiderDat.drop(columns=['Unnamed: 0'])    
+            
 
+        # convert columns to proper dtypes
         insiderDat.FilingDate = pd.to_datetime(insiderDat['FilingDate']).dt.date
-        
-        insiderDat = insiderDat.astype({'Price': 'float', 
-                                        'DeltaOwn': 'float', 
-                                        'Value': 'float', 
-                                        'NumTrades': 'int', 
-                                        'TradeToFileTime': 'int', 
-                                        'VolumeVolatility': 'float',
-                                        'PriceVolatility': 'float',
-                                        '%FuturePriceChange': 'float'})
+        for col in insiderDat.columns: 
+            if col not in ['Ticker','FilingDate']: insiderDat[col] = insiderDat[col].astype(float)
 
         return insiderDat
     
@@ -769,7 +807,7 @@ class my_model_prep:
             data_XY_resampled (pd.DataFrame): same as data_XY, but with rows duplicated via oversampling
         '''
         data_XY.assign(PriceChangeCAT=None)
-        
+
         binEnds = binStarts[1:] + [max(data_XY['%FuturePriceChange']) + 1e-6]  # account for rounding error
         
         for binStart, binEnd in zip(binStarts, binEnds):
@@ -783,14 +821,12 @@ class my_model_prep:
         return data_XY_resampled.drop(columns=['PriceChangeCAT'])
 
 
-    def returnXandY(insiderDat, startDate, endDate, binStarts=[]):
+    def returnXandY(data_XY, binStarts=[]):
         '''
-        Drops features not used for training and splits trade data into input and output sets.
+        Splits trade data into input and output sets.
 
         IN:
-            insiderDat (pd.DataFrame): see top of file
-            startDate (str): start date for data
-            endDate (str): end date for data
+            data_XY (pd.DataFrame): contains both input and output features
             binStarts (List[int]): a list of values at which our 'bins' for oversampling begin.
                                     Empty list skips oversampling.
         OUT:
@@ -799,17 +835,8 @@ class my_model_prep:
             data_X (pd.DataFrame): input data for model
             data_Y (pd.DataFrame): output data for model
         '''
-        dateRange = pd.date_range(start=startDate, end=endDate).date
-
-        insiderDat = insiderDat.drop(columns=['CompanyName', 'TradeDate', 'InsiderName', 'Owned', 'Qty'])
-
-        # Get rid of a column that I created when re-indexing the dataframe
-        if 'Unnamed: 0' in insiderDat.columns: insiderDat = insiderDat.drop(columns=['Unnamed: 0'])
-
         # Use one-hot encoding for trade type
         #dummies_data = pd.get_dummies(insiderDat, columns=['TradeType'], prefix=[None])
-
-        data_XY = insiderDat[insiderDat['FilingDate'].isin(dateRange)]
         
         if binStarts: data_XY = my_model_prep.oversample(data_XY, binStarts)
         
@@ -915,30 +942,8 @@ class my_sims:
         totalProfit = 0
 
         for d in pd.date_range(start=startDate, end=endDate):    
-            currDate = dt.date.strftime(d.date(), '%Y-%m-%d')
-
-            # Check each trade's performance prediction. If high enough, purchase at next day's opening.
-            for tradeNum, trade in data_XY[data_XY['FilingDate'] == d.date()].iterrows():
-                if trade[predName] < buyThresh: continue
-
-                tick = trade['Ticker']
-
-                buyPrice, buyDate = my_retrieval.returnDataOnDate(
-                    tick, historicDat[tick], currDate, delta=1, dataName='Open'
-                )
-                #buyDate = dt.date.strftime(buyDate, '%Y-%m-%d')
-
-                totalInvested += 1
-
-                print(f'''Buying {tick} on {buyDate}, currently ${round(buyPrice, 2)}''')
-
-                if tick in myTrades.keys():
-                    myTrades[tick]['BuyPrice'].append(buyPrice)
-                    myTrades[tick]['SellPrice'].append(None)
-                else:
-                    myTrades[tick] = {'BuyPrice': [buyPrice], 'SellPrice': [None]}
-
-
+            currDate = strftime(d.date(), '%Y-%m-%d')
+            
             # Check already-purchased stocks. If any ticker's value has risen enough, sell all shares  at closing.
             for tick, elem in myTrades.items():
                 for buyNum, buyPrice in enumerate(elem['BuyPrice']):
@@ -957,13 +962,38 @@ class my_sims:
 
                 # If it's the last day of the simulation, sell everything (for performance evaluation)
                 # !!!Make sure that this is a day that the market is open!!!
-                if d.date() == dt.datetime.strptime(endDate, '%Y-%m-%d').date():
+                if d.date() == strptime(endDate, '%Y-%m-%d').date():
                     try: currPrice = historicDat[tick].loc[currDate]['Close']
                     except: raise ValueError('Market must be open on simulation end date!')
                         
                     totalProfit += sum([(currPrice-elem['BuyPrice'][idx])/elem['BuyPrice'][idx] 
                                         for idx, val in enumerate(elem['SellPrice']) if val is None])
                     myTrades[tick]['SellPrice'] = [currPrice if val is None else val for val in elem['SellPrice']]
+            
+
+            # Now check today's trades' performance predictions. If high enough, purchase at next day's opening.
+            for tradeNum, trade in data_XY[data_XY['FilingDate'] == currDate].iterrows():
+                if trade[predName] < buyThresh: continue
+
+                tick = trade['Ticker']
+
+                buyPrice, buyDate = my_retrieval.returnDataOnDate(
+                    tick, historicDat[tick], currDate, delta=1, dataName='Open'
+                )
+                #buyDate = strftime(buyDate, '%Y-%m-%d')
+
+                totalInvested += 1
+
+                print(f'''Buying {tick} on {buyDate}, currently ${round(buyPrice, 2)}''')
+
+                if tick in myTrades.keys():
+                    myTrades[tick]['BuyPrice'].append(buyPrice)
+                    myTrades[tick]['SellPrice'].append(None)
+                else:
+                    myTrades[tick] = {'BuyPrice': [buyPrice], 'SellPrice': [None]}
+
+
+
 
 
         print('\n-----------------------------------------\n')
