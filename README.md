@@ -15,7 +15,7 @@ I use [XGBoost](https://xgboost.readthedocs.io/en/stable/index.html), which is a
 You can see my commentary on model performance in *nb3_decision_tree.ipynb* and *nb4_neural_net.ipynb*. I create a custom-weighted mean-squared-error metric that penalizes overestimated valuation losses and underestimated large valuation gains more harshly.
 
 ## What strategy is used?
-I develop a simple trading strategy in *nb5_strategy_simulation.ipynb* based on my model's valuation-percentage-increase predictions. I benchmark it against the performance of the S&P 500 ETF fund, [SPY](https://www.google.com/finance/quote/SPY:NYSEARCA), across the given 3-month time period.  
+I develop a simple trading strategy in *nb5_strategy_simulation.ipynb* based on my model's valuation-percentage-increase predictions. I benchmark it against the performance of the S&P 500 ETF fund, [SPY](https://www.google.com/finance/quote/SPY:NYSEARCA), across the given time period for testing.  
 <br />
 <br />
 *\*This project is neither an investment pitch nor financial advice.*
