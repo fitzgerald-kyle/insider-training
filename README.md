@@ -1,4 +1,4 @@
-# "Insider Training": Using Insider Trade Data to Inform Common Stock Trading
+# "Insider Training": A Novel Approach to Stock-Trading
 According to [Investopedia](https://www.investopedia.com/terms/i/insider.asp), an **insider** is "anyone who trades a company's shares based on material nonpublic knowledge."
 
 In this repository's notebooks, we mine public insider trade data and use machine learning to generate a novel trading strategy that outperforms the S&P 500 during a two-week period in October 2022.\*
